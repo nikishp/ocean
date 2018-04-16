@@ -1,0 +1,395 @@
+/* head style */ 
+.top-line
+  // padding: 7px 0
+  background-color: $blue
+
+.top-line__nav
+
+.top-line__list
+  display: flex
+  align-items: center
+  color: #ffffff
+  li
+    margin-right: 22px
+  a 
+    display: block
+    padding-right: 15px
+    padding-left: 0
+    
+    margin-right: 10px
+    &:hover
+      span
+        border-color: $or
+    span
+      display: inline-block
+      padding-top: 10px
+      padding-bottom: 6px
+      border-bottom: 4px solid transparent
+      transition: $tr
+
+
+.user
+  display: flex
+  align-items: center
+  line-height: 1
+  justify-content: flex-end
+
+.user__info-btn
+  &:not(:first-child)
+    margin-left: 20px
+
+
+.user__block
+  margin-left: 20px
+.user__item
+  display: flex
+  align-items: center
+  color: $f
+  transition: $tr
+  &:hover
+    color: $or
+    .user__logo .svg
+      fill: $or
+.user__logo
+  position: relative
+  margin-right: 10px
+  line-height: 0
+  font-size: 0
+  .svg
+    +size(18)
+    fill: #fff
+    transition: $tr
+.user__count
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  +size(16)
+  color: $f
+  font-size: 9px
+  line-height: 1
+  border-radius: 50%
+  background: $or
+  transform: translateX(50%) translateY(-50%)
+
+
+.user__text 
+  font-size: 12px
+  font-weight: 400
+  letter-spacing: -0.6px
+
+.user__item--uthorization
+  display: none
+
+.user__text-name 
+  display: block
+  font-size: 11px
+
+
+.header__mid
+  display: flex
+  padding: 10px 0
+  @extend .bg
+.header-decor
+  width: 25vw
+
+.header-decor--left
+  .header-decor__item--top
+    .decor__line
+      fill: $blue
+  .header-decor__item--middle
+    padding-right: 3%
+    .decor__line
+      fill: #124d7c
+  .header-decor__item--foot
+    padding-right: 6%
+    .decor__line
+      fill: #1d67a2
+
+.header-decor--right
+  .header-decor__item--top
+    padding-left: 6%
+    .decor__line
+      fill: #1d67a2
+  .header-decor__item--middle
+    padding-left: 3%
+    .decor__line
+      fill: #124d7c
+  .header-decor__item--foot
+    .decor__line
+      fill: $blue
+
+.header-decor__item
+  line-height: 0
+  &:not(:last-child)
+    margin-bottom: 3px
+ 
+.decor__line
+  width: 100%
+  height: 25px
+
+
+.logo
+  display: block
+  font-size: 0
+  line-height: 0
+
+.header__info-block
+  display: flex
+
+.info-block__item
+  display: flex
+  align-items: center
+  &:not(:last-child)
+    flex-shrink: 0
+    margin-right: 30px
+  .svg
+    +size(30)
+    margin-right: 15px
+    fill: $blue2
+.info-block__item--mask
+  
+  overflow: hidden
+  .info-block__desc
+    position: relative
+    margin-top: 0px
+    white-space: nowrap
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: -4px
+      right: 0
+      z-index: 3
+      width: 50px
+      cursor: pointer
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 29%, #fff 80%)
+ 
+.info-block__title
+
+.info-block__desc
+  margin-top: 4px
+  font-weight: 700
+
+.info-block__popup
+  display: block
+  margin-top: 3px
+  color: $or
+  font-size: 12px
+  line-height: 1
+  span
+    border-bottom: 1px dotted 
+    transition: $tr
+  &:hover
+    color: $or
+    border-bottom-color: transparent
+
+
+.info-block__city-link
+  border-bottom: 2px dotted 
+
+.buy-block
+  display: flex
+
+.buy-info
+  position: relative
+  display: block
+  +size(50)
+  margin-right: 15px
+  padding: 5px
+  color: $f
+  font-size: 9px
+  text-align: center
+  line-height: 1
+  border-radius: 3px
+  background: $blue2
+  transition: $tr
+  .svg
+    +size(30,25)
+    fill: $f
+  &:hover
+    color: $f
+    background: darken($blue2, 5%)
+.buy-info__count
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(20)
+  border-radius: 50%
+  background-color: $or
+  transform: translateX(50%) translateY(-50%)
+
+.buy-info__title
+  display: block
+  margin-top: 4px
+
+
+
+.basket-info
+  line-height: 1
+
+
+.basket-info__title
+  margin-bottom: 3px
+  font-weight: 700
+.basket-info__price
+  margin-bottom: 3px
+  color: $def
+  font-size: 14px
+
+.basket-info__link
+  display: block
+  color: $blue2
+  font-size: 12px
+  span
+    border-bottom: 1px solid
+  .svg
+    +size(6)
+    fill: blue2
+
+
+.nav-block
+  color: $f
+  background: $blue2
+
+.row--nav-block
+  align-items: center
+
+.catalog-btn
+  position: relative
+  display: block
+  padding-left: 20px
+  padding-top: 15px
+  padding-bottom: 13px
+  cursor: pointer
+.catalog-btn__decor
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  fill: $blue
+
+.catalog-btn__content
+  position: relative
+  z-index: 5
+  display: flex
+  align-items: center
+.catalog-btn__title
+  display: flex
+  align-items: center
+  margin-left: 20px
+  color: $f
+  line-height: 1  
+  font-weight: 700
+  text-transform: uppercase
+  .svg
+    +size(7)
+    margin-left: 23px
+    fill: $f
+
+
+
+.specials
+  display: flex
+
+  color: $f
+.specials__item
+  position: relative
+  // background: #000
+  &:not(:first-child)
+    margin-left: 20px
+  &:not(:last-child)
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 1px
+      // height: 20px
+      //background: linear-gradient(to bottom, #fff, #fff, #fff)
+      background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #ffffff 50%, rgba(255, 255, 255, 0) 100%)
+  .svg
+    +size(20)
+    margin-right: 15px
+    fill: $f
+    transition: $tr
+  &:hover
+    color: $or
+    .svg
+      fill: $or
+.specials__link
+  display: flex
+  align-items: center
+  padding: 5px 
+  padding-left: 0
+  padding-right: 20px
+  transition: $tr
+  // background: red
+
+
+.search
+
+.search__item
+  position: relative
+  height: 30px
+  color: $grey
+  font-size: 12px
+.search__input
+  display: block
+  width: 100%
+  height: 100%
+  padding-left: 20px
+  padding-right: 80px
+  border-radius: 3px
+  border: none
+  background-color: #ffffff
+.search__btn
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 5px
+  width: 67px
+  height: 20px
+  display: flex
+  align-items: center
+  margin: auto
+  color: $f
+  // font-size: 12px
+  border-radius: 3px
+  background-color: $or
+  transition: $tr
+  .svg
+    flex-shrink: 0
+    +size(12)
+    margin-right: 6px
+    fill: $f
+  &:hover
+    color: $f
+    background: darken($or, 5%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

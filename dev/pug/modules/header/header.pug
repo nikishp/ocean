@@ -1,0 +1,208 @@
+mixin header(name)
+  - name = name || ''
+  header(class="header " + name)
+    .top-line
+      .container
+        .row.row--middle
+          .col-md-7
+            nav.top-line__nav
+              ul.top-line__list
+                li.top-line__item
+                  a.top-line__link(href="#") 
+                    span О компании
+                li.top-line__item
+                  a.top-line__link(href="#") 
+                    span Сеть магазинов
+                li.top-line__item
+                  a.top-line__link(href="#") 
+                    span Дилеры
+                li.top-line__item
+                  a.top-line__link(href="#") 
+                    span Партнерам
+                li.top-line__item
+                  a.top-line__link(href="#") 
+                    span Контакты
+          .col-md-5
+            .user
+              .user__info
+                a.user__info-btn.btn.btn--defh.btn--white.btn--fluid(href="#")
+                  +svg('package')
+                  | Что с моим заказом?
+                a.user__info-btn.btn.btn--defh.btn--white.btn--fluid(href="#")
+                  +svg('help_circle')
+                  | Помощь
+              .user__block
+                a.user__item.user__item--uthorization(href="#")
+                  span.user__logo
+                    span.user__count(href="#") 25
+                    +svg('user')
+                  span.user__text Авторизация
+                a.user__item.user__item--login(href="#") 
+                  span.user__logo
+                    span.user__count(href="#") 25
+                    +svg('user')
+                  span.user__text Личный кабинет 
+                    span.user__text-name Иванов Иван
+    .header__mid.row--middle
+      .header-decor.header-decor--left
+        .header-decor__item.header-decor__item--top
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+            polygon(points='0,0 100,0 97.5,100 0,100')
+        .header-decor__item.header-decor__item--middle
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+            polygon(points='0,0 100,0 97.5,100 0,100')
+        .header-decor__item.header-decor__item--foot
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+            polygon(points='0,0 100,0 97.5,100 0,100')
+      .container
+        .row.row--middle
+          .col-md-2 
+            a.logo(href="#")
+              img.logo__img(src='img/content/logo.png', alt='logo', srcset='img/content/logo@2x.png 2x, img/content/logo@3x.png 3x')
+          .col-md-7 
+            .header__info-block
+              .info-block__item
+                .info-block__ico
+                  +svg('phone_head')
+                .info-block__content 
+                  .info-block__title Связаться с нами:
+                  .info-block__desc
+                    a.info-block__phone(href="tel:88001006673") 8 800 100 66 73, 
+                    a.info-block__phone(href="tel:88001006673") 8 800 100 66 73
+                  a.info-block__popup.popup-js(href="#recall"): span Заказать обратный звонок
+              .info-block__item
+                .info-block__ico
+                  +svg('clock')
+                .info-block__content 
+                  .info-block__title Мы работаем:
+                  .info-block__desc Пн-Вс 09:00 - 18:00
+              .info-block__item.info-block__item--mask
+                .info-block__ico
+                  +svg('map')
+                .info-block__content 
+                  .info-block__title Город:
+                  .info-block__desc: a.info-block__city-link.popup-js(href="#choose_city") Санкт-Петербург
+          .col-md-3.buy-block
+            a.buy-info.buy-info--favorites(href="#")
+              span.buy-info__count 30
+              span.buy-info__ico
+                +svg('heart')
+              span.buy-info__title Избранное
+            a.buy-info.buy-info--basket(href="#")
+              span.buy-info__count 30
+              span.buy-info__ico
+                +svg('cart')
+              span.buy-info__title Корзина
+            .basket-info
+              .basket-info__title Корзина
+              .basket-info__price На: <b>15 225 руб.</b>
+              a.basket-info__link(href="#")
+                span Оформить заказ
+                +svg('down')
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .header-decor.header-decor--right
+        .header-decor__item.header-decor__item--top
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveAspectRatio="none")
+            polygon(points='2.5,0 100,0 100,100 0,100')
+        .header-decor__item.header-decor__item--middle
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+            polygon(points='2.5,0 100,0 100,100 0,100')
+        .header-decor__item.header-decor__item--foot
+          svg.decor__line(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+            polygon(points='2.5,0 100,0 100,100 0,100')
+    .nav-block
+      .container
+        .row.row--nav-block
+          .col-md-3 
+            .catalog-btn
+              svg.catalog-btn__decor(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
+                polygon(points='0,0 100,0 92,100 0,100')
+              .catalog-btn__content
+                .catalog-btn__ico
+                  span.hamburger.hamburger--collapse
+                    span.hamburger-box
+                      span.hamburger-inner
+                .catalog-btn__title Каталог товаров
+                  +svg('down')
+          .col-md-6 
+            ul.specials
+              li.specials__item
+                a.specials__link(href="#")
+                  +svg('sale')
+                  | Распродажа
+              li.specials__item
+                a.specials__link(href="#")
+                  +svg('new')
+                  | Новинки
+              li.specials__item
+                a.specials__link(href="#")
+                  +svg('services')
+                  | Услуги
+              li.specials__item
+                a.specials__link(href="#")
+                  +svg('users')
+                  | Покупателю
+          .col-md-3 
+            form(action="#").search
+              .search__item
+                input.search__input(type="search", placeholder="Поиск по товарам")
+                button.search__btn
+                  +svg('search')
+                  | Поиск
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
