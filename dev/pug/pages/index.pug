@@ -4,5 +4,23 @@ block head
   - var title = 'Главная'
   - var bodyClass = ''
 block content
-
+  .container
+    .row
+      .col-lg-9
+        .main-slider
+          .main-slider__item
+            .main-slider__content(style="background-image: url(img/content/main_sl_1.jpg)")
+              .main-slider__content-height
+              .main-slider__content-fill
+                .main-slider__title Акция
+                .main-slider__desc Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке
+                a.btn.btn--def.btn--orange.main-slider__link(href="#") Подробнее
+          .main-slider__item
+            .main-slider__content(style="background-image: url(img/content/main_sl_2.jpg)")
+              .main-slider__content-height
+              .main-slider__content-fill
+                .main-slider__title Акция
+                .main-slider__desc Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке
+                a.btn.btn--def.btn--orange.main-slider__link(href="#") Подробнее
+      .col-lg-3
   

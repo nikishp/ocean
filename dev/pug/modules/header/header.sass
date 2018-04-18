@@ -2,7 +2,8 @@
 .top-line
   // padding: 7px 0
   background-color: $blue
-
+  +md-block()
+    display: none
 .top-line__nav
 
 .top-line__list
@@ -11,12 +12,17 @@
   color: #ffffff
   li
     margin-right: 22px
+    +lg-block()
+      margin-right: 10px
   a 
     display: block
     padding-right: 15px
     padding-left: 0
     
     margin-right: 10px
+    +lg-block()
+      padding-right: 0
+      font-size: 14px
     &:hover
       span
         border-color: $or
@@ -92,6 +98,8 @@
   display: flex
   padding: 10px 0
   @extend .bg
+  .container
+    flex-shrink: 0
 .header-decor
   width: 25vw
 
@@ -145,6 +153,8 @@
   &:not(:last-child)
     flex-shrink: 0
     margin-right: 30px
+    +lg-block()
+      margin-right: 15px
   .svg
     +size(30)
     margin-right: 15px
@@ -173,6 +183,11 @@
   margin-top: 4px
   font-weight: 700
 
+.info-block__phone
+  +lg-block()
+    display: block
+
+
 .info-block__popup
   display: block
   margin-top: 3px
@@ -192,6 +207,16 @@
 
 .buy-block
   display: flex
+  +lg-block()
+    // flex-direction: column
+    // align-items: center
+.buy-info__block
+  display: flex
+  +lg-block()
+    // flex-direction: column
+.buy-info--favorites
+  +lg-block()
+    // margin-bottom: 10px    
 
 .buy-info
   position: relative
@@ -206,9 +231,16 @@
   border-radius: 3px
   background: $blue2
   transition: $tr
+  +lg-block()
+    display: flex
+    align-items: center
+    justify-content: center
+    +size(40)
   .svg
     +size(30,25)
     fill: $f
+    +lg-block()
+      +size(20)
   &:hover
     color: $f
     background: darken($blue2, 5%)
@@ -227,7 +259,8 @@
 .buy-info__title
   display: block
   margin-top: 4px
-
+  +lg-block()
+    display: none
 
 
 .basket-info
@@ -267,6 +300,9 @@
   padding-top: 15px
   padding-bottom: 13px
   cursor: pointer
+  +lg-block()
+    padding-left: 10px
+    font-size: 14px
 .catalog-btn__decor
   position: absolute
   top: 0
@@ -292,7 +328,10 @@
     +size(7)
     margin-left: 23px
     fill: $f
-
+    +lg-block()
+      margin-left: 13px
+  +lg-block()
+    margin-left: 10px
 
 
 .specials

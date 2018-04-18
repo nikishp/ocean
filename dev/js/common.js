@@ -5,6 +5,9 @@
     svg4everybody(); 
     objectFitImages();  
 
+    var windowWidht = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+
     $('.info-block__item--mask .info-block__desc').on('click', function(event) {
      $('.info-block__city-link').trigger( "click" );
    });
@@ -42,6 +45,34 @@
 
   //phone mask
   // $(".phone").mask("+9(999)999-99-99");
+
+  if(windowWidht < 992){
+    $('.h3--foot-list').on('click', function(event) {
+      $(this).stop(true).toggleClass('h3--foot-open');
+      $(this).parent().find('.foot__list').stop(true).slideToggle();
+
+    });
+
+  }
+
+
+$('.main-slider').slick({
+  arrows:true,
+  prevArrow: '<div class="slide-controll slide-controll--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z" transform="translate(-695 -1458)" fill-rule="evenodd"/></svg></div>',
+  nextArrow: '<div class="slide-controll slide-controll--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z" transform="translate(-1511 -1458)"  fill-rule="evenodd"/></svg></div>',
+})
+
+
+$('.popup-close').on('click', function(event) {
+  $.magnificPopup.close();
+});
+
+
+
+
+
+
+
 
 }); //jQuery
 

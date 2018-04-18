@@ -18,7 +18,7 @@ body
 *:focus::placeholder
   opacity: 0
 *::selection
-  background-color: red
+  background-color: $or
   color: #fff
  
 // body input:focus:required:invalid,
@@ -120,14 +120,16 @@ h1,h2,h3,h4,h5,h6
   transition: $tr
 
 
-.btn--defh
+.btn--def
   height: 30px
+  width: 127px
+  border-radius: 3px
 .btn--fluid
+  width: auto
   min-width: 0
   padding: 0 15px
 .btn--white
   font-size: 12px
-  border-radius: 3px
   background: #ffffff
   .svg
     +size(20)
@@ -139,8 +141,13 @@ h1,h2,h3,h4,h5,h6
     background: $def
     .svg
       fill: $f
-
-
+.btn--orange
+  color: $f
+  font-size: 14px
+  background: $or
+  &:hover
+    color: $f
+    background: $def
 
 
 button[type='submit']
@@ -208,3 +215,78 @@ button[type='submit']
   100%
     opacity: 0
 // count style end
+
+
+.subscribe
+
+.subscribe--foot
+  margin-top: 20px
+  padding-bottom: 10px
+  +xs-block()
+    text-align: left
+  .subscribe__field
+    +xs-block()
+      max-width: 100%
+.subscribe__title
+  padding-bottom: 10px
+  color: $def
+  font-weight: 700
+  line-height: 20px
+.subscribe__field
+  display: inline-block
+  width: 100%
+  max-width: 216px
+  height: 30px
+  color: $grey
+  font-size: 12px
+  input
+    display: block
+    width: 100%
+    height: 100%
+    padding: 0 20px
+    border: none
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
+    background-color: $f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 

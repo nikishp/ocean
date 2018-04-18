@@ -5,13 +5,44 @@
   box-shadow: 0 -5px 15px rgba(51, 51, 51, 0.1)
   background-color: #fcfcfc
   @extend .bg
+  +md-block()
+    background-repeat: repeat
+    background-size: unset
+.foot__item
+  +md-block()
+    padding-bottom: 10px
 
+.h3--foot-list
+  position: relative
+  &::before
+    content: ''
+    display: none
+    position: absolute
+    top: -2px
+    right: 0
+    +size(15)
+    border: 3px solid
+    border-top: none
+    border-left: none
+    border-radius: 3px
+    transform: rotate(45deg)
+    transition: $tr
+    +md-block()
+      display: block
+  +md-block()
+    padding-right: 20px
+    cursor: pointer
+
+.h3--foot-open
+  &::before
+    transform: rotate(225deg)
 .foot__list
   padding-top: 15px
   color: $blue2
   font-size: 14px
   line-height: 1
-
+  +md-block()
+    display: none
 .foot__list-link
   display: block
   display: inline-block
@@ -28,6 +59,8 @@
   justify-content: flex-end
 .socials--foot
   padding-top: 16px
+  +md-block()
+    justify-content: center
 .socials__link
   display: flex
   justify-content: center
@@ -43,7 +76,9 @@
   .svg
     +size(20)
     fill: $f
-
+  +md-block()
+    margin-left: 5px
+    margin-right: 5px
 
 .foot__form
   text-align: right
@@ -75,42 +110,90 @@
     +size(12,16)
     margin: auto
     fill: $def
+  +md-block()
+    margin-right: auto
 
 
 
 
 
+.foot__line
+  margin-top: 15px
+  padding: 10px 0
+  color: $f
+  background-color: $blue
+  font-size: 14px
+  font-weight: 400
+  line-height: 20px
+
+.row--foot-line
+  +sm-block()
+    flex-direction: column-reverse
+
+.foot__line-item
+  display: flex
+  align-items: center
+.foot__line-item--right
+  // justify-content: flex-end
+  align-items: flex-end
+  flex-direction: column
+
+.foot__line-item--left
+  +md-block()
+    flex-direction: column
+    text-align: left
+    align-items: flex-start
+  +sm-block()
+    margin-top: 30px
+.foot__line-pay-link
+  font-size: 0
+  line-height: 0
+  .foot__line-link
+    display: inline-block
+    margin-left: 10px
+    &:nth-child(1)
+      +sprite($foo_pay_1)
+    &:nth-child(2)
+      +sprite($foo_pay_2)
+    &:nth-child(3)
+      +sprite($foo_pay_3)
+    &:nth-child(4)
+      +sprite($foo_pay_4)
+    &:nth-child(5)
+      +sprite($foo_pay_5)
+    &:nth-child(6)
+      +sprite($foo_pay_6)
+    +md-block()
+      margin-left: 0
+      margin-right: 10px
+  
+.foot__line-phones
+  display: flex
+  align-items: center
+
+  font-size: 16px
+  font-weight: 700
+  .svg
+    +size(15)
+    // margin-right: 5px
+    fill: $f
+    // vertical-align: middle
+
+.foot__line-phones-link
+  margin-left: 5px
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.foot__line-recall
+  padding-top: 4px
+  color: $or
+  font-size: 12px
+  font-weight: 400
+  line-height: 1
+  span
+    border-bottom: 1px dotted
 
 
 

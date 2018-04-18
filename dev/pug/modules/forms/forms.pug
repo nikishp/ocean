@@ -2,9 +2,7 @@ mixin form_default(formClass,formId)
   - formClass = formClass || ''
   - formId = formId || ''
   form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
-    // Hidden Required Fields
     input(name='form_subject', value='' + formTitle, type='hidden')
-    // END Hidden Required Fields
     .form__title 
     .form__subtitle 
     ul.form__list
@@ -52,3 +50,28 @@ mixin form_default(formClass,formId)
                 animate(attributename='opacity', values='1;0', times='0;1', dur='1s', begin='0s', repeatcount='indefinite')
 
     .form__police
+
+
+
+mixin recall(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || '' 
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    .popup-close
+      +svg('close')
+    .form__title Заказать обратный звонок
+    .form__subtitle 
+    ul.form__list
+      li.form__item
+        input(type='text', required='', name='Ваше имя', placeholder='Ваше имя')
+      li.form__item
+        input(type='tel', required='', name='Ваш телефон', placeholder='Ваш телефон')
+    .form__foot
+      .form__police
+        +svg('lock')
+        | Все Ваши данные конфиденциальны
+      .form__btn
+        button(type='submit').btn.btn--def.btn--orange Подписаться
+        
+

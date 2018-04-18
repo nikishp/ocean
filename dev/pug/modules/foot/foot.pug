@@ -2,56 +2,59 @@ mixin foot()
   footer.foot
     .container
       .row
-        .col-md-3
-          h3.h3.h3--foot-list Помощь покупателю
-          ul.foot__list
-            li.foot__list-item
-              a.foot__list-link(href="#") Статус заказа
-            li.foot__list-item
-              a.foot__list-link(href="#") Оформление заказа
-            li.foot__list-item
-              a.foot__list-link(href="#") Доставка
-            li.foot__list-item
-              a.foot__list-link(href="#") Оплата
-            li.foot__list-item
-              a.foot__list-link(href="#") Возврат и обмен товара
-            li.foot__list-item
-              a.foot__list-link(href="#") Политика конфиденциальности
-            li.foot__list-item
-              a.foot__list-link(href="#") Дисконтная система
-            li.foot__list-item
-              a.foot__list-link(href="#") Подарочные сертификаты
-        .col-md-3
-          h3.h3.h3--foot-list Информация о компании
-          ul.foot__list
-            li.foot__list-item
-              a.foot__list-link(href="#") О компании
-            li.foot__list-item
-              a.foot__list-link(href="#") Новости
-            li.foot__list-item
-              a.foot__list-link(href="#") Сеть магазинов
-            li.foot__list-item
-              a.foot__list-link(href="#") Дилеры
-            li.foot__list-item
-              a.foot__list-link(href="#") Франчайзинг
-            li.foot__list-item
-              a.foot__list-link(href="#") Вакансии
-        .col-md-3
-          h3.h3.h3--foot-list Информация о компании
-          ul.foot__list
-            li.foot__list-item
-              a.foot__list-link(href="#") О компании
-            li.foot__list-item
-              a.foot__list-link(href="#") Новости
-            li.foot__list-item
-              a.foot__list-link(href="#") Сеть магазинов
-            li.foot__list-item
-              a.foot__list-link(href="#") Дилеры
-            li.foot__list-item
-              a.foot__list-link(href="#") Франчайзинг
-            li.foot__list-item
-              a.foot__list-link(href="#") Вакансии
-        .col-md-3
+        .col-lg-3
+          .foot__item
+            h3.h3.h3--foot-list Помощь покупателю
+            ul.foot__list
+              li.foot__list-item
+                a.foot__list-link(href="#") Статус заказа
+              li.foot__list-item
+                a.foot__list-link(href="#") Оформление заказа
+              li.foot__list-item
+                a.foot__list-link(href="#") Доставка
+              li.foot__list-item
+                a.foot__list-link(href="#") Оплата
+              li.foot__list-item
+                a.foot__list-link(href="#") Возврат и обмен товара
+              li.foot__list-item
+                a.foot__list-link(href="#") Политика конфиденциальности
+              li.foot__list-item
+                a.foot__list-link(href="#") Дисконтная система
+              li.foot__list-item
+                a.foot__list-link(href="#") Подарочные сертификаты
+        .col-lg-3
+          .foot__item
+            h3.h3.h3--foot-list Информация о компании
+            ul.foot__list
+              li.foot__list-item
+                a.foot__list-link(href="#") О компании
+              li.foot__list-item
+                a.foot__list-link(href="#") Новости
+              li.foot__list-item
+                a.foot__list-link(href="#") Сеть магазинов
+              li.foot__list-item
+                a.foot__list-link(href="#") Дилеры
+              li.foot__list-item
+                a.foot__list-link(href="#") Франчайзинг
+              li.foot__list-item
+                a.foot__list-link(href="#") Вакансии
+        .col-lg-3
+          .foot__item
+            h3.h3.h3--foot-list Информация о компании
+            ul.foot__list
+              li.foot__list-item
+                a.foot__list-link(href="#") О компании
+              li.foot__list-item
+                a.foot__list-link(href="#") Новости
+              li.foot__list-item
+                a.foot__list-link(href="#") Сеть магазинов
+              li.foot__list-item
+                a.foot__list-link(href="#") Дилеры
+              li.foot__list-item
+                a.foot__list-link(href="#") Франчайзинг
+              li.foot__list-item
+                a.foot__list-link(href="#") Вакансии
+        .col-lg-3
           ul.socials.socials--foot
             li.socials__item
               a.socials__link(href="#")
@@ -66,4 +69,51 @@ mixin foot()
             .foot__form-search
               +svg('location')
               input.foot__form-search-input(type="search",placeholder="Поиск магазинов рядом")
-            p: b Подпишитесь на наши новости
+            .subscribe.subscribe--foot
+              .subscribe__title Подпишитесь на наши новости
+              .subscribe__field: input(type="email", name="subscribe" placeholder="Ваш E - mail")
+            .foot__form-btn
+              button.btn.btn--def.btn--orange Подписаться
+    .foot__line
+      .container
+        .row.row--foot-line
+          .col-md-6.foot__line-item.foot__line-item--left Мы принимаем:
+            .foot__line-pay-link
+              a.foot__line-link(href="#")
+              a.foot__line-link(href="#")
+              a.foot__line-link(href="#")
+              a.foot__line-link(href="#")
+              a.foot__line-link(href="#")
+              a.foot__line-link(href="#")
+          .col-md-6.foot__line-item.foot__line-item--right
+            .foot__line-phones
+              +svg('phone_line')
+              a.foot__line-phones-link(href="tel:88001006673") 8 800 100 66 73, 
+              a.foot__line-phones-link(href="tel:4959213362")  (495) 921 33 62 
+            a.foot__line-recall.popup-js(href="#recall")
+              span  Заказать обратный звонок
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 

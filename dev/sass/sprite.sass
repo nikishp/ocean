@@ -1,0 +1,132 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$foo-pay-1-name: 'foo_pay_1'
+$foo-pay-1-x: 39px
+$foo-pay-1-y: 0px
+$foo-pay-1-offset-x: -39px
+$foo-pay-1-offset-y: 0px
+$foo-pay-1-width: 33px
+$foo-pay-1-height: 20px
+$foo-pay-1-total-width: 72px
+$foo-pay-1-total-height: 70px
+$foo-pay-1-image: '../img/general/sprite.png'
+$foo-pay-1: (39px, 0px, -39px, 0px, 33px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_1', )
+$foo-pay-2-name: 'foo_pay_2'
+$foo-pay-2-x: 0px
+$foo-pay-2-y: 25px
+$foo-pay-2-offset-x: 0px
+$foo-pay-2-offset-y: -25px
+$foo-pay-2-width: 33px
+$foo-pay-2-height: 20px
+$foo-pay-2-total-width: 72px
+$foo-pay-2-total-height: 70px
+$foo-pay-2-image: '../img/general/sprite.png'
+$foo-pay-2: (0px, 25px, 0px, -25px, 33px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_2', )
+$foo-pay-3-name: 'foo_pay_3'
+$foo-pay-3-x: 38px
+$foo-pay-3-y: 25px
+$foo-pay-3-offset-x: -38px
+$foo-pay-3-offset-y: -25px
+$foo-pay-3-width: 33px
+$foo-pay-3-height: 20px
+$foo-pay-3-total-width: 72px
+$foo-pay-3-total-height: 70px
+$foo-pay-3-image: '../img/general/sprite.png'
+$foo-pay-3: (38px, 25px, -38px, -25px, 33px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_3', )
+$foo-pay-4-name: 'foo_pay_4'
+$foo-pay-4-x: 0px
+$foo-pay-4-y: 0px
+$foo-pay-4-offset-x: 0px
+$foo-pay-4-offset-y: 0px
+$foo-pay-4-width: 34px
+$foo-pay-4-height: 20px
+$foo-pay-4-total-width: 72px
+$foo-pay-4-total-height: 70px
+$foo-pay-4-image: '../img/general/sprite.png'
+$foo-pay-4: (0px, 0px, 0px, 0px, 34px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_4', )
+$foo-pay-5-name: 'foo_pay_5'
+$foo-pay-5-x: 0px
+$foo-pay-5-y: 50px
+$foo-pay-5-offset-x: 0px
+$foo-pay-5-offset-y: -50px
+$foo-pay-5-width: 33px
+$foo-pay-5-height: 20px
+$foo-pay-5-total-width: 72px
+$foo-pay-5-total-height: 70px
+$foo-pay-5-image: '../img/general/sprite.png'
+$foo-pay-5: (0px, 50px, 0px, -50px, 33px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_5', )
+$foo-pay-6-name: 'foo_pay_6'
+$foo-pay-6-x: 38px
+$foo-pay-6-y: 50px
+$foo-pay-6-offset-x: -38px
+$foo-pay-6-offset-y: -50px
+$foo-pay-6-width: 33px
+$foo-pay-6-height: 20px
+$foo-pay-6-total-width: 72px
+$foo-pay-6-total-height: 70px
+$foo-pay-6-image: '../img/general/sprite.png'
+$foo-pay-6: (38px, 50px, -38px, -50px, 33px, 20px, 72px, 70px, '../img/general/sprite.png', 'foo_pay_6', )
+$spritesheet-width: 72px
+$spritesheet-height: 70px
+$spritesheet-image: '../img/general/sprite.png'
+$spritesheet-sprites: ($foo-pay-1, $foo-pay-2, $foo-pay-3, $foo-pay-4, $foo-pay-5, $foo-pay-6, )
+$spritesheet: (72px, 70px, '../img/general/sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

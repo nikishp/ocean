@@ -67,22 +67,91 @@
 /* page style */
 
 
+.main-slider
+
+  .slide-controll
+    position: absolute
+    top: 50%
+    z-index: 10
+    width: 25px
+    height: 25px
+    cursor: pointer
+    // border-radius: 50%
+    background-color: $or
+    transform: translateY(-50%)
+    opacity: .5
+    transition: $tr
+    svg
+      +absolute-center()
+      +size(7,11)
+      fill: $f
+    &:hover
+      opacity: 1
+  .slide-controll--prev
+    left: 20px
+    border-radius: 50%
+  .slide-controll--next
+    right: 20px
+    border-radius: 50%
 
 
 
 
 
+.main-slider__content
+  position: relative
+  color: $f
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-size: cover
+.main-slider__content-height
+  padding-top: 35.5%
+
+.main-slider__content-fill
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 65px 90px
 
 
+.main-slider__title
+  margin-bottom: 15px
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+  color: $f
+  font-size: 48px
+  font-weight: 700
+  text-transform: uppercase
+
+.main-slider__desc
+  margin-bottom: 25px
 
 
-
-
-
-
-
-
-
+.slide-controll
+  position: absolute
+  top: 50%
+  z-index: 10
+  width: 30px
+  height: 30px
+  cursor: pointer
+  // border-radius: 3px
+  background-color: #ededed
+  transform: translateY(-50%)
+  opacity: .5
+  transition: $tr
+  svg
+    +absolute-center()
+    +size(20)
+    fill: $def
+  &:hover
+    opacity: 1
+.slide-controll--prev
+  left: 0
+  border-radius: 0 3px 3px 0
+.slide-controll--next
+  right: 0
+  border-radius: 3px 0 0 3px
 
 
 

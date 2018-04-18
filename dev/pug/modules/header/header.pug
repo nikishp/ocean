@@ -4,7 +4,7 @@ mixin header(name)
     .top-line
       .container
         .row.row--middle
-          .col-md-7
+          .col-lg-6.col-xl-7
             nav.top-line__nav
               ul.top-line__list
                 li.top-line__item
@@ -22,13 +22,13 @@ mixin header(name)
                 li.top-line__item
                   a.top-line__link(href="#") 
                     span Контакты
-          .col-md-5
+          .col-lg-6.col-xl-5 
             .user
               .user__info
-                a.user__info-btn.btn.btn--defh.btn--white.btn--fluid(href="#")
+                a.user__info-btn.btn.btn--def.btn--white.btn--fluid(href="#")
                   +svg('package')
                   | Что с моим заказом?
-                a.user__info-btn.btn.btn--defh.btn--white.btn--fluid(href="#")
+                a.user__info-btn.btn.btn--def.btn--white.btn--fluid(href="#")
                   +svg('help_circle')
                   | Помощь
               .user__block
@@ -56,10 +56,10 @@ mixin header(name)
             polygon(points='0,0 100,0 97.5,100 0,100')
       .container
         .row.row--middle
-          .col-md-2 
+          .col-lg-2 
             a.logo(href="#")
               img.logo__img(src='img/content/logo.png', alt='logo', srcset='img/content/logo@2x.png 2x, img/content/logo@3x.png 3x')
-          .col-md-7 
+          .col-lg-7 
             .header__info-block
               .info-block__item
                 .info-block__ico
@@ -82,17 +82,18 @@ mixin header(name)
                 .info-block__content 
                   .info-block__title Город:
                   .info-block__desc: a.info-block__city-link.popup-js(href="#choose_city") Санкт-Петербург
-          .col-md-3.buy-block
-            a.buy-info.buy-info--favorites(href="#")
-              span.buy-info__count 30
-              span.buy-info__ico
-                +svg('heart')
-              span.buy-info__title Избранное
-            a.buy-info.buy-info--basket(href="#")
-              span.buy-info__count 30
-              span.buy-info__ico
-                +svg('cart')
-              span.buy-info__title Корзина
+          .col-lg-3.buy-block
+            .buy-info__block
+              a.buy-info.buy-info--favorites(href="#")
+                span.buy-info__count 30
+                span.buy-info__ico
+                  +svg('heart')
+                span.buy-info__title Избранное
+              a.buy-info.buy-info--basket(href="#")
+                span.buy-info__count 30
+                span.buy-info__ico
+                  +svg('cart')
+                span.buy-info__title Корзина
             .basket-info
               .basket-info__title Корзина
               .basket-info__price На: <b>15 225 руб.</b>
@@ -125,7 +126,7 @@ mixin header(name)
     .nav-block
       .container
         .row.row--nav-block
-          .col-md-3 
+          .col-lg-3 
             .catalog-btn
               svg.catalog-btn__decor(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
                 polygon(points='0,0 100,0 92,100 0,100')
@@ -136,7 +137,7 @@ mixin header(name)
                       span.hamburger-inner
                 .catalog-btn__title Каталог товаров
                   +svg('down')
-          .col-md-6 
+          .col-lg-6 
             ul.specials
               li.specials__item
                 a.specials__link(href="#")
@@ -154,9 +155,9 @@ mixin header(name)
                 a.specials__link(href="#")
                   +svg('users')
                   | Покупателю
-          .col-md-3 
+          .col-lg-3 
             form(action="#").search
-              .search__item
+              .search__item 
                 input.search__input(type="search", placeholder="Поиск по товарам")
                 button.search__btn
                   +svg('search')
