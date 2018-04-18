@@ -50,23 +50,66 @@
     $('.h3--foot-list').on('click', function(event) {
       $(this).stop(true).toggleClass('h3--foot-open');
       $(this).parent().find('.foot__list').stop(true).slideToggle();
-
     });
-
   }
 
+  $('.main-slider').slick({
+    arrows:true,
+    prevArrow: '<div class="slide-controll slide-controll--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z" transform="translate(-695 -1458)" fill-rule="evenodd"/></svg></div>',
+    nextArrow: '<div class="slide-controll slide-controll--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z" transform="translate(-1511 -1458)"  fill-rule="evenodd"/></svg></div>',
+  })
 
-$('.main-slider').slick({
-  arrows:true,
-  prevArrow: '<div class="slide-controll slide-controll--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z" transform="translate(-695 -1458)" fill-rule="evenodd"/></svg></div>',
-  nextArrow: '<div class="slide-controll slide-controll--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z" transform="translate(-1511 -1458)"  fill-rule="evenodd"/></svg></div>',
-})
+  $('.popup-close').on('click', function(event) {
+    $.magnificPopup.close();
+  });
 
-
-$('.popup-close').on('click', function(event) {
-  $.magnificPopup.close();
+$('.product-item__favorite').on('click', function(event) {
+$(this).stop(true).toggleClass('product-item__favorite--active');
 });
 
+/*================================
+==========catalog viewer==========
+================================*/
+// Product List
+// $('#list-view').click(function() {
+//   $('#content .product-grid > .clearfix').remove();
+
+//   $('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
+//   $('#grid-view').removeClass('active');
+//   $('#list-view').addClass('active');
+
+//   localStorage.setItem('display', 'list');
+// });
+
+//   // Product Grid
+//   $('#grid-view').click(function() {
+//     // What a shame bootstrap does not take into account dynamically loaded columns
+//     var cols = $('#column-right, #column-left').length;
+
+//     if (cols == 2) {
+//       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
+//     } else if (cols == 1) {
+//       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12');
+//     } else {
+//       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
+//     }
+
+//     $('#list-view').removeClass('active');
+//     $('#grid-view').addClass('active');
+
+//     localStorage.setItem('display', 'grid');
+//   });
+
+//   if (localStorage.getItem('display') == 'list') {
+//     $('#list-view').trigger('click');
+//     $('#list-view').addClass('active');
+//   } else {
+//     $('#grid-view').trigger('click');
+//     $('#grid-view').addClass('active');
+//   }
+/*================================
+======= catalog viewer end =======
+================================*/
 
 
 

@@ -101,6 +101,7 @@
 .main-slider__content
   position: relative
   color: $f
+  border-radius: 5px
   background-repeat: no-repeat
   background-position: 0 0
   background-size: cover
@@ -153,16 +154,175 @@
   right: 0
   border-radius: 3px 0 0 3px
 
+.info-block
+  margin-top: 30px
 
-
-
+.news-block
+  color: $f
+  padding: 20px 30px
+  border-radius: 3px
+  background-repeat: no-repeat
+  background-position: center 0
+  background-size: cover
+.news-block--main
+  background-image: url(../img/general/news_main_bg.png)
+.news-block__title
+  display: block
+  margin-bottom: 10px
+  padding-top: 12px
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+  font-size: 24px
+  font-weight: 700
+  text-transform: uppercase
  
+.news-block__desc
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+  +lh(20,16)
 
-
-
-
-
+.news-block__btns
+  margin-top: 10px
+  .btn
+    margin-top: 10px
 /* page style end */
+
+
+.product-item
+  position: relative
+  // height: 285px
+  // padding: 20px
+  display: flex
+  border-radius: 3px
+  border: 1px solid #ededed
+  background-color: $f
+
+.product-item__img
+  max-width: 290px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  padding: 20px
+  // background: #000
+  img
+    +object-fit(cover)
+
+.product-item__content
+  padding: 20px
+  padding-left: 0
+
+
+.product-item__actions
+  position: absolute
+  top: 50px
+  left: -7px
+  display: flex
+  flex-direction: column
+
+.actions__item
+  position: relative
+  display: inline-flex
+  width: 70px
+  height: 24px
+  margin-bottom: 10px
+  align-items: center
+  justify-content: center
+  color: $f
+  font-size: 15px
+  font-weight: 700
+  line-height: 1
+  text-transform: uppercase
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 100%
+    
+
+.actions__item--sale
+  background: $or
+  &::before
+    +triangle(topright, 6px, 6px, darken($or,10%))
+.actions__item--new
+  background: #1d67a2
+  &::before
+    +triangle(topright, 6px, 6px, darken(#1d67a2,10%))
+.actions__item--hit
+  background: $def
+  &::before
+    +triangle(topright, 6px, 6px, darken($def,10%))
+
+
+.product-item__info
+  position: absolute
+  top: 0
+  right: 0
+  padding-top: 16px
+  padding-right: 16px
+  font-size: 12px
+  // background: grey
+  .svg
+    +size(14)
+    margin-right: 5px
+.product-item__option
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+
+.product-item__favorite
+  color: $grey
+  cursor: pointer
+  transition: $tr
+  user-select: none
+  .svg
+    fill: $grey
+    transition: $tr
+.product-item__favorite--active
+  color: $or
+  .svg
+    fill: $or
+
+.product-item__status
+  .svg
+    fill: $or
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*media style*/
 @import "media"
