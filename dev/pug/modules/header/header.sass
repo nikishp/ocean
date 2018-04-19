@@ -4,6 +4,10 @@
   background-color: $blue
   +md-block()
     display: none
+
+
+
+
 .top-line__nav
 
 .top-line__list
@@ -16,7 +20,7 @@
       margin-right: 10px
   a 
     display: block
-    padding-right: 15px
+    padding-right: 15px 
     padding-left: 0
     
     margin-right: 10px
@@ -103,6 +107,10 @@
 .header-decor
   width: 25vw
 
+.header__mid.row--middle
+  +md-block()
+    align-items: flex-start
+
 .header-decor--left
   .header-decor__item--top
     .decor__line
@@ -146,10 +154,13 @@
 
 .header__info-block
   display: flex
-
+  // +md-block()
+    flex-direction: column
 .info-block__item
   display: flex
   align-items: center
+  // +md-block()
+    margin-top: 20px
   &:not(:last-child)
     flex-shrink: 0
     margin-right: 30px
@@ -176,13 +187,15 @@
       width: 50px
       cursor: pointer
       background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 29%, #fff 80%)
- 
+      // +md-block()
+        display: none
 .info-block__title
 
 .info-block__desc
   margin-top: 4px
   font-weight: 700
-
+  +md-block()
+    display: flex
 .info-block__phone
   +lg-block()
     display: block
@@ -336,13 +349,17 @@
 
 .specials
   display: flex
-
   color: $f
+  +lg-block()
+    flex-wrap: wrap
 .specials__item
   position: relative
-  // background: #000
+  +lg-block()
+    margin-right: 20px
   &:not(:first-child)
     margin-left: 20px
+    +lg-block()
+      margin-left: 0
   &:not(:last-child)
     &::before
       content: ''

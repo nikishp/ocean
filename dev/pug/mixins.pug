@@ -2,3 +2,19 @@ mixin svg(name,mod)
   - mod = mod || ''
   svg(class="svg svg__" + name + ' ' + mod) 
     use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+
+
+mixin ban()
+  .row.row--banner
+    .col-lg-6
+      .banner__item.banner__item--f
+        .banner__title Консультации и помощь в выборе товаров 
+        .banner__desc - получи информацию из первых рук!
+        a.banner__link.btn.btn--def.btn--orange(href="#") Подробнее
+    .col-lg-6
+      .banner__item.banner__item--s
+        .banner__title Более 17 тысяч товаров в наличии!
+        .banner__desc Возможность поставки под заказ!
+        a.banner__link.btn.btn--def.btn--orange(href="#") Подробнее
+
+

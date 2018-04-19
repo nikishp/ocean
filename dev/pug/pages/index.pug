@@ -31,41 +31,711 @@ block content
             a.btn.btn--def.btn--black(href="#") Все новости
   
 
+
     .row
-      .col-xl-3 .col-xl-3
-      .col-xl-9
-        .row
-          .col-xl-12
-            .product-item
-              .product-item__actions
-                .actions__item.actions__item--sale sale
-                .actions__item.actions__item--new new
-                .actions__item.actions__item--hit hit
-              .product-item__info
-                .product-item__option.product-item__favorite
-                  +svg('heart_fill') 
-                  | В избранное
-                .product-item__option.product-item__status.product-item__status--available
-                  +svg('available') 
-                  | В наличии
-                .product-item__option.product-item__status.product-item__status--unavailable
-                  +svg('cancel') 
-                  | Нет в наличии
-              .product-item__img
-                img(src="img/content/goods_1.png", alt="image")
-              .product-item__content 
-                strong.product-item__title Слаломная лыжа "Freeride"
-                p.product-item__vendor Артикул: <b>155268</b>
-                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
-                p.product-item__produce Производитель: <b>"Zodiac"</b>
-                .product-item__foot
-                  .product-item__price
-                    .product-item__price-cur
-                      b 20 799 
-                      | руб.
-                    .product-item__price-old
-                      b 20 900 
-                      | руб.
-                  .product-item__btn-block 
-                    a.btn.btn--def.btn--orange(href="#") Подробнее
-                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+      .col
+        .info-titles
+          h2.h2 Новинки
+          a.info-titles__link(href="#") Смотреть все товары
+            +svg('right')
+    //- .row
+      .col-xl-12
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+    .row
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_2.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_3.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board 2
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                //- a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+  .store-option
+    .container
+      .row.store-option__content
+        .store-option__item
+          .store-option__img
+            +svg('store_option_1')
+          .store-option__title Возможность покупки в кредит!
+        .store-option__item
+          .store-option__img
+            +svg('store_option_2')
+          .store-option__title Послепродажная поддержка!
+        .store-option__item
+          .store-option__img
+            +svg('store_option_3')
+          .store-option__title Различные варианты доставки и оплаты на выбор! 
+        .store-option__item
+          .store-option__img
+            +svg('store_option_4')
+          .store-option__title Только официальные поставки!
+        .store-option__item
+          .store-option__img
+            +svg('store_option_5')
+          .store-option__title Закажи на сайте - забери в магазине
+
+  .container
+    .row
+      .col
+        .info-titles
+          h2.h2 Хит продаж
+          a.info-titles__link(href="#") Смотреть все товары
+            +svg('right')
+    //- .row
+      .col-xl-12
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+    .row
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_2.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_3.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board 2
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                //- a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+    +ban()
+    .row
+      .col
+        .info-titles
+          h2.h2 Распродажи
+          a.info-titles__link(href="#") Смотреть все товары
+            +svg('right')
+    //- .row
+      .col-xl-12
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+    .row
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_2.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            //- .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            //- .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_3.png", alt="image")
+          .product-item__content 
+            strong.product-item__title FAD Board 2
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                //- a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+      .col-xl-3.col-md-6.layout-col
+        .product-item
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            //- .actions__item.actions__item--new new
+            //- .actions__item.actions__item--hit hit
+          .product-item__info
+            .product-item__option.product-item__favorite
+              +svg('heart_fill') 
+              | В избранное
+            .product-item__option.product-item__status.product-item__status--available
+              +svg('available') 
+              | В наличии
+            //- .product-item__option.product-item__status.product-item__status--unavailable
+              +svg('cancel') 
+              | Нет в наличии
+          .product-item__img
+            img(src="img/content/goods_1.png", alt="image")
+          .product-item__content 
+            strong.product-item__title Слаломная лыжа "Freeride"
+            p.product-item__vendor Артикул: <b>155268</b>
+            p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+            p.product-item__produce Производитель: <b>"Zodiac"</b>
+            .product-item__foot
+              .product-item__price
+                .product-item__price-cur
+                  b 20 799 
+                  | руб.
+                .product-item__price-old
+                  b 20 900 
+                  | руб.
+              .product-item__btn-block 
+                a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+   
+    .row.row--main-about-history
+      .col-lg-6
+        h2.h2 О компании
+        p Компания<b> «МОРЕМАН» </b>через сеть фирменных магазинов, интернет-магазин с возможностью почтовой доставки, а также с помощью более чем 200 компаний — дилеров по всей территории России предлагает разнообразные товары для любителей отдыха и спорта на воде — от парусного или моторного судна до непромокаемой и теплой одежды.
+        p Это надувные лодки<b> Zodiac</b>, подвесные моторы <b>Mercury, Yamaha,</b> вездеходы-амфибии широкого назначения <b>ARGO</b> и <b>СENTAUR</b> (Канада); <br>судовые бензо- и дизель-электрогенераторы <b>KOHLER</b> (США); <br><b>TELEFLEX</b> (США, Англия) — системы дистанционного управления судами и двигателями; 
+        p <b>QUICK, CEREDI, OSCULATI, MATROMARINE</b> (Италия), <b>LEWMAR</b> (Англия) и другие фирмы, всего около 50 поставщиков — разнообразное судовое оборудование; <br><b>H.O.Sport, HYPERLITE</b> (США) — водные лыжи, вэйкборды, книборды; <br><b>INTERNATIONAL</b> (Англия), <b>StarBrite</b> (США) — лакокрасочные покрытия и средства ухода для судов; 
+        p <b>GO-TOP, JEANTEX</b> (Германия) — непромокаемая одежда для яхтсменов; <br>DUBARRY (Ирландия) — обувь для яхтинга, трейлеров для катеров и яхт московского завода МЗСА, а также товары многих других всемирно известных производителей.
+        p 
+          a.btn.btn--def.btn--orange(href="#") Подробнее
+      .col-lg-6
+        h2.h2 Просмотренные товары
+        .viewed
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_1.jpg", alt="image")
+            span.viewed__title Трюмная помпа<br> ТМС 450
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_2.jpg", alt="image")
+            span.viewed__title Разъем для подключения  приборов «Мореман»
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_3.jpg", alt="image")
+            span.viewed__title Сиденья с виниловыми  подушками
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_4.jpg", alt="image")
+            span.viewed__title Столик скреплением к релингу, 515x358 мм
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_1.jpg", alt="image")
+            span.viewed__title Трюмная помпа<br> ТМС 450
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_2.jpg", alt="image")
+            span.viewed__title Разъем для подключения  приборов «Мореман»
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_3.jpg", alt="image")
+            span.viewed__title Сиденья с виниловыми  подушками
+          a.viewed__item(href="#")
+            span.viewed__img
+              img(src="img/general/viewed_4.jpg", alt="image")
+            span.viewed__title Столик скреплением к релингу, 515x358 мм
+
+    .row
+      .col
+        h2.h2 Поиск магазина рядом
+        script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+        .map__wrapper
+          .map__input
+            input(type="text", name="map input" placeholder="Ваш город")
+          a.map__point(href="#")
+            +svg('location')
+          #YMapsID(class='map', style='width: 100%; height: 350px;')
+        script.
+          var myMap;
+          ymaps.ready(function () {
+          myMap = new ymaps.Map("YMapsID", {
+          center: [56.342436, 43.941972],
+          zoom: 17,
+          controls: []
+          });
+          var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          }, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/general/map_point.png',
+          iconImageSize: [30, 42],
+          iconImageOffset: [-5, -38]
+          })
+          myMap.geoObjects.add(myPlacemark); // Размещение геообъекта на карте.
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 
