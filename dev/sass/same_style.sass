@@ -271,6 +271,21 @@ button[type='submit']
 
 
 
+.breadcrumb
+  display: flex
+  padding-top: 25px
+  color: $def
+  font-size: 14px
+
+  li
+    padding-right: 20px
+    &:not(:last-child)
+      &::after
+        content: '/'
+        color: $or
+  a
+    display: inline-block
+    padding-right: 20px
 
 
 
@@ -278,28 +293,50 @@ button[type='submit']
 
 
 
+.goods-slider
+
+.goods-slider__container
+
+.goods-slider__item,.goods-slider-nav__item
+  position: relative
+  background-repeat: no-repeat
+  background-position: center 0
+  background-size: cover
+  border-radius: 3px
+.goods-slider__height
+  padding-top: 68%
+
+
+.goods-slider-nav
+  // margin-left: -10px
+  // margin-right: -10px
+.goods-slider-nav__item-wrap
+
+.goods-slider-nav__item
+  margin-left: 10px
+  margin-right: 10px
+.goods-slider-nav__height
+  padding-top: 63%
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.goods-slider-controll
+  position: absolute
+  top: 0
+  bottom: 0
+  z-index: 10
+  width: 30px
+  background: rgba(255, 255, 255, 0.6)
+  svg
+    +size(11)
+    fill: $def
+    +absolute-center()
+  &--prev
+    left: 0
+    border-radius: 3px 0 0 3px;
+  &--next
+    right: 0
+    border-radius: 0 3px 3px 0;
 
 
 

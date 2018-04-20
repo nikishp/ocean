@@ -17,4 +17,10 @@ mixin ban()
         .banner__desc Возможность поставки под заказ!
         a.banner__link.btn.btn--def.btn--orange(href="#") Подробнее
 
-
+mixin bread_crumbs(mod)
+  - mod = mod || ''
+  ul(class="breadcrumb" + ' ' + mod)
+    li
+      a(href="#") Главная страница
+    li
+      a(href="#") Страница товара

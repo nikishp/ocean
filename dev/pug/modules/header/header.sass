@@ -106,6 +106,24 @@
     flex-shrink: 0
 .header-decor
   width: 25vw
+  +md-block()
+    position: absolute
+    top: 10px
+    width: 50vw
+  +xxs-block()
+    // width: 45vw
+.header-decor--left
+  +md-block()
+    left: -45vw
+  +xxs-block()
+    padding-left: 30px
+.header-decor--right
+  +md-block()
+    right: 0
+  +xxs-block()
+    padding-left: 30px
+
+
 
 .header__mid.row--middle
   +md-block()
@@ -154,12 +172,12 @@
 
 .header__info-block
   display: flex
-  // +md-block()
+  +md-block()
     flex-direction: column
 .info-block__item
   display: flex
   align-items: center
-  // +md-block()
+  +md-block()
     margin-top: 20px
   &:not(:last-child)
     flex-shrink: 0
@@ -171,7 +189,6 @@
     margin-right: 15px
     fill: $blue2
 .info-block__item--mask
-  
   overflow: hidden
   .info-block__desc
     position: relative
@@ -187,7 +204,7 @@
       width: 50px
       cursor: pointer
       background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 29%, #fff 80%)
-      // +md-block()
+      +md-block()
         display: none
 .info-block__title
 
