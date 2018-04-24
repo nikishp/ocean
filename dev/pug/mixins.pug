@@ -23,4 +23,281 @@ mixin bread_crumbs(mod)
     li
       a(href="#") Главная страница
     li
-      a(href="#") Страница товара
+      a(href="#") #{title}
+
+
+
+mixin social(mod)
+  - mod = mod || ''
+  ul(class="social" + ' ' + mod)
+    li.social__item.social__item--vk
+      a.social__link(href="#")
+        +svg('s_vk')
+    li.social__item.social__item--fc
+      a.social__link(href="#")
+        +svg('s_fc')
+    li.social__item.social__item--od
+      a.social__link(href="#")
+        +svg('s_od')
+    li.social__item.social__item--gp
+      a.social__link(href="#")
+        +svg('s_gp')
+    li.social__item.social__item--tw
+      a.social__link(href="#")
+        +svg('s_tw')
+    li.social__item.social__item--tg
+      a.social__link(href="#")
+        +svg('s_tg')
+
+
+mixin social2(mod)
+  - mod = mod || ''
+  ul(class="social" + ' ' + mod)
+    li.social__item.social__item--status
+      //- .product-item__option.product-item__option--status.product-item__option--status-available
+        +svg('available') 
+        | В наличии
+      .product-item__option.product-item__option--status.product-item__option--status-unavailable
+        +svg('cancel') 
+        | Нет в наличии
+    li.social__item.social__item--vk
+      a.social__link(href="#")
+        +svg('s_vk')
+    li.social__item.social__item--fc
+      a.social__link(href="#")
+        +svg('s_fc')
+    li.social__item.social__item--od
+      a.social__link(href="#")
+        +svg('s_od')
+    li.social__item.social__item--gp
+      a.social__link(href="#")
+        +svg('s_gp')
+    li.social__item.social__item--tw
+      a.social__link(href="#")
+        +svg('s_tw')
+    li.social__item.social__item--tg
+      a.social__link(href="#")
+        +svg('s_tg')
+
+
+
+mixin relative_slide(mod)
+  - mod = mod || ''
+  div(class="relative-slider" + ' ' + mod)
+    //- .container
+    .row
+      .col
+        .info-titles
+          h2.h2 #{relative_title}
+          a.info-titles__link(href="#") Смотреть все товары
+            +svg('right')
+        .relative-slider__slider
+          .relative-slider__item            
+            .layout-col
+              .product-item
+                .product-item__actions
+                  //- .actions__item.actions__item--sale sale
+                  .actions__item.actions__item--new new
+                  //- .actions__item.actions__item--hit hit
+                .product-item__info
+                  .product-item__option.product-item__option--favorite
+                    +svg('heart_fill') 
+                    | В избранное
+                  //- .product-item__option.product-item__option--status.product-item__option--status-available
+                    +svg('available') 
+                    | В наличии
+                  .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                    +svg('cancel') 
+                    | Нет в наличии
+                .product-item__img
+                  img(src="img/content/goods_2.png", alt="image")
+                .product-item__content 
+                  strong.product-item__title FAD Board
+                  p.product-item__vendor Артикул: <b>155268</b>
+                  p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+                  p.product-item__produce Производитель: <b>"Zodiac"</b>
+                  .product-item__foot
+                    .product-item__price
+                      .product-item__price-cur
+                        b 20 799 
+                        | руб.
+                      .product-item__price-old
+                        b 20 900 
+                        | руб.
+                    .product-item__btn-block 
+                      a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                      a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+          .relative-slider__item            
+            .layout-col
+              .product-item
+                .product-item__actions
+                  //- .actions__item.actions__item--sale sale
+                  .actions__item.actions__item--new new
+                  //- .actions__item.actions__item--hit hit
+                .product-item__info
+                  .product-item__option.product-item__option--favorite
+                    +svg('heart_fill') 
+                    | В избранное
+                  //- .product-item__option.product-item__option--status.product-item__option--status-available
+                    +svg('available') 
+                    | В наличии
+                  .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                    +svg('cancel') 
+                    | Нет в наличии
+                .product-item__img
+                  img(src="img/content/goods_2.png", alt="image")
+                .product-item__content 
+                  strong.product-item__title FAD Board
+                  p.product-item__vendor Артикул: <b>155268</b>
+                  p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+                  p.product-item__produce Производитель: <b>"Zodiac"</b>
+                  .product-item__foot
+                    .product-item__price
+                      .product-item__price-cur
+                        b 20 799 
+                        | руб.
+                      .product-item__price-old
+                        b 20 900 
+                        | руб.
+                    .product-item__btn-block 
+                      a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                      a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+          .relative-slider__item            
+            .layout-col
+              .product-item
+                .product-item__actions
+                  //- .actions__item.actions__item--sale sale
+                  .actions__item.actions__item--new new
+                  //- .actions__item.actions__item--hit hit
+                .product-item__info
+                  .product-item__option.product-item__option--favorite
+                    +svg('heart_fill') 
+                    | В избранное
+                  //- .product-item__option.product-item__option--status.product-item__option--status-available
+                    +svg('available') 
+                    | В наличии
+                  .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                    +svg('cancel') 
+                    | Нет в наличии
+                .product-item__img
+                  img(src="img/content/goods_2.png", alt="image")
+                .product-item__content 
+                  strong.product-item__title FAD Board
+                  p.product-item__vendor Артикул: <b>155268</b>
+                  p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+                  p.product-item__produce Производитель: <b>"Zodiac"</b>
+                  .product-item__foot
+                    .product-item__price
+                      .product-item__price-cur
+                        b 20 799 
+                        | руб.
+                      .product-item__price-old
+                        b 20 900 
+                        | руб.
+                    .product-item__btn-block 
+                      a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                      a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+          .relative-slider__item            
+            .layout-col
+              .product-item
+                .product-item__actions
+                  //- .actions__item.actions__item--sale sale
+                  .actions__item.actions__item--new new
+                  //- .actions__item.actions__item--hit hit
+                .product-item__info
+                  .product-item__option.product-item__option--favorite
+                    +svg('heart_fill') 
+                    | В избранное
+                  //- .product-item__option.product-item__option--status.product-item__option--status-available
+                    +svg('available') 
+                    | В наличии
+                  .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                    +svg('cancel') 
+                    | Нет в наличии
+                .product-item__img
+                  img(src="img/content/goods_2.png", alt="image")
+                .product-item__content 
+                  strong.product-item__title FAD Board
+                  p.product-item__vendor Артикул: <b>155268</b>
+                  p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+                  p.product-item__produce Производитель: <b>"Zodiac"</b>
+                  .product-item__foot
+                    .product-item__price
+                      .product-item__price-cur
+                        b 20 799 
+                        | руб.
+                      .product-item__price-old
+                        b 20 900 
+                        | руб.
+                    .product-item__btn-block 
+                      a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                      a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+          .relative-slider__item            
+            .layout-col
+              .product-item
+                .product-item__actions
+                  //- .actions__item.actions__item--sale sale
+                  .actions__item.actions__item--new new
+                  //- .actions__item.actions__item--hit hit
+                .product-item__info
+                  .product-item__option.product-item__option--favorite
+                    +svg('heart_fill') 
+                    | В избранное
+                  //- .product-item__option.product-item__option--status.product-item__option--status-available
+                    +svg('available') 
+                    | В наличии
+                  .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                    +svg('cancel') 
+                    | Нет в наличии
+                .product-item__img
+                  img(src="img/content/goods_2.png", alt="image")
+                .product-item__content 
+                  strong.product-item__title FAD Board
+                  p.product-item__vendor Артикул: <b>155268</b>
+                  p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна
+                  p.product-item__produce Производитель: <b>"Zodiac"</b>
+                  .product-item__foot
+                    .product-item__price
+                      .product-item__price-cur
+                        b 20 799 
+                        | руб.
+                      .product-item__price-old
+                        b 20 900 
+                        | руб.
+                    .product-item__btn-block 
+                      a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                      a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+
+
+mixin pagination(mod)
+  - mod = mod || ''
+  nav.pagination
+    .pagination__controll
+      a.pagination__controll-link.pagination__controll-link--prev(href="#")
+        +svg('left')
+        | Назад
+      a.pagination__controll-link.pagination__controll-link--next(href="#")
+        | Вперед  
+        +svg('right')
+    ul(class="pagination__list" + ' ' + mod)
+      li.active
+        a(href='#') 1
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') 4
+      li
+        a(href='#') 5
+      li
+        a(href='#') 6
+
+
+

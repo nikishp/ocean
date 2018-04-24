@@ -10,12 +10,12 @@ module.exports = function() {
 
     //magnific-popup
     //http://dimsemenov.com/plugins/magnific-popup/
-    'dev/libs/magnific-popup/dist/jquery.magnific-popup.js',
+    // 'dev/libs/magnific-popup/dist/jquery.magnific-popup.js',
     //'node_modules/magnific-popup/dist/jquery.magnific-popup.js', 
 
     //fancybox 3
     // https://fancyapps.com/fancybox/3/
-    // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 
     //zoom
     //'dev/libs/zoom-master/jquery.zoom.js',

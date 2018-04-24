@@ -69,7 +69,7 @@ mixin header(name)
                   .info-block__desc
                     a.info-block__phone(href="tel:88001006673") 8 800 100 66 73,  
                     a.info-block__phone(href="tel:88001006673") 8 800 100 66 73
-                  a.info-block__popup.popup-js(href="#recall"): span Заказать обратный звонок
+                  a.info-block__popup(data-fancybox, href="#recall"): span Заказать обратный звонок
               .info-block__item
                 .info-block__ico
                   +svg('clock')
@@ -126,7 +126,7 @@ mixin header(name)
     .nav-block
       .container
         .row.row--nav-block
-          .col-lg-3 
+          .col-lg-3.col--hf.mob-info
             .catalog-btn
               svg.catalog-btn__decor(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100', preserveaspectratio='none')
                 polygon(points='0,0 100,0 92,100 0,100')
@@ -137,7 +137,62 @@ mixin header(name)
                       span.hamburger-inner
                 .catalog-btn__title Каталог товаров
                   +svg('down')
-          .col-lg-6 
+            .user__block
+              a.user__item.user__item--uthorization(href="#")
+                span.user__logo
+                  span.user__count(href="#") 25
+                  +svg('user')
+                span.user__text Авторизация
+              a.user__item.user__item--login(href="#") 
+                span.user__logo
+                  span.user__count(href="#") 25
+                  +svg('user')
+                span.user__text Личный кабинет 
+                  span.user__text-name Иванов Иван
+        
+            .buy-info__block
+              a.buy-info.buy-info--favorites(href="#")
+                span.buy-info__count 30
+                span.buy-info__ico
+                  +svg('heart')
+                span.buy-info__title Избранное
+              a.buy-info.buy-info--basket(href="#")
+                span.buy-info__count 30
+                span.buy-info__ico
+                  +svg('cart')
+                span.buy-info__title Корзина
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          .col-lg-6.col--hm 
             ul.specials
               li.specials__item
                 a.specials__link(href="#")
@@ -155,7 +210,16 @@ mixin header(name)
                 a.specials__link(href="#")
                   +svg('users')
                   | Покупателю
-          .col-lg-3 
+            .user
+              .user__info
+                a.user__info-btn.btn.btn--def.btn--white.btn--fluid(href="#")
+                  +svg('package')
+                  | Что с моим заказом?
+                a.user__info-btn.btn.btn--def.btn--white.btn--fluid(href="#")
+                  +svg('help_circle')
+                  | Помощь
+
+          .col-lg-3.col--hl 
             form(action="#").search
               .search__item 
                 input.search__input(type="search", placeholder="Поиск по товарам")

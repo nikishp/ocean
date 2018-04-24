@@ -276,9 +276,12 @@ button[type='submit']
   padding-top: 25px
   color: $def
   font-size: 14px
-
+  +sm-block()
+    flex-wrap: wrap
   li
     padding-right: 20px
+    +sm-block()
+      padding-right: 10px
     &:not(:last-child)
       &::after
         content: '/'
@@ -286,7 +289,8 @@ button[type='submit']
   a
     display: inline-block
     padding-right: 20px
-
+    +sm-block()
+      padding-right: 10px
 
 
 
@@ -294,7 +298,48 @@ button[type='submit']
 
 
 .goods-slider
-
+  position: relative
+  .product-item__info
+    left: 10px
+    top: 10px
+    right: auto
+    z-index: 10
+    padding-top: 16px;
+    padding-right: 16px;
+    padding: 10px 15px
+    color: $f
+    border-radius: 3px
+    background-color: rgba(15, 63, 101, 0.7)
+    .svg
+      fill: $f
+    .product-item__option--favorite
+      color: inherit
+      user-select: none
+      margin-bottom: 0
+  .product-item__actions
+    top: 10px
+    left: auto
+    right: -6px
+    z-index: 10
+  .actions__item
+    &::before
+      content: ''
+      position: absolute
+      left: auto
+      right: 0
+      top: 100%
+  .actions__item--sale
+    background: $or
+    &::before
+      +triangle(topleft, 6px, 6px, darken($or,10%))
+  .actions__item--new
+    background: #1d67a2
+    &::before
+      +triangle(topleft, 6px, 6px, darken(#1d67a2,10%))
+  .actions__item--hit
+    background: $def
+    &::before
+      +triangle(topleft, 6px, 6px, darken($def,10%))
 .goods-slider__container
 
 .goods-slider__item,.goods-slider-nav__item
@@ -305,16 +350,31 @@ button[type='submit']
   border-radius: 3px
 .goods-slider__height
   padding-top: 68%
+.goods-slider__item
 
 
 .goods-slider-nav
-  // margin-left: -10px
-  // margin-right: -10px
+  margin-top: 20px
+  .goods-slider-controll
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 10
+    width: 30px
+    height: auto
+    border-radius: 0
+    background: rgba(255, 255, 255, 0.6)
+    transform: none
+  .goods-slider-controll--prev
+    // left: 10px
+  .goods-slider-controll--next
+    // right: 10px
 .goods-slider-nav__item-wrap
-
-.goods-slider-nav__item
   margin-left: 10px
   margin-right: 10px
+  // padding-left: 10px
+  // padding-right: 10px
+
 .goods-slider-nav__height
   padding-top: 63%
 
@@ -322,11 +382,16 @@ button[type='submit']
 
 .goods-slider-controll
   position: absolute
-  top: 0
+  top: 50%
   bottom: 0
   z-index: 10
   width: 30px
-  background: rgba(255, 255, 255, 0.6)
+  height: 30px
+  cursor: pointer
+  border-radius: 3px 0 0 3px
+  background-color: #ededed
+  // background: rgba(255, 255, 255, 0.6)
+  transform: translateY(-50%)
   svg
     +size(11)
     fill: $def
@@ -337,6 +402,307 @@ button[type='submit']
   &--next
     right: 0
     border-radius: 0 3px 3px 0;
+
+
+
+.tabs__content 
+  display: none
+.tabs__list-item
+  cursor: pointer
+.tabs__content.active-tab
+  display: block
+
+
+
+
+.goods-char--char
+  margin-top: 40px
+  border-top: 1px solid #ededed
+
+.h3--card
+  display: flex
+  align-items: center
+  justify-content: space-between
+.all-char
+  display: inline-flex
+  align-items: center
+  color: $grey
+  font-size: 14px
+  font-weight: 400
+  line-height: 1
+  transition: $tr
+  +xs-block()
+    display: none
+  .svg
+    +size(15)
+    margin-right: 8px
+    fill: $grey
+    transition: $tr
+  &:hover
+    color: $or
+    .svg
+      fill: $or
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 23px
+  border-radius: 3px
+  background-image: url(../img/general/bg.png)
+  .svg
+    +size(25)
+
+
+.social__item
+  margin: 0 5px
+.social__link
+  display: block
+  font-size: 0
+  background: #fff
+.social__item--vk
+  .svg
+    fill: #4c6997
+.social__item--fc
+  .svg
+    fill: #454f91
+.social__item--od
+  .svg
+    fill: #e77529
+.social__item--gp
+  .svg
+    fill: #d85042
+.social__item--tw
+  .svg
+    fill: #2da0e9
+.social__item--tg
+  .svg
+    fill: #669dd7
+
+
+/*===========================
+  ======responsive table======
+  ===========================*/
+.table--card
+  width: 100%
+  table-layout: fixed
+  // padding-left: 40px
+  // padding-right: 40px
+  font-size: 15px
+  border-spacing: 0
+  border: 1px solid #f9f9f9
+  .available
+    color: $or
+  .table__row-title
+    padding-left: 40px
+    padding-right: 40px
+    th
+      padding: 15px 0
+      text-align: left
+      font-size: 18px
+      font-weight: 700
+      line-height: 1.1
+      &:nth-child(1)
+        width: 50%
+        padding-left: 40px
+        +sm-block()
+          width: 100%
+          text-align: left
+      &:nth-child(2)
+        width: 25%
+        text-align: center
+        +sm-block()
+          width: 100%
+          text-align: left
+      &:nth-child(3)
+        width: 25%
+        padding-right: 40px
+        text-align: right
+        +sm-block()
+          width: 100%
+          text-align: left
+    +sm-block()
+      display: none
+  .table__row-content
+    font-size: 14px
+    a
+      display: flex
+      align-items: center
+      color: $or
+      span
+        border-bottom: 1px solid
+    .svg
+      +size(10,14)
+      margin-right: 5px
+      fill: $or
+    &:nth-child(even)
+      background: #f9f9f9
+    +sm-block()
+      display: block
+      margin-bottom: 20px
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+  .table__td
+    padding: 15px 0
+    &:nth-child(1)
+      padding-left: 40px
+      +sm-block()
+        width: 100%
+        padding-left: 15px
+        padding-right: 15px
+        padding-top: 15px
+        text-align: left
+    &:nth-child(2)
+      text-align: center
+      +sm-block()
+        width: 100%
+        padding-left: 15px
+        padding-right: 15px
+        text-align: left
+    &:nth-child(3)
+      padding-right: 40px
+      +sm-block()
+        width: 100%
+        padding-left: 15px
+        padding-right: 15px
+        text-align: left
+      text-align: right
+
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+    +sm-block()
+      display: block
+      display: flex
+      // margin-bottom: 20px
+      padding: 0
+      padding-bottom: 15px
+      border-bottom: none
+    &::before
+      content: attr(data-title)": "
+      display: none
+      margin-bottom: 5px
+      font-size: 14px
+      font-weight: bold
+      +sm-block()
+        display: block
+        min-width: 110px
+        word-break: break-word
+        // background: red
+        // display: inline-block
+        // float: left
+
+/*===========================
+  ====responsive table end====
+  ===========================*/
+
+
+
+.pagination
+  position: relative
+  max-width: 400px
+  width: 100%
+  margin-top: 40px
+  margin-bottom: 40px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 60px
+  line-height: 1
+  // background: rgba(0,0,0,0.2)
+  +xsl-block()
+    padding: 0 14px
+.pagination__controll-link
+  position: absolute
+  top: 50%
+  display: flex
+  align-items: center
+  transform: translateY(-50%)
+  transition: $tr
+  // background: #000
+  +xsl-block()
+    font-size: 0
+
+  &:hover
+    color: $or
+    .svg
+      fill: $or
+  .svg
+    // +size()
+    width: 6px
+    height: 10px
+    fill: #383737
+    transition: $tr
+    +xsl-block()
+      +size(12)
+.pagination__controll-link--prev
+  left: 0
+  .svg
+    margin-right: 5px
+.pagination__controll-link--next
+  right: 0
+  .svg
+    margin-left: 5px
+
+.pagination__list
+  display: flex
+  justify-content: space-between
+  li
+    margin: 0 4px
+    +xxs-block()
+      // margin: 0 8px
+  .active
+    a
+      color: #fff
+      background: $or
+  a
+    display: flex
+    +size(36)
+    justify-content: center
+    align-items: center
+    border-radius: 3px
+    border: 2px solid transparent
+    transition: $tr
+    // background: $or
+    +xxs-block()
+      +size(30)
+    &:hover
+      border-color: $or
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,450 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Страница товара'
+  - var bodyClass = ''
+block content
+  .container
+    .row
+      .col
+        +bread_crumbs()
+    .row
+      .col
+        .info-titles
+          h2.h2 Страница товара
+          a.info-titles__btn-link(href="#")
+            +svg('faq')
+            | Задать вопрос по товару
+
+    .row
+      .col-lg-7
+        .goods-slider
+          .product-item__info
+            .product-item__option.product-item__option--favorite
+              +svg('heart_fill') 
+              | В избранное
+          .product-item__actions
+            .actions__item.actions__item--sale sale
+            .actions__item.actions__item--new new
+            .actions__item.actions__item--hit hit
+          .goods-slider__container
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_1.jpg)")
+
+              .goods-slider__height
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_2.jpg)")
+        
+              .goods-slider__height
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_3.jpg)")
+         
+              .goods-slider__height
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_4.jpg)")
+           
+              .goods-slider__height
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_5.jpg)")
+        
+              .goods-slider__height
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_6.jpg)")
+       
+              .goods-slider__height
+        .goods-slider-nav
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_1.jpg)")
+              .goods-slider-nav__height
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_2.jpg)")
+              .goods-slider-nav__height
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_3.jpg)")
+              .goods-slider-nav__height
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_4.jpg)")
+              .goods-slider-nav__height
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_5.jpg)")
+              .goods-slider-nav__height
+          .goods-slider-nav__item-wrap
+            .goods-slider-nav__item(style="background-image: url(img/content/boat/boat_6.jpg)")
+              .goods-slider-nav__height
+
+      .col-lg-5
+        h2.h2.h2--card Слаломная лыжа "Freeride"
+        .card__info
+          .card__info-header
+            .card__info-desc
+              p Производитель: <b>“Zodiac”</b>
+              p.product-item__vendor Артикул: <b>155268</b>
+            .product-item__price
+              .product-item__price-cur
+                b 20 799 
+                | руб.
+              .product-item__price-old
+                b 20 900 
+                | руб.
+          .card__info-footer
+            .card__info-footer-btn
+              a.btn.btn--def.btn--black(href="#") Добавить в избранное
+              a.btn.btn--def.btn--orange(href="#") Заказать товар
+            a.info-titles__btn-link.info-titles__btn-link--card-footer(href="#")
+              +svg('faq')
+              | Задать вопрос по товару
+        +social2('social--card')
+        h3.h3 Краткое описание
+        p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения новых предложений. С другой стороны начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки соответствующий условий активизации. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений. Равным образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+
+      .col-lg-12
+        .tabs.tabs--goods
+          ul.tabs__list
+            li.tabs__list-item.active-tab Описание
+            li.tabs__list-item Справочная информация
+            li.tabs__list-item Спецификация
+            li.tabs__list-item Наличие в магазинах
+          .tabs__content.active-tab
+            h2.h2 Описание
+            p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения новых предложений. С другой стороны начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки соответствующий условий активизации. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений. Равным образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+            p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения новых предложений. С другой стороны начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки соответствующий условий активизации. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений. Равным образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+            .goods-char.goods-char--char
+              h3.h3.h3--card Характеристики
+                a.all-char(href="#") 
+                  +svg('eye') 
+                  | Смотреть все характеристики
+              table.goods-char__table(cellspacing="0", cellpadding="0")
+                tr.goods-char__row
+                  td.goods-char__col Цвет
+                  td.goods-char__col: b Серебристый
+                tr.goods-char__row
+                  td.goods-char__col Индикация температуры
+                  td.goods-char__col: b Да 
+                tr.goods-char__row
+                  td.goods-char__col Количество дверей
+                  td.goods-char__col: b 2 
+                tr.goods-char__row
+                  td.goods-char__col Тип управления
+                  td.goods-char__col: b электронное
+                tr.goods-char__row
+                  td.goods-char__col Водонепроницаемость
+                  td.goods-char__col: b Есть
+          .tabs__content
+            h2.h2 Справочная информация
+            p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения новых предложений. С другой стороны начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки соответствующий условий активизации. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений. Равным образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+            p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения новых предложений. С другой стороны начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки соответствующий условий активизации. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений. Равным образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.          
+          .tabs__content
+            h2.h2 Спецификация
+            .row
+              .col-lg-6
+                .goods-char
+                  h3.h3 Характеристики дизайна
+                  table.goods-char__table(cellspacing="0", cellpadding="0")
+                    tr.goods-char__row
+                      td.goods-char__col Цвет
+                      td.goods-char__col: b Серебристый
+                    tr.goods-char__row
+                      td.goods-char__col Индикация температуры
+                      td.goods-char__col: b Да 
+                    tr.goods-char__row
+                      td.goods-char__col Количество дверей
+                      td.goods-char__col: b 2 
+                    tr.goods-char__row
+                      td.goods-char__col Тип управления
+                      td.goods-char__col: b электронное
+                    tr.goods-char__row
+                      td.goods-char__col Водонепроницаемость
+                      td.goods-char__col: b Есть
+                .goods-char
+                  h3.h3 Вес и габариты
+                  table.goods-char__table(cellspacing="0", cellpadding="0")
+                    tr.goods-char__row
+                      td.goods-char__col Общий объем
+                      td.goods-char__col: b 517
+                    tr.goods-char__row
+                      td.goods-char__col Объем холодильной камеры
+                      td.goods-char__col: b 340 
+                    tr.goods-char__row
+                      td.goods-char__col Объем нулевой камеры
+                      td.goods-char__col: b 0 
+                    tr.goods-char__row
+                      td.goods-char__col Ширина
+                      td.goods-char__col: b 90
+                    tr.goods-char__row
+                      td.goods-char__col Глубина
+                      td.goods-char__col: b 70
+              .col-lg-6
+                .goods-char
+                  h3.h3 Характеристики дизайна
+                  table.goods-char__table(cellspacing="0", cellpadding="0")
+                    tr.goods-char__row
+                      td.goods-char__col Цвет
+                      td.goods-char__col: b Серебристый
+                    tr.goods-char__row
+                      td.goods-char__col Индикация температуры
+                      td.goods-char__col: b Да 
+                    tr.goods-char__row
+                      td.goods-char__col Количество дверей
+                      td.goods-char__col: b 2 
+                    tr.goods-char__row
+                      td.goods-char__col Тип управления
+                      td.goods-char__col: b электронное
+                    tr.goods-char__row
+                      td.goods-char__col Водонепроницаемость
+                      td.goods-char__col: b Есть
+                    tr.goods-char__row
+                      td.goods-char__col Цвет
+                      td.goods-char__col: b Серебристый
+                    tr.goods-char__row
+                      td.goods-char__col Индикация температуры
+                      td.goods-char__col: b Да 
+                    tr.goods-char__row
+                      td.goods-char__col Количество дверей
+                      td.goods-char__col: b 2 
+                    tr.goods-char__row
+                      td.goods-char__col Тип управления
+                      td.goods-char__col: b электронное
+                    tr.goods-char__row
+                      td.goods-char__col Водонепроницаемость
+                      td.goods-char__col: b Есть
+                    tr.goods-char__row
+                      td.goods-char__col Водонепроницаемость
+                      td.goods-char__col: b Есть
+          .tabs__content
+            h2.h2 Наличие в магазинах
+            table.table.table--card
+              tr.table__row-title
+                th Адрес
+                th Режим работы
+                th Наличие
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .unavailable Нету в наличии 
+              tr.table__row-content
+                td(data-title="Адрес").table__td
+                  .table__td-content
+                    | г.Москва, просп. Московский, 21 
+                    a.popup-iframe(href='https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393')
+                      +svg('location')
+                      span Смотреть на карте
+                td(data-title="Режим работы").table__td 
+                  .table__td-content 10:00-21:00 
+                td(data-title="Наличие").table__td 
+                  .table__td-content 
+                    .available В наличии 
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -var relative_title = 'С этим товаром покупают';
+    +relative_slide()
+    +ban()
+    -var relative_title = 'просмотренные товары';
+    +relative_slide()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 
