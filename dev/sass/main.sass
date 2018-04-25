@@ -1001,14 +1001,150 @@
   line-height: 20px
 
 
-.news__btn
+
+.tabs--basket
+  .tabs__content
+    margin-bottom: 0
 
 
 
 
 
+.basket__table
+  font-size: 14px
+  +md-block()
+    // display: block
+  .goods-char__row
+
+  .goods-char__row--head
+    font-size: 17px
+    +md-block()
+      display: none
+
+  .goods-char__col
+    padding: 1.2%
+    +md-block()
+      // display: block 
+      display: inline-block
+      width: 100%
+      width: auto 
+      // order: 7
+      padding: 10px
+      // float: left
+    &:nth-child(1)
+      width: 5%
+      +md-block()
+        width: 40px
+    &:nth-child(2)
+      width: 9%
+      +md-block()
+        width: 80px
+    &:nth-child(3)
+      width: 30%
+      +md-block()
+      +xs-block()
+        width: calc(100% - 120px)
+      +xxs-block()
+        width: 100%
+        padding-left: 48px
+    &:nth-child(4)
+      +md-block()
+        display: none
+    &:nth-child(5)
+      +md-block()
+        // width: auto
+        width: 120px
+      +xs-block()
+        margin-left: 39px
+    &:nth-child(6)
+      // background: red
+      // text-align: center
+    &:nth-child(7)
+      width: 195px
+      text-align: right
+      +md-block()
+        width: 100%
+        text-align: left
+        padding-left: 48px
 
 
+
+
+
+.basket__table-close
+  .svg
+    fill: $or
+    +size(15)
+
+
+.basket__table-img
+  max-width: 60px
+  width: 100%
+  height: 35px
+  font-size: 0
+  +md-block()
+    height: auto
+  img
+    width: 100%
+    height: 100%
+    +object-fit(cover)
+    +md-block()
+      width: auto
+      height: auto
+
+
+.basket__sum
+  margin-top: 30px
+  padding-bottom: 10px
+  text-align: right
+  font-size: 18px
+  font-weight: 700
+  text-transform: uppercase
+  border-bottom: 1px solid #f9f9f9
+.basket__sum-item
+  margin-bottom: 10px 
+
+
+
+.basket__discount
+  max-width: 750px
+  padding: 35px 0
+  line-height: 20px
+.basket__discount-link
+  color: $or
+  text-decoration: underline
+  &:hover
+    color: $or
+
+
+.basket__discount-form
+  display: flex
+  align-items: center 
+  margin-top: 20px
+  +xsl-block()
+    flex-direction: column
+  .form__item
+    &:first-child
+      max-width: 274px
+      width: 100%
+      margin-right: 40px
+      +xsl-block()
+        margin-right: 0
+        margin-bottom: 10px
+
+.basket__btns
+  padding-top: 30px
+  text-align: right
+  border-top: 1px solid #f9f9f9
+  .btn
+    margin-left: 20px
+  +xsl-block()
+    display: flex
+    justify-content: center
+    text-align: center
+    .btn
+      margin: 0 5px
+      font-size: 12px
 
 
 

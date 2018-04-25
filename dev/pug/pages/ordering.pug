@@ -1,0 +1,74 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Оформление заказа'
+  - var bodyClass = ''
+block content
+  .container
+    .row
+      .col
+        +bread_crumbs()
+    .row
+      .col-lg-12
+        h2.h2 Оформление заказа
+    form.form.form--ordering(action="#")
+      .row
+        .col-lg-6
+          h3.h3 Авторизация
+          +form_item('mail', 'mail', 'mail', "Ваш e-mail")
+          +form_item('pass', 'password', 'pass', "Пароль")
+        .col-lg-6 
+          h3.h3 Выберите способ доставки
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 

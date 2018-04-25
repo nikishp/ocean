@@ -123,11 +123,16 @@ h1,h2,h3,h4,h5,h6
   background: lightgrey
   transition: $tr
   line-height: 1
-
+  border-radius: 3px
 .btn--def
   height: 30px
   width: 127px
-  border-radius: 3px
+.btn--def-sm
+  height: 25px
+.btn--def-lg
+  height: 35px
+.btn--big
+  width: 165px
 .btn--fluid
   width: auto
   min-width: 0
@@ -679,18 +684,42 @@ button[type='submit']
       border-color: $or
 
 
+.increment-field
+  display: flex
+  align-items: center
 
 
+.increment-field__btn
+  position: relative
+  width: 20px
+  height: 20px
+  flex-shrink: 0
+  padding: 0
+  margin: 0
+  color: #fff
+  font-weight: bold
+  line-height: 1
+  border-radius: 50%
+  background-color: $blue2
+  &:hover
+    color: #fff
+  span
+    +absolute-center()
+.increment-field__inp
+  display: block
+  width: 100%
+  height: 23px
+  text-align: center  
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+  border-radius: 3px
+  background-color: $f
+  border: none
 
 
-
-
-
-
-
-
-
-
+.increment-field__btn--sub
+  margin-right: 10px
+.increment-field__btn--add
+  margin-left: 10px
 
 
 

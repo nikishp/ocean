@@ -1,0 +1,245 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Корзина'
+  - var bodyClass = ''
+block content
+  .container
+    .row
+      .col
+        +bread_crumbs()
+    .row
+      .col-lg-12
+        h2.h2 Корзина
+      .col-lg-12
+        .tabs.tabs--basket
+          ul.tabs__list
+            li.tabs__list-item.active-tab Готовые к заказу
+            li.tabs__list-item Отложенные
+          .tabs__content.active-tab
+            table.goods-char__table.basket__table(cellspacing="0", cellpadding="0")
+              tr.goods-char__row.goods-char__row--head
+                td.goods-char__col
+                td.goods-char__col 
+                td.goods-char__col: b Наименование
+                td.goods-char__col: b Стоимость
+                td.goods-char__col: b Количество
+                td.goods-char__col: b Сумма
+                td.goods-char__col  
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Отложить
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_1.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Отложить
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_3.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Отложить
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Отложить
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_2.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Отложить
+      
+            .basket__sum#finished
+              .basket__sum-item.basket__sum-item--all ИТОГО: <span>10 460 руб.</span>
+              .basket__sum-item.basket__sum-item--saved сэкономлено: <span>2 000 руб.</span>
+
+            .basket__discount
+              .basket__discount-info Если у вас есть дисконтная карта, подарочная карта или промокод, введите номер для получения скидки. Скидка по промокоду не суммируется с другими действующими предложениями и скидками. <br>
+                a.basket__discount-link(href="#") Подробнее о дисконтной системе
+              form.basket__discount-form(action="#")
+                +form_item('percent', 'text', 'basket__discount', "Дисконтная карта, Купон...")
+                .form__item.form__item--btn
+                  button.btn.btn--def.btn--def-lg.btn--blue(type="submit") Сохранить
+          .tabs__content
+            table.goods-char__table.basket__table(cellspacing="0", cellpadding="0")
+              tr.goods-char__row.goods-char__row--head
+                td.goods-char__col
+                td.goods-char__col 
+                td.goods-char__col: b Наименование
+                td.goods-char__col: b Стоимость
+                td.goods-char__col: b Количество
+                td.goods-char__col: b Сумма
+                td.goods-char__col  
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def.btn--def-sm.btn--fluid.btn--black(href="#") Переместить в корзину
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def.btn--def-sm.btn--fluid.btn--black(href="#") Переместить в корзину
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Переместить в корзину
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Переместить в корзину
+ 
+              tr.goods-char__row
+                td.goods-char__col 
+                  a.basket__table-close(href="#")
+                    +svg('close')
+                td.goods-char__col
+                  .basket__table-img: img(src="img/content/boat/boat_4.jpg", alt="image")
+                td.goods-char__col Далеко-далеко за словесными горами в стране, гласных и согласных.
+                td.goods-char__col 1500 руб.
+                td.goods-char__col
+                  +increment()
+                td.goods-char__col 150 руб.
+                td.goods-char__col 
+                  a.btn.btn--def-sm.btn--fluid.btn--black(href="#") Переместить в корзину
+  
+            .basket__sum#delay
+              .basket__sum-item.basket__sum-item--all ИТОГО: <span>101 460 руб.</span>
+              .basket__sum-item.basket__sum-item--saved сэкономлено: <span>21 000 руб.</span>
+        .basket__btns
+          a.btn.btn--blue.btn--def-lg.btn--big Продолжить покупки
+          a.btn.btn--orange.btn--def-lg.btn--big Оформить заказ
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 
