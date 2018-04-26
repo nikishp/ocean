@@ -1,0 +1,131 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Личный кабинет'
+  - var bodyClass = ''
+block content
+  .container
+    .row
+      .col
+        +bread_crumbs()
+    .row
+      .col-lg-12
+        h2.h2 Личный кабинет
+    .row
+      .col-lg-3
+        ul.lk-menu
+          li.lk-menu__item.lk-menu__item--active
+            a.lk-menu__link(href="#lk-order") Ваши заказы
+          li.lk-menu__item
+            a.lk-menu__link(href="#lk-setting") Настройки аккаунта
+          li.lk-menu__item
+            a.lk-menu__link(href="#lk-customers") Клуб постоянных покупателей
+          li.lk-menu__item
+            a.lk-menu__link(href="#lk-favor") Избранные товары
+          li.lk-menu__item
+            a.lk-menu__link(href="#lk-wait") Ожидают поступления
+
+      .col-lg-9 
+        .lk-block.lk-block--order(data-section="lk-order")#lk-order
+          h3.h3 Ваши заказы
+          table.table
+            tr.table__row-title
+              th №
+              th Наименование
+              th Стоимость
+              th Статус
+              th Сумма
+            tr.table__row-content
+              td(data-title="№").table__td 4
+              td(data-title="Наименование").table__td Наименование товара 
+              td(data-title="Стоимость").table__td 1500 руб. 
+              td(data-title="Статус").table__td: .lk-status.lk-status--new Новый
+              td(data-title="Сумма").table__td 500 руб.
+            tr.table__row-content
+              td(data-title="№").table__td 8
+              td(data-title="Наименование").table__td Наименование товара 
+              td(data-title="Стоимость").table__td 1500 руб. 
+              td(data-title="Статус").table__td: .lk-status.lk-status--proces В обработке
+              td(data-title="Сумма").table__td 500 руб.
+            tr.table__row-content
+              td(data-title="№").table__td 3
+              td(data-title="Наименование").table__td Наименование товара 
+              td(data-title="Стоимость").table__td 1500 руб. 
+              td(data-title="Статус").table__td: .lk-status.lk-status--done Выполнен
+              td(data-title="Сумма").table__td 500 руб.
+            tr.table__row-content
+              td(data-title="№").table__td 3
+              td(data-title="Наименование").table__td Наименование товара 
+              td(data-title="Стоимость").table__td 1500 руб. 
+              td(data-title="Статус").table__td: .lk-status Новый
+              td(data-title="Сумма").table__td 500 руб.
+          .lk-block__total ИТОГО:   
+            span 10 460 руб.
+
+        form.lk-block.lk-block--setting(data-section="lk-setting")#lk-setting(action="#")
+          h3.h3 Настройки аккаунта
+          .row
+            .col-lg-6 
+              +form_item('user', 'text', 'ФИО', "ФИО")
+              +form_item('phone_line', 'tel', 'Ваш телефон', "Ваш телефон")
+              +form_item('city', 'text', 'Город', "Город")
+              +form_item('pass', 'password', 'Пароль', "Пароль")
+            .col-lg-6 
+              +form_item('mail', 'email', 'Ваш e-mail', "Ваш e-mail")
+              +form_item('users', 'tel', 'Логин', "Логин")
+              +form_item('adrs', 'text', 'Адрес', "Адрес")
+              +form_item('pas_rep', 'password', 'Повторите пароль', "Повторите пароль")
+            .col-lg-12
+              .lk-block__controll.lk-block__controll--cps
+                label 
+                  input(type="checkbox", name="Подписаться на нашу рассылку")
+                  | Подписаться на нашу рассылку
+                button(type="submit").btn.btn--def.btn--blue Сохранить
+  
+        .lk-block.lk-block--regular-customers(data-section="lk-customers")#lk-customers
+          h3.h3 Клуб постоянных покупателей
+          .regular-customers__links
+            a.btn.btn--def-lg.btn--big.btn--blue(href="#") Узнать больше о карте постоянного клиента
+            a.btn.btn--def-lg.btn--big.btn--orange(href="#") Обновить членский номер 
+        .lk-block.lk-block--favor(data-section="lk-favor")#lk-favor
+          -var relative_title = 'Избранные товары';
+          +relative_slide3()
+        .lk-block.lk-block--wait(data-section="lk-wait")#lk-wait
+          -var relative_title = 'Ожидают поступления';
+          +relative_slide3()  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 

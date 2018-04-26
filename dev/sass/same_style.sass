@@ -88,6 +88,14 @@ textarea
   resize: none //запрещает изменения размера мишью
   outline: none
   color: inherit
+
+input,button,textarea
+  &:disabled
+    color: #fff !important
+    background: #D1D1D1 !important
+    &:hover
+      background: #D1D1D1 !important
+
 ul
   list-style-type: none
   margin: 0
@@ -105,7 +113,7 @@ h1,h2,h3,h4,h5,h6
   font-size: 18px
   font-weight: 700
   +lh(20,18)
-  text-transform: uppercase
+  // text-transform: uppercase
 
 
 .hidden
@@ -115,15 +123,86 @@ h1,h2,h3,h4,h5,h6
 //.flip-clock-wrapper ul.play li.flip-clock-active
   animation: none
 
+
+
+
+
+/* ============================================ */
+.table
+  width: 100%
+  font-size: 15px
+  border-spacing: 0
+  border: 1px solid #f9f9f9
+  border-radius: 3px
+.table__row-title
+  font-size: 18px
+  font-weight: 700
+  th
+    padding: 20px 0
+    text-align: left
+    &:first-child
+      padding-left: 15px
+  +sm-block()
+    display: none
+
+.table__row-content
+  font-size: 14px
+  &:nth-child(even)
+    background: #f9f9f9
+  +sm-block()
+    display: block
+    padding-top: 10px
+    // margin-bottom: 20px
+
+.table__td
+  padding: 20px 0
+  &:first-child
+    padding-left: 15px
+  +sm-block()
+    display: flex
+    align-items: baseline
+    padding: 0
+    padding-bottom: 10px
+    padding-left: 15px
+    border-bottom: none
+  &::before
+    content: attr(data-title)": "
+    display: none
+    margin-bottom: 5px
+    font-size: 16px
+    font-weight: bold
+    +sm-block()
+      display: block
+      flex-basis: 30%
+      padding-right: 10px
+
+
+
+
+
+
+/* ============================================================== */
+
+
+
+
+
+
 .btn
   display: inline-flex
   justify-content: center
   align-items: center
   min-width: 100px
-  background: lightgrey
+  font-size: 14px
+  background: #ededed
   transition: $tr
   line-height: 1
+  vertical-align: top
+  text-align: center
   border-radius: 3px
+
+
+
 .btn--def
   height: 30px
   width: 127px
@@ -728,6 +807,127 @@ button[type='submit']
 
 
 
+.accordion
+// necessary style
+.accordion__content
+  display: none
+.accordion__title
+  position: relative
+  display: flex
+  align-items: center
+  color: $def
+  font-size: 16px
+  font-weight: 400
+  // justify-content: space-between
+  cursor: pointer
+.accordion__arrow
+  flex-shrink: 0
+  display: block
+  margin-left: auto
+  font-size: 0
+  line-height: 0
+  transition: all .25s linear
+.svg__down
+  display: block
+  +size(8)
+  fill: $def
+.accordion__item--active
+  .accordion__arrow
+    transform: rotate(180deg)
+  .accordion__content
+    display: block
+
+// necessary style end
+
+.accordion__item
+  &:not(:last-child)
+    .accordion__title
+      margin-bottom: 10px
+
+.accordion__title
+  // padding: 10px 0
+  // background: #51abec
+  &:not(:last-child)
+    // margin-bottom: 10px
+.accordion__content
+  padding: 10px 35px
+  font-size: 12px
+  // background: rgba(0, 0, 0, 0.3)
+  +sm-block()
+    padding: 10px 20px
+    padding-right: 10px
+
+.delivery__block
+  padding: 20px
+  border-radius: 10px
+  +sm-block()
+    padding: 10px
+.delivery__block--bg
+  background-image: url(../img/general/bg.png)
+.delivery__block--bd
+  border: 3px solid #f9f9f9
+.jq-radio
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  flex-shrink: 0
+  width: 16px
+  height: 16px
+  margin: 0
+  margin-right: 10px
+  padding: 0
+  vertical-align: 0
+  border: none
+  background: #fff
+  // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), inset -1px -1px #FFF, inset 1px -1px #FFF
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+  cursor: pointer
+  // background: red
+.jq-radio.focused
+  border: none
+.jq-radio.disabled
+  opacity: .55
+.jq-radio
+  border-radius: 50%
+  &.checked 
+    .jq-radio__div
+      width: 6px
+      height: 6px
+      margin: 0
+      border-radius: 50%
+      background: $or
+      box-shadow: none
+
+
+
+.jq-checkbox
+  width: 16px
+  height: 16px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  margin: 0
+  margin-right: 10px
+  border: none
+  vertical-align: 0
+  vertical-align: middle
+  background: $f
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+  border-radius: 3px
+  cursor: pointer
+.jq-checkbox.focused
+  border: none
+.jq-checkbox.disabled
+  opacity: .55
+.jq-checkbox
+  &.checked 
+    .jq-checkbox__div
+      width: 10px
+      height: 5px
+      margin: 0
+      border-bottom: 2px solid $or
+      border-left: 2px solid $or
+      transform: rotate(-50deg)
 
 
 
@@ -736,6 +936,95 @@ button[type='submit']
 
 
 
+
+
+
+
+
+
+
+.pay-method__option
+  display: flex
+  align-items: flex-start
+  line-height: 1
+  span
+    display: block
+    margin-top: 10px
+    font-size: 12px
+  &:not(:last-child)
+    margin-bottom: 10px
+
+
+.delivery__block--mt
+  margin-top: 20px
+  .ordering__total-item
+    +xs-block()
+      font-size: 12px
+
+.ordering__total-title
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+
+.ordering__total-item
+  display: flex
+  margin-top: 20px
+  font-size: 18px
+  font-weight: 700
+  line-height: 20px
+  +sm-block()
+    line-height: 1
+  span
+    &:first-child
+      padding-right: 5px
+      // background: green
+    &:nth-child(2)
+      flex-grow: 1
+      // background: red
+      border-bottom: 1px dotted $def
+    &:last-child
+      flex-shrink: 0
+      padding-left: 5px
+      color: $or
+      // background: blue
+
+
+
+.ordering__foot
+  margin-top: 20px
+
+.ordering__foot-check
+  color: $or
+  font-size: 12px
+  font-weight: 300
+  span
+    text-decoration: underline
+
+
+.ordering__foot-btns
+  padding-top: 20px
+  display: flex
+  margin-left: -5px
+  margin-right: -5px
+  justify-content: space-between
+  +sm-block()
+    flex-wrap: wrap
+    justify-content: center
+    .btn
+      margin-top: 10px
+  .btn
+    margin: 0 5px
+
+
+.form--autorisize
+  +md-block()
+    width: 100%
+    float: none
+
+.form--ordering
+  +md-block()
+    display: flex
+    flex-direction: column-reverse
 
 
 // 

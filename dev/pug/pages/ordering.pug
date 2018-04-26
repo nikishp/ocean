@@ -2,7 +2,7 @@ extends ../layout/main
 
 block head 
   - var title = 'Оформление заказа'
-  - var bodyClass = ''
+  - var bodyClass = 'ordering-page'
 block content
   .container
     .row
@@ -10,17 +10,92 @@ block content
         +bread_crumbs()
     .row
       .col-lg-12
-        h2.h2 Оформление заказа
-    form.form.form--ordering(action="#")
-      .row
-        .col-lg-6
-          h3.h3 Авторизация
-          +form_item('mail', 'mail', 'mail', "Ваш e-mail")
-          +form_item('pass', 'password', 'pass', "Пароль")
-        .col-lg-6 
-          h3.h3 Выберите способ доставки
-        
+        h2.h2 Оформление заказа 
+    .row
+      .col-lg-12
+        form.form.form--autorisize(action="#")
+          .col-lg-12
+            h3.h3 Авторизация
+            +form_item('mail', 'mail', 'Ваш e-mail', "Ваш e-mail")
+            +form_item('pass', 'password', 'Пароль', "Пароль")
+            //- button(type="submit").bnt.btn--def.btn--blue Авторизоваться 
+            button(type="submit").btn.btn--def.btn--blue.btn--def-lg Вход
 
+            hr
+          
+        form.form.form--ordering(action="#")
+          .col-lg-6
+            h3.h3 Выберите способ доставки
+            .delivery__block.delivery__block--bg
+              .accordion 
+                .accordion__item
+                  .accordion__title
+                    input(type="radio", name="delivery", checked, value="Доставка почтой России до отделения в вашем городе")
+                    | Доставка почтой России до отделения в вашем городе
+                    .accordion__arrow
+                      +svg('down')
+                  .accordion__content Данный способ доставки подходит для пересылки не объемного товара весом до 10 кг. Напоминаем вам, что на основании статьи 22 Федерального закона «О почтовой связи» запрещается перевозить: легковоспламеняющиеся и другие опасные вещества; предметы, которые по своему характеру или упаковке могут представлять опасность для почтовых работников, пачкать или портить другие почтовые отправления и почтовое оборудование
+                .accordion__item
+                  .accordion__title
+                    input(type="radio", name="delivery", value="Адрессная доставка Почтой России")
+                    | Адрессная доставка Почтой России
+                    .accordion__arrow
+                      +svg('down')
+                  .accordion__content Данный способ доставки подходит для пересылки не объемного товара весом до 10 кг. Напоминаем вам, что на основании статьи 22 Федерального закона «О почтовой связи» запрещается перевозить: легковоспламеняющиеся и другие опасные вещества
+
+                .accordion__item
+                  .accordion__title
+                    input(type="radio", name="delivery", value="Доставка другой службой доставки")
+                    | Доставка другой службой доставки
+                    .accordion__arrow
+                      +svg('down')
+                  .accordion__content Данный способ доставки подходит для пересылки не объемного товара весом до 10 кг. 
+            h3.h3 Выберете способ оплаты
+            .delivery__block.delivery__block--bd
+              .pay-method__option
+                input(type="radio", id="met_1", checked, name="pay_method", value="Банковской картой")
+                label(for="met_1") Банковской картой
+                  span После принятия заказа менеджером интернет-магазина Вы оплачиваете заказ банковской картой в разделе «заказы» своего личного кабинета
+              .pay-method__option
+                input(type="radio", id="met_2", name="pay_method", value="Счет для оплаты в банке")
+                label(for="met_2") Счет для оплаты в банке
+                  span После принятия заказа менеджером интернет-магазина Вам будет направлен счет, который Вы оплачиваете в любом банке
+              .pay-method__option
+                input(type="radio", id="met_3", name="pay_method", value="Купить в кредит")
+                label(for="met_3") Купить в кредит
+          
+            .delivery__block.delivery__block--bg.delivery__block--mt
+              .ordering__total-title Итого:
+              .ordering__total-item
+                span Товаров на сумму
+                span
+                span 10 460 руб.
+              .ordering__total-item
+                span Доставка
+                span
+                span 0 руб.
+              .ordering__total-item
+                span Скидка постоянного покупателя 5%
+                span
+                span 100 руб.
+          
+
+            .ordering__foot
+              label.ordering__foot-check
+                input(type="checkbox", checked, name="Даю согласие на обработку моих персональных данных", value="yes")
+                span Даю согласие на обработку моих персональных данных
+              .ordering__foot-btns
+                a.btn.btn--def.btn--big(href="#") Назад в корзину
+                a.btn.btn--def.btn--big.btn--blue(href="#") Продолжить покупки
+                button.btn.btn--def.btn--big.btn--orange(type="submit") Оформить заказа
+          .col-lg-6.form--ordering-col
+            h3.h3 Информация о покупателе
+            +form_item('city', 'text', 'Город', "Город")
+            +form_item('user', 'text', 'ФИО', "ФИО")
+            +form_item('mail', 'email', 'Ваш e-mail', "Ваш e-mail")
+            +form_item('phone_line', 'tel', 'Ваш телефон', "Ваш телефон")
+            +form_item('user', 'text', 'ФИО', "ФИО")
+            +form_textarea('comment', 'Комментари', "Комментари")
 
 
 
