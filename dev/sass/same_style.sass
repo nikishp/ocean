@@ -175,6 +175,205 @@ h1,h2,h3,h4,h5,h6
       display: block
       flex-basis: 30%
       padding-right: 10px
+/* ====================================================== */
+
+
+
+.jq-selectbox
+  vertical-align: middle
+  cursor: pointer
+
+.jq-selectbox__select
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 28px
+  width: 165px
+  padding: 0
+  padding-left: 20px
+  padding-right: 5px
+  border: none
+  border-bottom-color: inherit
+  border-left: 3px solid $blue 
+  border-radius: 3px
+  background: #ededed
+  box-shadow: none
+  font: 14px/1 "Calibri",sans-serif
+  color: $def
+  text-shadow: none
+  &:hover
+    background: #ededed
+  &:active
+    background: darken(#ededed,10%)
+    box-shadow: none
+
+.jq-selectbox
+  &.focused .jq-selectbox__select
+    border: none
+    border-left: 3px solid $blue
+  &.disabled .jq-selectbox__select
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
+
+.jq-selectbox__select-text
+  display: block
+  width: 100%
+  // background: red
+
+.jq-selectbox .placeholder
+  color: #888
+
+.jq-selectbox__trigger
+  position: static
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 25px
+  height: 100%
+  // background: green
+  border-left: 1px solid #CCC
+  border: none
+
+.jq-selectbox__trigger-arrow
+  position: static
+  width: 0
+  height: 0
+  border-top: 5px solid #999
+  border-right: 5px solid transparent
+  border-left: 5px solid transparent
+  // background: red
+  width: 7px
+  height: 7px
+  transform: rotate(-45deg)
+  border: 1px solid $def
+  border-top: none
+  border-right: none
+
+.jq-selectbox
+  &:hover .jq-selectbox__trigger-arrow
+    border-color: $or
+  &.disabled .jq-selectbox__trigger-arrow
+    border-top-color: #AAA
+
+.jq-selectbox__dropdown
+  box-sizing: border-box
+  width: 100%
+  margin: 0
+  padding: 0
+  border: none
+  border-radius: 3px
+  background: #FFF
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+  font: 14px/1 "Calibri",sans-serif
+
+.jq-selectbox
+  ul
+    margin: 0
+    padding: 0
+  li
+    min-height: 18px
+    padding: 6px
+    padding-left: 24px
+    color: $def
+    &.selected
+      background-color: $or
+      color: #FFF
+    &:hover
+      background-color: $blue
+      color: #FFF
+    &.disabled
+      color: #AAA
+      &:hover
+        background: none
+    &.optgroup
+      font-weight: bold
+      &:hover
+        background: none
+        color: #231F20
+        cursor: default
+    &.option
+      padding-left: 25px
+
+.jq-select-multiple
+  box-sizing: border-box
+  padding: 1px
+  border: none
+  border-bottom-color: #B3B3B3
+  border-radius: 3px
+  background: #FFF
+  box-shadow: inset 1px 1px #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+  font: 14px/1 "Calibri",sans-serif
+  color: $def
+  cursor: default
+  &.focused
+    border: none
+  &.disabled
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
+  ul
+    margin: 0
+    padding: 0
+  li
+    padding: 10px
+    list-style: none
+    &:first-child
+      border-radius: 3px 3px 0 0
+    &:last-child
+      border-radius: 0 0 3px 3px
+    &.selected
+      background: $or
+      color: #FFF
+    &.disabled
+      color: #AAA
+    &.optgroup
+      font-weight: bold
+    &.option
+      padding-left: 25px
+  &.disabled li.selected, li.selected.disabled
+    background: #CCC
+    color: #FFF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1025,6 +1224,159 @@ button[type='submit']
   +md-block()
     display: flex
     flex-direction: column-reverse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.irs-max, .irs-min
+  display: none
+// 
+.irs-from, .irs-single, .irs-to
+  display: none
+
+
+
+
+.irs-line-mid, .irs-line-left, .irs-line-right, .irs-bar, .irs-bar-edge, .irs-slider
+  background: url(../img/sprite-skin-nice.png) repeat-x
+  background: none
+
+.irs
+  height: 40px
+.irs-with-grid
+  height: 60px
+
+.irs-line
+  height: 8px
+  top: 25px
+  background: #fff
+  border-radius: 10px
+  box-shadow: 0 0 0 1px rgba(255, 125, 0, 1)
+.irs-line-left
+  height: 8px
+  background-position: 0 -30px
+  background: #fff
+.irs-line-mid
+  height: 8px
+  background-position: 0 0
+  background: #fff
+
+.irs-line-right
+  height: 8px
+  background-position: 100% -30px
+  background: #fff
+.irs-bar
+  height: 8px
+  top: 25px
+  background-position: 0 -60px
+  background: $or
+.irs-bar-edge
+  top: 25px
+  height: 8px
+  width: 11px
+  background-position: 0 -90px
+  // background: green
+.irs-shadow
+  height: 1px
+  top: 34px
+  background: #000
+  opacity: 0.15
+  
+.lt-ie9 .irs-shadow
+  filter: alpha(opacity = 15)
+
+.irs-slider
+  width: 22px
+  height: 22px
+  top: 17px
+  border-radius: 50%
+  background-position: 0 -120px
+  background: $blue
+  &.state_hover, &:hover
+    background-position: 0 -150px
+  &::before
+    content: ''
+    position: absolute
+    +absolute-center()
+    +size(8)
+    border-radius: 50%
+    background: #fff
+.irs-min, .irs-max
+  color: #999
+  font-size: 10px
+  line-height: 1.333
+  text-shadow: none
+  top: 0
+  padding: 1px 3px
+  background: rgba(0, 0, 0, 0.1)
+  -moz-border-radius: 3px
+  border-radius: 3px
+.lt-ie9
+  .irs-min, .irs-max
+    background: #ccc
+
+.irs-from, .irs-to, .irs-single
+  color: #fff
+  font-size: 10px
+  line-height: 1.333
+  text-shadow: none
+  padding: 1px 5px
+  background: rgba(0, 0, 0, 0.3)
+  -moz-border-radius: 3px
+  border-radius: 3px
+
+.lt-ie9
+  .irs-from, .irs-to, .irs-single
+    background: #999
+
+.irs-grid-pol
+  background: #99a4ac
+
+.irs-grid-text
+  color: #99a4ac
+
+.irs-disabled
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // 

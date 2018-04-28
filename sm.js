@@ -35,6 +35,7 @@ var settings = {
       width: "380px"
     }
   },
++xsl-block()
   mixinNames: {
     container: "container",
     row: "row",

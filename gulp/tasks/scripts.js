@@ -8,6 +8,10 @@ module.exports = function() {
     // svg4everybody
     'node_modules/svg4everybody/dist/svg4everybody.min.js',
 
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+
+    'dev/libs/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.js',
+
     //magnific-popup
     //http://dimsemenov.com/plugins/magnific-popup/
     // 'dev/libs/magnific-popup/dist/jquery.magnific-popup.js',

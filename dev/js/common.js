@@ -155,11 +155,11 @@
       var vieportHeight = $(window).height(),
       footHeight = $('.foot').outerHeight(true, true),
       calcHeight = vieportHeight - footHeight;
-      // console.log("vieportHeight", vieportHeight);
-      // console.log("footHeight", vieportHeight);
-      // console.log("calcHeight", calcHeight);
-      return calcHeight;
-    });
+        // console.log("vieportHeight", vieportHeight);
+        // console.log("footHeight", vieportHeight);
+        // console.log("calcHeight", calcHeight);
+        return calcHeight;
+      });
 
 
     //popup form
@@ -264,7 +264,7 @@
     });
 
 
-    $('input[type="radio"],input[type="checkbox"]').styler();
+    $('input[type="radio"],input[type="checkbox"],select').styler();
 
 
 
@@ -297,160 +297,133 @@
 
     $(".ordering__foot-check input").on(' change ', function(event) {
 
-      if($(this).is(':checked')){
+      if ($(this).is(':checked')) {
         $(".ordering__foot-btns button").prop("disabled", false);
         console.log('check');
-      }else{
-       $(".ordering__foot-btns button").prop("disabled", true);
-       console.log('uncheck');
-     }
-
-
-   });
-
-
-
-
-    /*========================================================================*/
-
-
-//menu fixed on scroll
-var navPos, winPos, navHeight,leftPosi,navWidth;
-
-function refreshVar() {
-  navPos = $('.lk-menu').offset().top;
-  leftPos = $('.lk-menu').offset().left;
-  navHeight = $('.lk-menu').outerHeight(true);
-  navWidth = $('.lk-menu').outerWidth( true );
-};
-refreshVar();
-
-if(windowWidht>992){
-
-  $('<div class="lk-menu--clone"></div>').insertBefore('.lk-menu').css('height', navHeight).hide();
-
-  $(window).scroll(function () {
-
-    winPos = $(window).scrollTop();
-    // console.log("winPos", winPos);
-    if (winPos >= navPos) {
-      $('.lk-menu').css({
-        position: 'fixed',
-        top: '0',
-        left: leftPos,
-        'z-index': '10',
-        width: navWidth,
-      });
-      $('.lk-menu--clone').show();
-    } else {
-      $('.lk-menu').prop('style', '');
-      $('.lk-menu--clone').hide();
-    }
-
-  });
-
-
-  };// if > 992
-  //menu fixed on scroll end
-
-  //menu scroll and add class on scroll
-
-  //scroll
-  // var navHeight = $(".header__top-line").outerHeight(true);
-
-  function showSection(section, isAnimate) {
-    var direction = section.replace(/#/, '');
-    // console.log(direction)
-    var reqSection = $('.lk-block').filter('[data-section="' + direction + '"]');
-    // var reqSection = $('.lk-block').filter('id="' + direction + '"');
-
-    var reqSectionPos = reqSection.offset().top - 10;
-    // console.log("reqSectionPos", reqSectionPos);
-
-    if (isAnimate) {
-      $('body, html').animate({
-        scrollTop: reqSectionPos
-      }, 500);
-    } else {
-      $('body, html').scrollTop(reqSectionPos);
-    }
-  };
-
-  //вызывать по клику  showSection($(this).attr('href'), true);
-  $('.lk-menu__link').on('click', function (event) {
-    event.preventDefault();
-    showSection($(this).attr('href'), true);
-  });
-  //scroll end
-
-  //add class
-  function checkSection() {
-
-    $('.lk-block').each(function () {
-      var $this = $(this),
-      // topEdge = $this.offset().top - $('.header__top-line').outerHeight(true),
-      topEdge = $this.offset().top - 30 ,
-      bottomEdge = topEdge + $this.outerHeight(true),
-      wScroll = $(window).scrollTop();
-
-      if (topEdge < wScroll && bottomEdge > wScroll) {
-
-        var currentId = $this.data('section'),
-        reqLink = $('.lk-menu__link').filter('[href="#' + currentId + '"]');
-
-        reqLink.closest('.lk-menu__item').addClass('lk-menu__item--active').siblings().removeClass('lk-menu__item--active');
-
-        //простовляния хешей в адрессную строку
-        // if (history.pushState) {
-        //   history.pushState(null, null, "#" + currentId);
-        //   // console.log("modern work");
-        // } else {
-        //   // window.location.hash = currentId;
-        //   location.hash = currentId;
-        //   // console.log("old work");
-        // }
-
+      } else {
+        $(".ordering__foot-btns button").prop("disabled", true);
+        console.log('uncheck');
       }
+
+
     });
 
-  };
+
+    function filterList(value) {
+      var list = $(".table--lk-ur .table__row-content");
+      $(list).fadeOut(10);
+      if (value == "All") {
+        $(".table--lk-ur").find(".table__row-content").each(function (i) {
+          $(this).slideDown();
+        });
+      } else {
+        $(".table--lk-ur").find("tr[data-filter*=" + value + "]").each(function (i) {
+          $(this).slideDown();
+        });
+      }
+    };
+
+    $('.lk-block__select--lk-ur select').on('change', function(event) {
+      var curVal = $(this).val();
+      filterList(curVal);
+    });
 
 
-  $(window).scroll(function () {
-    checkSection();
+    $('[data-toggle="tooltip"]').tooltip({
+      // trigger: 'click',
+    })
+
+
+
+    $('.filter__head ').on('click', function(event) {
+      // $('.hamburger').toggleClass('is-active');
+
+      // console.log(".filter__head");
+    });
+
+
+
+    $('.filter__block-title').on('click', function(event) {
+
+      $(this).toggleClass('filter__block-title--collapse').next('.filter__block-content').stop(true, true).slideToggle();
+
+    });
+
+
+
+   //  $(".filter__price-range").ionRangeSlider({
+   //    type: "double",
+   //    min: 0,
+   //    max: 999999,
+   //    from: 30,
+   //    to: 600000,
+   //    min_interval: 20,
+   //    onChange: function (data) {
+
+   //     data("from"),
+   //     data("to");
+   //      console.log(from + " - " + to);
+   //   },
+   // });
+
+
+   var $range = $(".filter__price-range"),
+   $inputFrom = $('.price-controll__input .filter__price-controll-min'),
+   $inputTo = $('.price-controll__input .filter__price-controll-max'),
+   instance,
+   min = 0,
+   max = 1000,
+   from = 0,
+   to = 0;
+
+   $range.ionRangeSlider({
+    type: "double",
+    min: min,
+    max: max,
+    from: 200,
+    to: 800,
+    onStart: updateInputs,
+    onChange: updateInputs
   });
+   instance = $range.data("ionRangeSlider");
 
-  // уменьшаю количество вызова функций при скролле
-  /*
-  var scrollTimeout;  // global for any pending scrollTimeout
-  $(window).scroll(function () {
-    if (scrollTimeout) {
-      // clear the timeout, if one is pending
-      clearTimeout(scrollTimeout);
-      scrollTimeout = null;
+   function updateInputs (data) {
+    from = data.from;
+    to = data.to;
+    
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to); 
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
     }
-    scrollTimeout = setTimeout(checkSection, 500);
+    
+    instance.update({
+      from: val
+    });
   });
-  */
 
-  // var didScroll = false;
-
-  // window.onscroll = doThisStuffOnScroll;
-
-  // function doThisStuffOnScroll() {
-  //   didScroll = true;
-  // }
-
-  // setInterval(function () {
-  //   if (didScroll) {
-  //     didScroll = false;
-  //     checkSection();
-  //   }
-  // }, 500);
-
-  //add class end
-
-  //menu scroll and add class on scroll end
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+    
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+    
+    instance.update({
+      to: val
+    });
+  });
 
 
 
@@ -462,7 +435,40 @@ if(windowWidht>992){
 
 
 
-}); //jQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //removeIf(production)
@@ -475,8 +481,12 @@ function pageWidget(pages) {
   var widgetStilization = $('<style>body{position:relative}.widget_wrap{position:fixed;top:0;left:-23px;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;transition:all .3s ease;transform:translate(-100%,0)}.widget_wrap ul{max-width:220px;width:100%;display:flex;flex-wrap:wrap}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) 50% 50% no-repeat #222;cursor:pointer}.widget_wrap:hover{left:0;transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{display:block;color:#fff;text-decoration:none;font-size:15px;width:100px}.widget_link:hover{color:#fff;text-decoration:underline}</style>');
   widgetStilization.prependTo(".widget_wrap")
 };
-pageWidget(['index', 'under_goods', 'card', 'news', 'basket', 'ordering', 'lkf', 'thanks'])
+pageWidget(['index', 'under_goods', 'card', 'news', 'basket', 'ordering', 'lkf', 'lkf_ur', 'catalog'])
+//endRemoveIf(production)
 
+}); //jQuery
+
+//removeIf(production)
 
 //pixel-glass-js-master
 //function pixelGlass(){'use strict';var doc=document;var controlsPanel;var bodyContentWrapper;var panelClass='controls-panel';var canBeDisabled=[];var prefix='pg';var filtersList=['none','invert'];var statesList=['off','on'];var currents={state:getCurrent('state',statesList[1]),filter:getCurrent('filter',filtersList[0]),opacity:getCurrent('opacity',0.5)};var targets={state:{elem:doc.documentElement,attr:'data'},filter:{elem:doc.body,attr:'data'},opacity:{elem:doc.body,attr:'style'}};var paramsStates={elemTag:'button',elemText:'on',listName:'states',itemName:'state',target:targets.state,type:'button',list:statesList,canDisableAll:!0,attrs:{tabindex:1,}};var paramsFilters={elemTag:'button',elemText:'invert',listName:'filters',itemName:'filter',target:targets.filter,type:'button',list:filtersList,attrs:{tabindex:2,}};var paramsOpacity={itemName:'opacity',type:'number',target:targets.opacity,setAttr:'style',attrs:{min:0,max:1,step:0.1,tabindex:3,}};init();function init(){createContolsPanel();applyCurrentData();if(currents.state==='on'){applyCurrentStyles()}}

@@ -62,7 +62,7 @@ block content
           .lk-block__total ИТОГО:   
             span 10 460 руб.
 
-        form.lk-block.lk-block--setting(data-section="lk-setting")#lk-setting(action="#")
+        form.lk-block.lk-block--setting(data-section="lk-setting",action="#")#lk-setting
           h3.h3 Настройки аккаунта
           .row
             .col-lg-6 
@@ -93,23 +93,69 @@ block content
         .lk-block.lk-block--wait(data-section="lk-wait")#lk-wait
           -var relative_title = 'Ожидают поступления';
           +relative_slide3()  
+
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  script.
+    var windowWidht = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var navPos, winPos, navHeight, leftPosi, navWidth;
+    function refreshVar() {
+    navPos = $('.lk-menu').offset().top;
+    leftPos = $('.lk-menu').offset().left;
+    navHeight = $('.lk-menu').outerHeight(true);
+    navWidth = $('.lk-menu').outerWidth(true);
+    };
+    refreshVar();
+    if (windowWidht > 992) {
+    $('<div class="lk-menu--clone"></div>').insertBefore('.lk-menu').css('height', navHeight).hide();
+    $(window).scroll(function() {
+    winPos = $(window).scrollTop();
+    if (winPos >= navPos) {
+    $('.lk-menu').css({
+    position: 'fixed',
+    top: '0',
+    left: leftPos,
+    'z-index': '10',
+    width: navWidth,
+    });
+    $('.lk-menu--clone').show();
+    } else {
+    $('.lk-menu').prop('style', '');
+    $('.lk-menu--clone').hide();
+    }
+    });
+    }; // if > 992
+    function showSection(section, isAnimate) {
+    var direction = section.replace(/#/, '');
+    var reqSection = $('.lk-block').filter('[data-section="' + direction + '"]');
+    var reqSectionPos = reqSection.offset().top - 10;
+    if (isAnimate) {
+    $('body, html').animate({
+    scrollTop: reqSectionPos
+    }, 500);
+    } else {
+    $('body, html').scrollTop(reqSectionPos);
+    }
+    };
+    $('.lk-menu__link').on('click', function(event) {
+    event.preventDefault();
+    showSection($(this).attr('href'), true);
+    });
+    function checkSection() {
+    $('.lk-block').each(function() {
+    var $this = $(this),
+    topEdge = $this.offset().top - 30,
+    bottomEdge = topEdge + $this.outerHeight(true),
+    wScroll = $(window).scrollTop();
+    if (topEdge < wScroll && bottomEdge > wScroll) {
+    var currentId = $this.data('section'),
+    reqLink = $('.lk-menu__link').filter('[href="#' + currentId + '"]');
+    reqLink.closest('.lk-menu__item').addClass('lk-menu__item--active').siblings().removeClass('lk-menu__item--active');
+    }
+    });
+    };
+    $(window).scroll(function() {
+    checkSection();
+    });
 
 
 

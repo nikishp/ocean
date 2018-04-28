@@ -387,7 +387,7 @@
 
 .layout-col
   .product-item
-    display: flex;
+    display: flex
     flex-direction: column
 
   .product-item__img
@@ -400,7 +400,7 @@
     padding-left: 16px
 
   .product-item__content
-    width: 100%;
+    width: 100%
     padding-left: 20px
 
   .product-item__desc,.product-item__produce
@@ -1248,10 +1248,18 @@
   padding-top: 20px
   padding-bottom: 30px
   border-bottom: 1px solid #f9f9f9
+  +xsl-block()
+    display: flex
+    flex-direction: column
+    // justify-content: center
+    align-items: center
 .lk-block__controll--cps
   text-align: right
   .btn
     margin-left: 20px
+    +xsl-block()
+      margin-left: 0
+      margin-top: 20px
 
 
 .regular-customers__links
@@ -1261,8 +1269,13 @@
     font-size: 13px
     &:first-child
       margin-right: 30px
-
- 
+      +xsl-block()
+        margin-bottom: 15px
+        margin-right: 0
+  +xsl-block()
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .relative-slider__slider-triple
   margin-left: -10px
@@ -1273,6 +1286,352 @@
     right: 9px
 
 
+
+.lk-block--file
+  .h3
+    display: flex
+    justify-content: space-between
+    align-items: center
+.lk-block__select
+  margin-left: 20px
+
+
+
+
+
+.download-link
+  display: flex
+  align-items: center
+  .svg
+    width: 16px
+    height: 16px
+    margin-right: 5px
+    fill: $or
+
+
+
+.table--lk-ur
+ .table__row-content
+  // display: none
+
+
+
+.fast-order
+  display: flex
+  align-items: center
+  // margin-right: -15px
+  +lg-block()
+    flex-wrap: wrap
+  +xs-block()
+    justify-content: center
+    // justify-content: center
+  .btn
+    margin: 15px
+  .form__item
+    margin-bottom: 0
+    margin-right: 30px
+    flex-shrink: 0
+    flex-grow: 1
+    +xs-block()
+      width: 100%
+      margin-right: 0
+    // background: green
+    input
+      max-width: 260px
+      padding: 0 30px
+      +xs-block()
+        max-width: 100%
+
+
+.fast-order__tooltips
+  position: relative
+  margin-left: 15px
+  +xs-block()
+    margin-top: 15px
+    margin-left: 0
+  .btn
+    margin: 0
+  span
+    position: absolute
+    top: -7px
+    right: -7px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    color: $f
+    cursor: pointer
+    font-size: 9px
+    font-weight: 400
+    line-height: 14px
+    background-color: $def
+
+
+.tooltip-inner
+  max-width: 270px !important
+  padding: 10px !important
+  color: #fff
+  text-align: left !important
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2)
+  color: $def
+  font-size: 12px
+  font-weight: 400
+  line-height: 16px
+
+
+
+
+
+
+.lk-block--fast-order
+  padding-bottom: 30px
+  border-bottom: 1px solid #f9f9f9
+
+
+
+.table-requisites
+  width: 100%
+  border-spacing: 0
+  font-size: 14px
+
+  border-radius: 3px
+  border: 1px solid #f9f9f9
+
+
+  tr
+    &:nth-child(even)
+      background: #f9f9f9
+      +xs-block()
+        background: transparent
+  td
+    width: 50%
+    padding: 15px
+    vertical-align: top
+    +xs-block()
+      display: block
+      width: 100%
+    &:first-child
+      padding-left: 30px
+      +xs-block()
+        padding-left: 15px
+        background: #f9f9f9
+    &:last-child
+      padding-right: 30px
+      +xs-block()
+        padding-right: 15px
+
+
+
+
+.filter__head,.filter__content,.faq
+  margin-bottom: 20px
+  padding: 20px
+  border-radius: 3px
+  background-image: url(../img/general/bg.png)
+
+
+.filter__head-title
+  color: $def
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+
+.filter__head
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .hamburger
+    display: inline-block
+    padding: 0
+    font-size: 0
+    line-height: 0
+    &:hover
+      opacity: 1
+  .hamburger-box
+    width: 25px
+    height: 15px
+  .hamburger-inner
+    width: 100%
+    height: 2px
+    margin-top: -1px
+    transition-timing-function: ease
+    transition-duration: 0.25s
+    transition-property: transform
+    border-radius: 10px
+    background-color: $def //цвет нужно дублировать
+    &::before, &::after
+      width: 100%
+      height: inherit
+      transition-timing-function: ease
+      transition-duration: 0.25s
+      transition-property: transform
+      border-radius: inherit
+      background-color: $def //цвет нужно дублировать
+    &::before
+      top: -13px
+  .hamburger--collapse .hamburger-inner::after 
+      top: -7px
+
+
+.filter__block
+  &:not(:last-child)
+    padding-bottom: 20px
+
+.filter__block-title
+  display: flex
+  // align-items: center
+  align-items: flex-start
+  justify-content: space-between
+  margin-bottom: 25px
+  color: $blue
+  font-weight: 700
+  cursor: pointer
+.category-title__ico
+  position: relative
+  width: 16px
+  height: 16px
+  flex-shrink: 0
+  margin-top: 4px
+  margin-left: 10px
+  border-radius: 50%
+  color: #fff
+  font-size: 0
+  line-height: 0
+  background-color: $blue2
+  &::before,&::after
+    content: ''
+    position: absolute
+    background-color: $f
+    transition: $tr
+  &::before
+    top: 50%
+    left: 50%
+    width: 8px
+    height: 2px
+    transform: translateX(-50%) translateY(-50%)
+  &::after
+    top: 50%
+    left: 50%
+    width: 2px
+    height: 8px
+    transform: translateX(-50%) translateY(-50%)
+    opacity: 0
+.filter__block-title--collapse
+  .category-title__ico
+    &::after
+      opacity: 1
+
+
+
+
+.filter__block-item
+  display: flex
+  align-items: flex-start
+  .jq-checkbox
+    flex-shrink: 0
+    margin-top: 3px
+  &:not(:last-child)
+    margin-bottom: 20px
+
+
+
+
+
+
+
+.faq__title
+  display: flex
+  align-items: center
+  color: $blue
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  .svg
+    flex-shrink: 0
+    +size(16)
+    margin-right: 2px
+    fill: $blue
+
+
+.faq__list
+  padding-left: 16px
+  color: $or
+  font-size: 14px
+  font-weight: 400
+  text-decoration: underline
+
+
+.faq__item
+  margin-top: 15px
+
+
+.filter__price-controll
+  display: flex
+  margin: 0 -5px
+  margin-top: 25px
+
+.price-controll__input
+  position: relative
+  margin: 0 5px
+  height: 30px
+  color: $def
+  font-size: 14px
+  line-height: 20px
+
+  input
+    display: block
+    width: 100%
+    height: 100%
+    padding-left: 25px
+    padding-right: 25px
+    border: none
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+    border-radius: 3px
+    background-color: $f
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 5px
+    margin: auto
+    display: flex
+    align-items: center
+
+  &:first-child
+    &::before
+      content: 'от'
+  &:last-child
+    &::before
+      content: 'до'
+
+.price-controll__input-clear
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  display: flex
+  width: 20px
+  // justify-content: center
+  align-items: center
+  font-size: 0
+  cursor: pointer
+  .svg
+    +size(10)
+    fill: $or
+
+
+
+.catalog__controll-item--btn-group
+  a
+    +size(30)
+    padding: 5px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 3px
+    background-color: #ededed
 
 
 

@@ -1,0 +1,200 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Каталог товаров'
+  - var bodyClass = ''
+block content
+  .container
+    .row
+      .col
+        +bread_crumbs()
+    .row
+      .col-lg-12
+        h2.h2 Каталог товаров
+    .row.catalog-wrap
+      .col-lg-3.catalog-sidebar
+        .catalog__filter
+          .filter__head
+            .filter__head-title Фильтр товаров
+            span.hamburger.hamburger--collapse
+              span.hamburger-box
+                span.hamburger-inner
+          .filter__content
+            .filter__block
+              .filter__block-title
+                .category-title__name Категория
+                .category-title__ico -
+              .filter__block-content
+                label.filter__block-item
+                  input(type="checkbox", name="Катера, яхты, швертботы")
+                  | Катера, яхты, швертботы
+                label.filter__block-item
+                  input(type="checkbox", name="Надувные лодки и оборудование")
+                  | Надувные лодки и оборудование
+                label.filter__block-item
+                  input(type="checkbox", name="Лодочные моторы и оборудование")
+                  | Лодочные моторы и оборудование
+                label.filter__block-item
+                  input(type="checkbox", name="Вездеходы")
+                  | Вездеходы
+
+
+            .filter__block
+              .filter__block-title
+                .category-title__name Бренд
+                .category-title__ico -
+              .filter__block-content
+                label.filter__block-item
+                  input(type="checkbox", name='Лодки "Мореман"')
+                  | Лодки "Мореман"
+                label.filter__block-item
+                  input(type="checkbox", name="Лодки «Zodiac» для спорта и отдыха")
+                  | Лодки «Zodiac» для спорта и отдыха
+                label.filter__block-item
+                  input(type="checkbox", name="Профессиональные лодки «Zodiac»")
+                  | Профессиональные лодки «Zodiac»
+                label.filter__block-item
+                  input(type="checkbox", name="Оборудование для лодок")
+                  | Оборудование для лодок
+                label.filter__block-item
+                  input(type="checkbox", name="Запчасти для лодок")
+                  | Запчасти для лодок
+                label.filter__block-item
+                  input(type="checkbox", name="Шлюпбалки")
+                  | Шлюпбалки
+                label.filter__block-item
+                  input(type="checkbox", name="Оборудование для лодок Borika")
+                  | Оборудование для лодок Borika
+                label.filter__block-item
+                  input(type="checkbox", name="Лодки с уценкой")
+                  | Лодки с уценкой
+      
+
+            .filter__block
+              .filter__block-title
+                .category-title__name По предложениям
+                .category-title__ico -
+              .filter__block-content
+                label.filter__block-item
+                  input(type="checkbox", name="Доступные для доставки")
+                  | Доступные для доставки
+                label.filter__block-item
+                  input(type="checkbox", name="Доступные в региональных магазинах")
+                  | Доступные в региональных магазинах
+                label.filter__block-item
+                  input(type="checkbox", name="Хиты продаж")
+                  | Хиты продаж
+                label.filter__block-item
+                  input(type="checkbox", name="Новинки")
+                  | Новинки
+
+            .filter__block
+              .filter__block-title
+                .category-title__name Цена
+                .category-title__ico -
+              .filter__block-content
+                .filter__price
+                  input(type="text", name="filter_range", value="").filter__price-range
+                  .filter__price-controll
+                    .price-controll__input
+                      .price-controll__input-clear
+                        +svg('clear')
+                      input(type="text", name="filter_range_min", value="").filter__price-controll-min
+                    .price-controll__input
+                      .price-controll__input-clear
+                        +svg('clear')
+                      input(type="text", name="filter_range_max", value="").filter__price-controll-max
+
+
+
+
+            .filter__block
+              .filter__block-title
+                .category-title__name Доступность для доставки, самовывоза
+                .category-title__ico -
+              .filter__block-content
+                label.filter__block-item
+                  input(type="checkbox", name="Доступные для доставки")
+                  | Доступные для доставки
+                label.filter__block-item
+                  input(type="checkbox", name="Доступные для доставки2")
+                  | Доступные для доставки2
+                label.filter__block-item
+                  input(type="checkbox", name="Доступные для доставки3")
+                  | Доступные для доставки3
+
+        .faq
+          .faq__title
+            +svg('svg_i') 
+            | Справочная информация
+          ul.faq__list
+            li.faq__item
+              a.faq__link(href="#") Справочный материал
+            li.faq__item
+              a.faq__link(href="#") Справочный материал
+            li.faq__item
+              a.faq__link(href="#") Справочный материал
+            li.faq__item
+              a.faq__link(href="#") Справочный материал
+            li.faq__item
+              a.faq__link(href="#") Справочный материал
+
+
+
+
+      .col-lg-9 
+        .catalog__controll
+          .catalog__controll-item
+            select(name="controll")
+              option(value="") Отображать по 10
+              option(value="") Отображать по 20
+              option(value="") Отображать по 30
+              option(value="") Отображать по 40
+          .catalog__controll-item
+            select(name="controll")
+              option(value="") По популярности
+              option(value="") По популярности2
+              option(value="") По популярности3
+              option(value="") По популярности4
+       
+          .catalog__controll-item.catalog__controll-item--btn-group
+            a(href="#")
+              +svg('table_sort_list')
+            a(href="#")
+              +svg('table_sort_table')
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 
