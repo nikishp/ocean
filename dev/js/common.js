@@ -207,42 +207,39 @@
     ==========catalog viewer==========
     ================================*/
     // Product List
-    // $('#list-view').click(function() {
-    //   $('#content .product-grid > .clearfix').remove();
+    $('#list-view').click(function() {
 
-    //   $('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
-    //   $('#grid-view').removeClass('active');
-    //   $('#list-view').addClass('active');
+      $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-12');
 
-    //   localStorage.setItem('display', 'list');
-    // });
+      // console.log(".layout-item");
 
-    //   // Product Grid
-    //   $('#grid-view').click(function() {
-    //     // What a shame bootstrap does not take into account dynamically loaded columns
-    //     var cols = $('#column-right, #column-left').length;
+      localStorage.setItem('display', 'list');
+    });
 
-    //     if (cols == 2) {
-    //       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
-    //     } else if (cols == 1) {
-    //       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12');
-    //     } else {
-    //       $('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
-    //     }
+      // Product Grid
+      $('#grid-view').click(function() {
+        // What a shame bootstrap does not take into account dynamically loaded columns
+        var cols = $('.catalog-sidebar').length;
+        console.log("cols", cols);
 
-    //     $('#list-view').removeClass('active');
-    //     $('#grid-view').addClass('active');
+        if (cols == 2) {
+          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-6 col-md-6 layout-col')
+        } else if (cols == 1) {
+          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-4 col-md-6 layout-col')
+        } else {
+          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-3 col-md-6 layout-col')
+        }
 
-    //     localStorage.setItem('display', 'grid');
-    //   });
+        localStorage.setItem('display', 'grid');
+      });
 
-    //   if (localStorage.getItem('display') == 'list') {
-    //     $('#list-view').trigger('click');
-    //     $('#list-view').addClass('active');
-    //   } else {
-    //     $('#grid-view').trigger('click');
-    //     $('#grid-view').addClass('active');
-    //   }
+      if (localStorage.getItem('display') == 'list') {
+        $('#list-view').trigger('click');
+        $('#list-view').addClass('active');
+      } else {
+        $('#grid-view').trigger('click');
+        $('#grid-view').addClass('active');
+      }
     /*================================
     ======= catalog viewer end =======
     ================================*/
@@ -374,14 +371,24 @@
    min = 0,
    max = 1000,
    from = 0,
-   to = 0;
+   to = 1000;
+
+
+   $('.price-controll__input-clear').on('click',function(event) {
+    instance.reset();
+    $('.price-controll__input .filter__price-controll-min').prop('value',min);
+    $('.price-controll__input .filter__price-controll-max').prop('value',max);
+    // console.log("instance.reset()", from);
+// $range.destroy();
+});
+
 
    $range.ionRangeSlider({
     type: "double",
     min: min,
     max: max,
-    from: 200,
-    to: 800,
+    from: from,
+    to: to,
     onStart: updateInputs,
     onChange: updateInputs
   });
@@ -390,14 +397,14 @@
    function updateInputs (data) {
     from = data.from;
     to = data.to;
-    
+
     $inputFrom.prop("value", from);
     $inputTo.prop("value", to); 
   }
 
   $inputFrom.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < min) {
       val = min;
@@ -412,7 +419,7 @@
 
   $inputTo.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < from) {
       val = from;
@@ -431,6 +438,14 @@
 
 
 
+  if(windowWidht<992){
+    $('.filter__content').slideToggle();
+
+    $('.filter__head').on('click', function(event) {
+      $('.filter__content').slideToggle();
+    });
+
+  }
 
 
 
@@ -448,8 +463,33 @@
 
 
 
+  /*s-menu*/
+
+  var toggleButton = $('.catalog-btn'),
+  menuList =$('.s-menu__list'),
+  subMenuList =$('.s-menu__sublist'),
+  menuItem =$('.s-menu__item'),
+  subMenuItem =$('.s-menu__subitem'),
+  menuLink = $('.s-menu__link'),
+  subMenuLink = $('.s-menu__sublink');
 
 
+
+  // menuItem.each(function() {
+    $('.s-menu__item, .s-menu__subitem ').each(function() {
+      if($(this).find("ul").length > 0){
+        // console.log("el");
+        $(this).append('<div class="s-menu__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12"><path d="M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z" transform="translate(-1511 -1458)" fill-rule="evenodd"/></svg></div>')
+      }
+    });
+
+    $('.s-menu__arrow').on('click', function(event) {
+
+      $(this).parents('li').addClass('active-element').siblings().removeClass('active-element');
+
+      // console.log("s-menu__arrow");
+
+    });
 
 
 

@@ -66,6 +66,7 @@
   margin-left: auto
   margin-right: auto
   padding: 20px 30px
+
   border-radius: 5px
   .form__list
     display: flex
@@ -74,12 +75,25 @@
     padding: 20px 0
     +xs-block()
       flex-direction: column
+      margin-left: 0
+      margin-right: 0
       padding-bottom: 0
   .form__item
+    width: 50%
+    height: 40px
     margin: 0 10px
     +xs-block()
+      width: 100%
+      margin: 0
+    input
+      padding: 0 20px
+      color: #9f9f9f;
+      font-size: 12px;
+      border-radius: 3px
+      border: 1px solid #9f9f9f;
+    +xs-block()
       margin-bottom: 20px
-.popup-close
+.popup-close,.fancybox-close-small
   position: absolute
   top: 20px
   right: 30px
@@ -88,13 +102,16 @@
   align-items: center
   width: 28px
   height: 28px
+  padding: 0
   cursor: pointer
   border-radius: 3px
   background-color: $blue2
   transition: $tr
-  .svg
-    +size(13)
+  .svg,svg
+    +size(28)
     fill: #fff
+    stroke: #fff
+    opacity: 1
   &:hover
     background: $or
 

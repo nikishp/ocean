@@ -142,7 +142,7 @@ block content
 
 
 
-      .col-lg-9 
+      .col-lg-9.catalog--col
         .catalog__controll
           .catalog__controll-item
             select(name="controll")
@@ -158,12 +158,406 @@ block content
               option(value="") По популярности4
        
           .catalog__controll-item.catalog__controll-item--btn-group
-            a(href="#")
+            a(href="#")#list-view
               +svg('table_sort_list')
-            a(href="#")
+            a(href="#")#grid-view
               +svg('table_sort_table')
-          
+          //- .layout-col
+        .row.row--layout
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
 
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
+
+
+          .col-xl-12.layout-item
+            .product-item
+              .product-item__actions
+                .actions__item.actions__item--sale sale
+                //- .actions__item.actions__item--new new
+                //- .actions__item.actions__item--hit hit
+              .product-item__info
+                .product-item__option.product-item__option--favorite
+                  +svg('heart_fill') 
+                  | В избранное
+                .product-item__option.product-item__option--status.product-item__option--status-available
+                  +svg('available') 
+                  | В наличии
+                //- .product-item__option.product-item__option--status.product-item__option--status-unavailable
+                  +svg('cancel') 
+                  | Нет в наличии
+              .product-item__img
+                img(src="img/content/goods_1.png", alt="image")
+              .product-item__content 
+                strong.product-item__title Слаломная лыжа "Freeride"
+                p.product-item__vendor Артикул: <b>155268</b>
+                p.product-item__desc Таким образом консультация с широким активом позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. 
+                p.product-item__produce Производитель: <b>"Zodiac"</b>
+                .product-item__foot
+                  .product-item__price
+                    .product-item__price-cur
+                      b 20 799 
+                      | руб.
+                    .product-item__price-old
+                      b 20 900 
+                      | руб.
+                  .product-item__btn-block 
+                    a.btn.btn--def.btn--orange.btn--fluid(href="#") Подробнее
+                    a.btn.btn--def.btn--fluid.btn--blue(href="#") Добавить в корзину
 
 
 

@@ -22,6 +22,8 @@
 /* head */
 @import "../pug/modules/header/header"
 
+@import "../pug/modules/mmenu/mmenu"
+
 /* foot */
 @import "../pug/modules/foot/foot"
 
@@ -1428,6 +1430,7 @@
 .filter__head,.filter__content,.faq
   margin-bottom: 20px
   padding: 20px
+  cursor: pointer
   border-radius: 3px
   background-image: url(../img/general/bg.png)
 
@@ -1621,17 +1624,25 @@
     +size(10)
     fill: $or
 
-
-
+.catalog__controll
+  display: flex
+  justify-content: flex-end
+  font-size: 0
+.catalog__controll-item
+  margin-left: 30px
 .catalog__controll-item--btn-group
   a
-    +size(30)
+    +size(28)
     padding: 5px
     display: inline-flex
     justify-content: center
     align-items: center
     border-radius: 3px
     background-color: #ededed
+    .svg
+      +size(28)
+    &:not(:first-child)
+      margin-left: 10px
 
 
 
@@ -1639,24 +1650,18 @@
 
 
 
+.catalog--col
+  margin-top: -38px
+  +md-block()
+    margin-top: 15px
+      
+.catalog__controll
+  margin-bottom: 30px
+  +md-block()
+    display: none
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.catalog__filter
+  margin-top: 20px
 
 
 
