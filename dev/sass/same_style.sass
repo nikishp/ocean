@@ -435,6 +435,8 @@ h1,h2,h3,h4,h5,h6
   &:hover
     color: $f
     background: $def
+  &:active,&:focus
+    color: $f
 .btn--black
   color: $f
   font-size: 14px
@@ -442,6 +444,8 @@ h1,h2,h3,h4,h5,h6
   &:hover
     color: $f
     background: lighten($def, 13%)
+  &:active,&:focus
+    color: $f
 .btn--blue
   color: $f
   font-size: 14px
@@ -449,7 +453,8 @@ h1,h2,h3,h4,h5,h6
   &:hover
     color: $f
     background: $def
-
+  &:active,&:focus
+    color: $f
 button[type='submit']
   .form-load
     width: 0
@@ -986,6 +991,7 @@ button[type='submit']
 .increment-field__inp
   display: block
   width: 100%
+  width: calc(100% - 60px)
   height: 23px
   text-align: center  
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
@@ -1167,6 +1173,7 @@ button[type='submit']
 
 .ordering__total-item
   display: flex
+  align-items: baseline
   margin-top: 20px
   font-size: 18px
   font-weight: 700
@@ -1179,6 +1186,7 @@ button[type='submit']
       // background: green
     &:nth-child(2)
       flex-grow: 1
+      min-width: 50px
       // background: red
       border-bottom: 1px dotted $def
     &:last-child

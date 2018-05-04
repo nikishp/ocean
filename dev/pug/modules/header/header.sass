@@ -318,7 +318,7 @@
   .svg
     +size(6)
     fill: $blue2
-
+    transform: translateX(4px)
 
 .nav-block
   color: $f
@@ -375,6 +375,7 @@
   padding-top: 15px
   padding-bottom: 13px
   cursor: pointer
+  transition: $tr
   +lg-block()
     padding-left: 10px
     font-size: 14px
@@ -453,14 +454,18 @@
     +size(7)
     margin-left: 23px
     fill: $f
+    transition: $tr
+    transform: rotate(-90deg)
     +lg-block()
       margin-left: 13px
     +xxs-block()
       display: none
   +lg-block()
     margin-left: 10px
-
-
+.catalog-btn--open
+  .catalog-btn__title
+    .svg
+      transform: rotate(0)
 .specials
   display: flex
   color: $f

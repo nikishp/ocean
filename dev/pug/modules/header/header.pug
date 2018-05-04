@@ -34,12 +34,12 @@ mixin header(name)
               .user__block
                 a.user__item.user__item--uthorization(href="#")
                   span.user__logo
-                    span.user__count(href="#") 25
+                    span.user__count 25
                     +svg('user')
                   span.user__text Авторизация
                 a.user__item.user__item--login(href="#") 
                   span.user__logo
-                    span.user__count(href="#") 25
+                    span.user__count 25
                     +svg('user')
                   span.user__text Личный кабинет 
                     span.user__text-name Иванов Иван
@@ -81,7 +81,7 @@ mixin header(name)
                   +svg('map')
                 .info-block__content 
                   .info-block__title Город:
-                  .info-block__desc: a.info-block__city-link.popup-js(href="#choose_city") Санкт-Петербург
+                  .info-block__desc: a.info-block__city-link(href="#choose_city") Санкт-Петербург
           .col-lg-3.buy-block
             .buy-info__block
               a.buy-info.buy-info--favorites(href="#")
@@ -140,12 +140,12 @@ mixin header(name)
             .user__block
               a.user__item.user__item--uthorization(href="#")
                 span.user__logo
-                  span.user__count(href="#") 25
+                  span.user__count 25
                   +svg('user')
                 span.user__text Авторизация
               a.user__item.user__item--login(href="#") 
                 span.user__logo
-                  span.user__count(href="#") 25
+                  span.user__count 25
                   +svg('user')
                 span.user__text Личный кабинет 
                   span.user__text-name Иванов Иван

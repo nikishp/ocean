@@ -258,8 +258,9 @@
     position: absolute
     left: 0
     top: 100%
-    
-
+.product-item__title
+  display: block
+  +elipsis()
 .actions__item--sale
   background: $or
   &::before
@@ -748,7 +749,9 @@
       fill: none
       +size(15, 13)
       stroke: $or
-
+      transition: $tr
+      &:hover
+        fill: $or
   .product-item__price
     flex-direction: column-reverse
     justify-content: center
@@ -832,7 +835,9 @@
       margin-bottom: 10px
     span
       border-bottom: 1px dotted #000
-
+    &:hover
+      span
+        border-bottom: none
 
 
 

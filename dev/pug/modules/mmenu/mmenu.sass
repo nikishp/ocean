@@ -1,162 +1,187 @@
-.row--nav-block
-  position: relative
+@media screen and (min-width: 1200px)
+  .s-menu
+    ul
+      width: 220px
 
-
-.s-menu
-  position: absolute
-  top: 100%
-  left: 15px
-  right: 15px
-  z-index: 100
-  background: #000
-  background: $blue
-
-
-.s-menu__list
-  position: relative
-  li
-    // background: red
-    // position: relative
-    display: flex
-    align-items: center
-    justify-content: space-between
+  ul.s-menu__list
     width: 260px
-    font-size: 14px
-    font-weight: 300
-    transition: $tr
-    &:hover
-      background: $or
-    &.active-element
-      ul
-        display: block
-      &>.s-menu__arrow
-        transform: rotate(180deg)
-    a
-      // background: #000
+    li
+      font-size: 14px
+    
+@media screen and (min-width: 992px)
+
+  .row--nav-block
+    position: relative
+  .catalog-btn--open
+    background: $blue
+    margin-right: 3px
+  .s-menu
+    display: none
+    position: absolute
+    top: 100%
+    left: 15px
+    right: 15px
+    z-index: 100
+    background: $blue
+    ul
+      width: 180px
+
+  ul.s-menu__list
+    position: relative
+    width: 210px
+    li
       display: flex
       align-items: center
-      height: 40px
-      padding: 0 20px
-      padding-right: 10px
-      flex-grow: 1
-  &>li
-    border-right: 1px solid  #135285
+      justify-content: space-between
+      font-weight: 300
+      transition: $tr
+      font-size: 12px
+      &:hover
+        background: $or
+      &.active-element
+        &>ul
+          display: block
+        &>.s-menu__arrow
+          transform: rotate(180deg)
+      a
+        display: flex
+        align-items: center
+        height: 40px
+        padding: 0 20px
+        padding-right: 10px
+        flex-grow: 1
+        +lg-block()
+          padding: 0 10px
+    &>li
+      border-right: 1px solid  #135285
 
-
-
-
-.s-menu__item
-  // position: relative
-  // width: calc(100% / 5)
-  // height: 40px
-  // background: red
-
-
-
-.s-menu__item.active-element
-  background: $or
-.s-menu__sublist
-  display: none
-  position: absolute
-  width: 200px
-  background: red
-  top: 0
-  // right: 0
-  left: 260px
-  li
-    border-right: 1px solid #135285
-    border-bottom: 1px solid #135285
-
-
-.s-menu__subitem
-  // height: 40px
-  // &:hover
-    &>.s-menu__sublist
-      position: absolute
-      top: 0
-      left: 100%  
-      display: block 
-.s-menu__subitem.active-element
-  background: $or
-
-.s-menu__arrow
-  display: inline-block
-  font-size: 0
-  flex-shrink: 0
-  padding: 7px 4px
-  // padding-right: 0
-  cursor: e-resize
-  // background: green
-  transition: $tr
-  svg
-    +size(8,11)
-    fill: #fff
-
-
-// .active-element
-  &>.s-menu__sublist
-    display: block
+  .s-menu__item.active-element
+    background: $or
+  .s-menu__sublist
+    display: none
     position: absolute
-    left: 100%
     top: 0
+    left: 260px
+    left: 100%
+    li
+      box-shadow: inset 0 0 0 1px #135285
+
+  .s-menu__subitem.active-element
+    background: $or
+
+  .s-menu__arrow
+    display: inline-block
+    font-size: 0
+    flex-shrink: 0
+    padding: 7px 4px
+    cursor: pointer
+    transition: $tr
+    svg
+      +size(8,11)
+      fill: #fff
+
+
+  .s-menu__sublist--open
+    position: absolute
+    top: 0
+    left: 0
+    display: block !important
+    background: $blue
+    li
+
+  .s-menu__back-arrow
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    display: none
+    height: 40px
+    z-index: 10
+    background: red
+    svg
+      +size(8,11)
+      fill: #fff
 
 
 
 
 
 
+@media screen and (max-width: 992px)
+  .row--nav-block
+    position: relative
+  .s-menu 
+    position: absolute
+    top: 57px
+    left: 0
+    width: 100%
+
+  .s-menu__list
+    display: none
+    position: relative
+    left: 0
+    z-index: 25
+    width: 100%
+    padding: 0 15px
+    overflow: hidden
+    background: $blue
+    li
+      display: flex
+      align-items: center
+      box-shadow:  0 2px 0px -1px #135285
+      a
+        // display: block
+        display: flex
+        align-items: center
+        width: 100%
+        padding: 5px 0
+        height: 40px
+        // background: #000
+    .s-menu__arrow
+      position: relative
+      height: 30px
+      width: 20px
+      margin-left: auto
+      cursor: pointer
+      // background: grey
+      svg
+        +absolute-center()
+        +size(10)
+        fill: #fff
 
 
 
+  .s-menu__sublist
+    position: absolute
+    left: -100%
+    top: 0
+    // transition: $tr
+  .active-list
+    &>ul
+      left: 0
+      z-index: 30
+      width: 100%
+      padding: 0 15px
+      background: $blue
+      background: #000
+      background: #2B64A0
+      transition: $tr
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .s-menu__back
+    display: none
+    position: relative
+    width: 100%
+    z-index: 10
+    padding: 6px 15px
+    cursor: pointer
+    background: $blue
+    background: $or
+    svg
+      +size(8,11)
+      display: inline-block
+      vertical-align: baseline
+      margin-right: 10px
+      fill: #fff
 
 
 
