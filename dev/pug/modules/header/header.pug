@@ -69,7 +69,7 @@ mixin header(name)
                   .info-block__desc
                     a.info-block__phone(href="tel:88001006673") 8 800 100 66 73,  
                     a.info-block__phone(href="tel:88001006673") 8 800 100 66 73
-                  a.info-block__popup(data-fancybox, href="#recall"): span Заказать обратный звонок
+                  a.info-block__popup(data-fancybox, data-touch="false", href="#recall"): span Заказать обратный звонок
               .info-block__item
                 .info-block__ico
                   +svg('clock')
@@ -81,7 +81,7 @@ mixin header(name)
                   +svg('map')
                 .info-block__content 
                   .info-block__title Город:
-                  .info-block__desc: a.info-block__city-link(href="#choose_city") Санкт-Петербург
+                  .info-block__desc(data-fancybox="city_popup", data-touch="false", data-src="#choose_city"): .info-block__city-link Санкт-Петербург
           .col-lg-3.buy-block
             .buy-info__block
               a.buy-info.buy-info--favorites(href="#")

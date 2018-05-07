@@ -60,6 +60,8 @@
     color: $or
     .user__logo .svg
       fill: $or
+  &:focus,&:active
+    color: $f
 .user__logo
   position: relative
   margin-right: 10px
@@ -195,6 +197,8 @@
     position: relative
     margin-top: 0px
     white-space: nowrap
+    // background: #000
+    cursor: pointer
     &::before
       content: ''
       position: absolute

@@ -61,7 +61,6 @@ mixin recall(formClass,formId)
     //- .popup-close
       +svg('close')
     .form__title Заказать обратный звонок
-    .form__subtitle 
     ul.form__list
       li.form__item
         input(type='text', required='', name='Ваше имя', placeholder='Ваше имя')
@@ -73,5 +72,27 @@ mixin recall(formClass,formId)
         | Все Ваши данные конфиденциальны
       .form__btn
         button(type='submit').btn.btn--def.btn--orange Подписаться
+        
+mixin quest(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || '' 
+  form(class='form ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    //- .popup-close
+      +svg('close')
+    .form__title #{formTitle}
+    ul.form__list
+      li.form__item
+        input(type='text', required='', name='Ваше имя', placeholder='Ваше имя')
+      li.form__item
+        input(type='tel', required='', name='Ваш телефон', placeholder='Ваш телефон')
+    .form__item.form__item--textarea
+      textarea(name="Ваш вопрос", placeholder="Ваш вопрос")
+    .form__foot 
+      .form__police
+        +svg('lock')
+        | Все Ваши данные конфиденциальны
+      .form__btn
+        button(type='submit').btn.btn--def.btn--orange Задать вопрос
         
 

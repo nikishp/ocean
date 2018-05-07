@@ -12,7 +12,7 @@ block content
       .col
         .info-titles
           h2.h2 Страница товара
-          a.info-titles__btn-link(href="#")
+          a.info-titles__btn-link(href="#quest", data-fancybox="quest", data-touch="false")
             +svg('faq')
             | Задать вопрос по товару
 
@@ -28,23 +28,17 @@ block content
             .actions__item.actions__item--new new
             .actions__item.actions__item--hit hit
           .goods-slider__container
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_1.jpg)")
-
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_1.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_1.jpg")
               .goods-slider__height
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_2.jpg)")
-        
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_2.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_2.jpg")
               .goods-slider__height
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_3.jpg)")
-         
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_3.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_3.jpg")
               .goods-slider__height
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_4.jpg)")
-           
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_4.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_4.jpg")
               .goods-slider__height
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_5.jpg)")
-        
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_5.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_5.jpg")
               .goods-slider__height
-            .goods-slider__item(style="background-image: url(img/content/boat/boat_6.jpg)")
-       
+            .goods-slider__item(style="background-image: url(img/content/boat/boat_6.jpg)", data-fancybox="images", data-touch="false" data-src="img/content/boat/boat_6.jpg")
               .goods-slider__height
         .goods-slider-nav
           .goods-slider-nav__item-wrap
@@ -96,7 +90,7 @@ block content
           ul.tabs__list
             li.tabs__list-item.active-tab Описание
             li.tabs__list-item Справочная информация
-            li.tabs__list-item Спецификация
+            li.tabs__list-item.tabs__list-item--spec Спецификация
             li.tabs__list-item Наличие в магазинах
           .tabs__content.active-tab
             h2.h2 Описание
@@ -235,12 +229,6 @@ block content
                 td(data-title="Наличие").table__td 
                   .table__td-content 
                     .available В наличии 
-     
-
-
-
-
-
               tr.table__row-content
                 td(data-title="Адрес").table__td
                   .table__td-content
@@ -265,12 +253,6 @@ block content
                 td(data-title="Наличие").table__td 
                   .table__td-content 
                     .available В наличии 
-     
-
-
-
-
-
               tr.table__row-content
                 td(data-title="Адрес").table__td
                   .table__td-content
@@ -295,12 +277,6 @@ block content
                 td(data-title="Наличие").table__td 
                   .table__td-content 
                     .available В наличии 
-     
-
-
-
-
-
               tr.table__row-content
                 td(data-title="Адрес").table__td
                   .table__td-content
@@ -325,12 +301,6 @@ block content
                 td(data-title="Наличие").table__td 
                   .table__td-content 
                     .available В наличии 
-     
-
-
-
-
-
               tr.table__row-content
                 td(data-title="Адрес").table__td
                   .table__td-content
@@ -355,12 +325,6 @@ block content
                 td(data-title="Наличие").table__td 
                   .table__td-content 
                     .available В наличии 
-     
-
-
-
-
-
               tr.table__row-content
                 td(data-title="Адрес").table__td
                   .table__td-content

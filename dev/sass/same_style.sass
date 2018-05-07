@@ -639,7 +639,7 @@ button[type='submit']
 .goods-slider__height
   padding-top: 68%
 .goods-slider__item
-
+  cursor: pointer
 
 .goods-slider-nav
   margin-top: 20px
@@ -898,25 +898,29 @@ button[type='submit']
 
 .pagination
   position: relative
-  max-width: 400px
+  // max-width: 400px
+  display: flex
+  align-items: center
+  justify-content: center 
   width: 100%
   margin-top: 40px
   margin-bottom: 40px
   margin-left: auto
   margin-right: auto
-  padding: 0 60px
+  // padding: 0 70px
   line-height: 1
   // background: rgba(0,0,0,0.2)
   +xsl-block()
     padding: 0 14px
 .pagination__controll-link
-  position: absolute
-  top: 50%
+  // position: absolute
+  // top: 50%
+  // width: 70px
   display: flex
   align-items: center
-  transform: translateY(-50%)
+  // transform: translateY(-50%)
   transition: $tr
-  // background: #000
+  // background: red
   +xsl-block()
     font-size: 0
 
@@ -933,19 +937,25 @@ button[type='submit']
     +xsl-block()
       +size(12)
 .pagination__controll-link--prev
-  left: 0
+  // left: 0
+  justify-content: flex-end
+  margin-right: 10px
+
   .svg
     margin-right: 5px
 .pagination__controll-link--next
-  right: 0
+  // right: 0
+  margin-left: 10px
   .svg
     margin-left: 5px
 
 .pagination__list
   display: flex
   justify-content: space-between
+  justify-content: center
   li
     margin: 0 4px
+    // background: $or
     +xxs-block()
       // margin: 0 8px
   .active
@@ -1134,9 +1144,20 @@ button[type='submit']
       border-left: 2px solid $or
       transform: rotate(-50deg)
 
-
-
-
+.popup-table
+  position: relative
+  max-width: 980px
+  width: 100%
+  margin-bottom: 0
+  padding: 0
+  border-radius: 3px
+  overflow: initial
+  .fancybox-close-small, .popup-close
+    top: 0;
+    right: 0;
+    transform: translateX(50%) translateY(-50%)
+    +md-block()
+      transform: translateX(0) translateY(-50%)
 
 
 
@@ -1365,6 +1386,54 @@ button[type='submit']
   color: #99a4ac
 
 .irs-disabled
+
+
+
+.popup-city
+  position: relative
+  max-width: 620px
+  width: 100%
+  color: $f
+  // color: $or
+  background: $blue
+  border-radius: 3px
+  margin-bottom: 0
+  box-shadow: 0 0 3px 0 $or
+  .fancybox-close-small
+    position: absolute
+    top: 10px
+    right: 10px
+.popup-city__content
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -10px
+.popup-city__item
+  display: block
+  width: calc(33.33% - 20px)
+  margin: 0 10px
+  margin-bottom: 15px
+  text-decoration: underline
+  +xs-block()
+    width: calc(50% - 20px)
+  +xxs-block()
+    width: calc(50% - 20px)
+    width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
