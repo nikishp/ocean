@@ -567,6 +567,7 @@ button[type='submit']
   +sm-block()
     flex-wrap: wrap
   li
+    display: inline-flex
     padding-right: 20px
     +sm-block()
       padding-right: 10px
@@ -994,7 +995,7 @@ button[type='submit']
   line-height: 1
   border-radius: 50%
   background-color: $blue2
-  &:hover
+  &:hover,&:focus,&:active
     color: #fff
   span
     +absolute-center()
@@ -1220,12 +1221,13 @@ button[type='submit']
 
 .ordering__foot
   margin-top: 20px
-
-.ordering__foot-check
-  color: $or
-  font-size: 12px
-  font-weight: 300
-  span
+.ordering__foot-checker
+  display: flex
+  align-items: center
+  a
+    color: $or
+    font-size: 12px
+    font-weight: 300
     text-decoration: underline
 
 

@@ -16,7 +16,7 @@ block content
         form.form.form--autorisize(action="#")
           .col-lg-12
             h3.h3 Авторизация
-            +form_item('mail', 'mail', 'Ваш e-mail', "Ваш e-mail")
+            +form_item('mail', 'email', 'Ваш e-mail', "Ваш e-mail")
             +form_item('pass', 'password', 'Пароль', "Пароль")
             //- button(type="submit").bnt.btn--def.btn--blue Авторизоваться 
             button(type="submit").btn.btn--def.btn--blue.btn--def-lg Вход
@@ -82,9 +82,10 @@ block content
           
 
             .ordering__foot
-              label.ordering__foot-check
-                input(type="checkbox", checked, name="Даю согласие на обработку моих персональных данных", value="yes")
-                span Даю согласие на обработку моих персональных данных
+              .ordering__foot-checker
+                label.ordering__foot-check
+                  input(type="checkbox", checked, name="Даю согласие на обработку моих персональных данных", value="yes")
+                a(href="#") Даю согласие на обработку моих персональных данных
               .ordering__foot-btns
                 a.btn.btn--def.btn--big(href="#") Назад в корзину
                 a.btn.btn--def.btn--big.btn--blue(href="#") Продолжить покупки

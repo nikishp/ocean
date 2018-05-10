@@ -138,6 +138,7 @@ block content
     };
     $('.lk-menu__link').on('click', function(event) {
     event.preventDefault();
+    //$(this).parents('li').siblings().removeClass('lk-menu__item--active');
     showSection($(this).attr('href'), true);
     });
     function checkSection() {
@@ -149,7 +150,7 @@ block content
     if (topEdge < wScroll && bottomEdge > wScroll) {
     var currentId = $this.data('section'),
     reqLink = $('.lk-menu__link').filter('[href="#' + currentId + '"]');
-    reqLink.closest('.lk-menu__item').addClass('lk-menu__item--active').siblings().removeClass('lk-menu__item--active');
+    reqLink.closest('.lk-menu__item').addClass('lk-menu__item--active').siblings().removeClass('lk-menu__item--active').trigger("change");
     }
     });
     };

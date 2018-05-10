@@ -260,6 +260,7 @@
     top: 100%
 .product-item__title
   display: block
+  font-weight: bold
   +elipsis()
 .actions__item--sale
   background: $or
@@ -363,6 +364,7 @@
 
 .product-item__btn-block
   margin-left: auto
+  flex-shrink: 0
   // padding-left: 20px
   +md-block()
     margin-top: 20px
@@ -506,6 +508,10 @@
   font-size: 16px
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
   border-radius: 10px
+  +xxs-block()
+    left: 10px
+    right: 70px
+    width: calc(100% - 81px)
   input
     display: block
     width: 100%
@@ -532,7 +538,8 @@
     width: 21px
     height: 30px
     fill: $blue
-
+  +xxs-block()
+    right: 10px
 
 
 
@@ -714,7 +721,8 @@
 
 .goods-char__table
   width: 100%
-  table-layout: fixed
+  table-layout: fixed 
+  border-collapse: collapse
   border-radius: 3px
   border: 1px solid #f9f9f9
   word-break: break-word
@@ -832,6 +840,7 @@
   +xs-block()
     margin-top: 0
     flex-direction: column
+    flex-shrink: 0
   .product-item__option
     margin-right: 10px
     margin-bottom: 0
@@ -1026,7 +1035,9 @@
   +md-block()
     // display: block
   .goods-char__row
-
+  .btn
+    font-size: 13px
+    // height: 35px
   .goods-char__row--head
     font-size: 17px
     +md-block()
@@ -1205,7 +1216,7 @@
 .lk-menu__item
   border-left: 3px solid $blue
   border-bottom: 1px solid #f9f9f9
-  &:hover
+  // &:hover
     .lk-menu__link
       color: $f
       background: $blue
@@ -1366,6 +1377,7 @@
     position: absolute
     top: -7px
     right: -7px
+    z-index: 20
     display: flex
     justify-content: center
     align-items: center
@@ -1378,8 +1390,9 @@
     font-weight: 400
     line-height: 14px
     background-color: $def
-
-
+    +sm-block()
+      +size(20)
+      font-size: 12px
 .tooltip-inner
   max-width: 270px !important
   padding: 10px !important
@@ -1390,7 +1403,8 @@
   font-size: 12px
   font-weight: 400
   line-height: 16px
-
+  a
+    text-decoration: underline
 
 
 
