@@ -38,10 +38,29 @@
     bottom: auto
 .form__item--btn
   height: auto
+.form__item--correct
+  input
+    border-color: #ff7d00
+  &::before
+    content: '' 
+    position: absolute
+    top: 50%
+    right: 15px
+    +sprite($cor_ar)
+    transform: translateY(-50%)
+
+.form__item--incorrect
+  input
+    border-color: #0f3f65
+  &::before
+    content: '' 
+    position: absolute
+    top: 50% 
+    right: 15px
+    +sprite($incor_ar)
+    transform: translateY(-50%)
 
 
-
-  
   .mfp-close,.fancybox-close-small
     display: none
    
