@@ -346,24 +346,24 @@
     $('[data-toggle="tooltip"]').tooltip({
       trigger: 'click',
       html: true,
-      // placement: 'left',
+        // placement: 'left',
         placement: function(tip, element) { //$this is implicit
 
-        // if (position.left > 515) {
-        //     return "left";
-        // }
-           // if (position.top < 110){
-        //   return "bottom";
-        // }
-        if (windowWidht < 500) {
-            return "bottom";
-        }else{
-        return "left";
-        }
-      }
-    }) 
+            // if (position.left > 515) {
+            //     return "left";
+            // }
+            // if (position.top < 110){
+            //   return "bottom";
+            // }
+            if (windowWidht < 500) {
+              return "bottom";
+            } else {
+              return "left";
+            }
+          }
+        })
 
- 
+
 
     // $('.filter__head ').on('click', function(event) {
     //   // $('.hamburger').toggleClass('is-active');
@@ -378,9 +378,9 @@
       $(this).toggleClass('filter__block-title--collapse').next('.filter__block-content').stop(true, true).slideToggle();
 
     });
-   
 
-  
+
+
     //  $(".filter__price-range").ionRangeSlider({
     //    type: "double",
     //    min: 0,
@@ -470,16 +470,14 @@
 
 
     $('.filter__head').on('click', function(event) {
-      // $(this).children('.hamburger').toggleClass('is-active');
-      $('.filter__content').stop(true,true).slideToggle();
-    });
+        // $(this).children('.hamburger').toggleClass('is-active');
+        $('.filter__content').stop(true, true).slideToggle();
+      });
 
 
     if (windowWidht < 992) {
-      $('.filter__content').stop(true,true).slideToggle();
+      $('.filter__content').stop(true, true).slideToggle();
     }
-
-
 
 
 
@@ -500,11 +498,6 @@
     menuLink = $('.s-menu__link'),
     subMenuLink = $('.s-menu__sublink'),
     menuArrow = $('.s-menu__arrow');
-
-
-    // windowWidht = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-
 
     function elementHeight(selector, num) {
         // высота блока по макс.высоте чаилда
@@ -551,13 +544,103 @@
         toggleButton.find('.hamburger').removeClass('is-active');
         sMenu.stop(true, true).slideUp();
         $('.s-menu li').removeClass('active-element');
-      });
 
-      $('.s-menu__list li').mouseenter(function() {
+
+      });
+      var cout = 0;
+      var defHeight = $(".s-menu").height();
+
+      $('.s-menu__list li').hover(function() {
+
         $(this).children('li').removeClass('active-element');
         $(this).addClass('active-element').siblings().removeClass('active-element');
-        elementHeight('li.active-element>ul', 0);
-      });
+            // elementHeight('li.active-element>ul', 0);
+
+            // console.log("cout", cout);
+
+            var offset = $(".s-menu").offset();
+            // console.log("offset", offset);
+            var ofParrent = offset.top;
+            // console.log("ofParrent", ofParrent);
+            // console.log("defHeight", defHeight);
+            var elementOffset = $(this).parent().offset().top - ofParrent;
+            // var elementOffset = $(this).offset().top - ofParrent;
+            // var elementOffset = $(this).parent().position().top;
+            console.log("elementOffset", elementOffset);
+            // console.log("elementOffset", elementOffset);
+            var elementListHeight = $(this).children('ul').height();
+            console.log("elementListHeight", elementListHeight);
+            // console.log("elementListHeight", elementListHeight);
+            // var elementListHeight = $(this).children('ul').length > 0 ? $(this).children('ul').height() : 0;
+            // var elementListHeight = $(this).children('ul').length > 0 ? $(this).children('ul').height() : 0;
+            // console.log("elementListHeight", elementListHeight);
+            var elementDefHeight = elementOffset + elementListHeight;
+            // console.log("elementDefHeight", elementDefHeight);
+            // console.log("elementDefHeight", elementDefHeight);
+
+            // if ((elementOffset + $(this).children('ul').height()) > cout) {
+            //   cout = elementOffset + $(this).children('ul').height();
+            // }
+            // console.log("cout after", cout);
+
+
+            $('.s-menu').css("height", "");
+            if (defHeight < elementDefHeight) {
+              $(".s-menu").height(elementDefHeight);
+                // console.log("defHeight < elementDefHeight");
+
+              }
+
+              // if (defHeight > elementDefHeight) {
+              //   // console.log("elementOffset", elementOffset);
+              //   // console.log("defHeight", defHeight);
+              //   // console.log("elementDefHeight", elementDefHeight);
+
+              //   // // console.log($(this).parent().height());
+              //   // // console.log("asdf", asdf);
+              //   // // $(".s-menu").height
+              //   // // $(".s-menu").height(elementDefHeight);
+              //   // console.log("defHeight > elementDefHeight");
+              //   // console.log('cout - elHei', cout - elementListHeight);
+
+              //   // $(".s-menu").height(elementDefHeight);
+
+
+              // }
+
+
+
+            }, function() {
+
+
+              // var offset = $(".s-menu").offset();
+              // var ofParrent = offset.top;
+              // console.log("defHeight", defHeight);
+              // var elementOffset = $(this).offset().top;
+              // console.log("elementOffset", elementOffset);
+              // var elementListHeight = $(this).parent().height();
+              // console.log("elementListHeight", elementListHeight);
+              // var elementDefHeight = elementOffset + elementListHeight;
+
+              // $('.s-menu').css("height", "");
+
+              // $(".s-menu").height(elementListHeight);
+
+
+              // if($(".s-menu").height() < defHeight){
+              //   $(".s-menu").height(defHeight)
+
+
+              // }
+
+
+
+
+            });
+
+
+
+
 
     } //if width > 992
     else {
@@ -627,7 +710,6 @@
     };
     pageWidget(['index', 'under_goods', 'card', 'news', 'basket', 'ordering', 'lkf', 'lkf_ur', 'catalog', 'default'])
         //endRemoveIf(production)
-
 
 
 
