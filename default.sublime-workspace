@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"out",
+				"outerHeight\t.outerHeight()"
+			],
+			[
+				"off",
+				"offset\t.offset()"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"pare",
+				"parent\t.parent()"
+			],
+			[
 				"window",
 				"windowWidht"
 			],
@@ -102,10 +122,6 @@
 			[
 				"res",
 				"resize\t.resize()"
-			],
-			[
-				"pare",
-				"parents\t.parents()"
 			],
 			[
 				"ord",
@@ -272,7 +288,7 @@
 			"file": "/C/Users/Developer_2/Desktop/serv/ospanel/domains/ocean/dev/pug/modules/mmenu/mmenu.pug",
 			"settings":
 			{
-				"buffer_size": 6719,
+				"buffer_size": 67830,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -287,13 +303,11 @@
 			}
 		},
 		{
-			"contents": "//$(document).ready(function() {\n\n  $(function() {\n\n    svg4everybody();\n    objectFitImages();\n\n    var windowWidht = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;\n\n\n    $(\".increment-field__inp\").keypress(function(event) {\n      if (/[^0-9]/.exec(event.target.value)) {}\n    }).bind(\"input\", function(event) {\n      if (/[^0-9]/.exec(event.target.value)) $(this).val($(this).val().replace(/[^0-9]/gim, ''));\n    });\n\n\n\n  function popupCall() {\n\n    $('.popup-iframe').each(function() {\n\n      var fancyPathHref = $(this).attr('href');\n            // console.log(fancyPathHref);\n\n            $(this).fancybox({\n              touch: false,\n              src: fancyPathHref,\n              iframe: {\n                css: {\n                        // width : '600px'\n                      }\n                    }\n                  });\n          });\n  }\n  popupCall();\n\n  $('.popup-iframe').on('click', function() {\n    setTimeout(popupCall, 1000)\n  });\n\n\n\n    // $('.popup-iframe').magnificPopup({\n    //   disableOn: 700,\n    //   type: 'iframe',\n    //   mainClass: 'mfp-fade',\n    //   removalDelay: 160,\n    //   preloader: false,\n\n    //   fixedContentPos: false\n    // });\n\n\n\n\n\n\n    $('.relative-slider__slider').slick({\n      slidesToShow: 4,\n      arrows: true,\n      prevArrow: '<div class=\"goods-slider-controll goods-slider-controll--prev\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z\" transform=\"translate(-695 -1458)\" fill-rule=\"evenodd\"/></svg></div>',\n      nextArrow: '<div class=\"goods-slider-controll goods-slider-controll--next\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z\" transform=\"translate(-1511 -1458)\"  fill-rule=\"evenodd\"/></svg></div>',\n      responsive: [{\n        breakpoint: 1200,\n        settings: {\n          slidesToShow: 3\n        }\n      }, {\n        breakpoint: 992,\n        settings: {\n          slidesToShow: 2\n        }\n      }, {\n        breakpoint: 560,\n        settings: {\n          slidesToShow: 1\n        }\n      }]\n    });\n\n    $('.relative-slider__slider-triple').slick({\n      slidesToShow: 3,\n      arrows: true,\n      prevArrow: '<div class=\"goods-slider-controll goods-slider-controll--prev\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z\" transform=\"translate(-695 -1458)\" fill-rule=\"evenodd\"/></svg></div>',\n      nextArrow: '<div class=\"goods-slider-controll goods-slider-controll--next\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z\" transform=\"translate(-1511 -1458)\"  fill-rule=\"evenodd\"/></svg></div>',\n      responsive: [{\n        breakpoint: 1200,\n        settings: {\n          slidesToShow: 2\n        }\n      }, {\n        breakpoint: 992,\n        settings: {\n          slidesToShow: 2\n        }\n      }, {\n        breakpoint: 560,\n        settings: {\n          slidesToShow: 1\n        }\n      }]\n    });\n\n\n\n\n    // tabs \n    $('.tabs__list').on('click', '.tabs__list-item:not(.active-tab)', function() {\n      $(this)\n      .addClass('active-tab').siblings().removeClass('active-tab')\n      .closest('.tabs').find('.tabs__content').removeClass('active-tab').eq($(this).index()).addClass('active-tab');\n    });\n\n\n\n    $('.goods-slider__container').slick({\n        // infinite: false,\n        arrows: false,\n        asNavFor: '.goods-slider-nav'\n      });\n\n    $('.goods-slider-nav').slick({\n        // infinite: false,\n        arrows: false,\n        slidesToShow: 4,\n        centerMode: true,\n        centerPadding: '40px',\n        focusOnSelect: true,\n        arrows: true,\n        prevArrow: '<div class=\"goods-slider-controll goods-slider-controll--prev\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z\" transform=\"translate(-695 -1458)\" fill-rule=\"evenodd\"/></svg></div>',\n        nextArrow: '<div class=\"goods-slider-controll goods-slider-controll--next\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z\" transform=\"translate(-1511 -1458)\"  fill-rule=\"evenodd\"/></svg></div>',\n        asNavFor: '.goods-slider__container',\n        responsive: [{\n          breakpoint: 768,\n          settings: {\n            slidesToShow: 2\n          }\n        }, {\n          breakpoint: 480,\n          settings: {\n            centerMode: false,\n            centerPadding: '0',\n            slidesToShow: 2\n          }\n        }]\n      });\n\n\n\n    // $('.info-block__item--mask .info-block__desc').on('click', function(event) {\n    //     // $('.info-block__city-link').trigger(\"click\");\n    //     console.log(\".info-block__item--mask\");\n    // });\n\n\n\n\n\n    //footer on bottom\n    $('.wrapper').css(\"min-height\", function() {\n      var vieportHeight = $(window).height(),\n      footHeight = $('.foot').outerHeight(true, true),\n      calcHeight = vieportHeight - footHeight;\n        // console.log(\"vieportHeight\", vieportHeight);\n        // console.log(\"footHeight\", vieportHeight);\n        // console.log(\"calcHeight\", calcHeight);\n        return calcHeight;\n      });\n\n\n    //popup form\n    // $('.popup-js').magnificPopup({\n    //   type: 'inline',\n    //   preloader: false,\n    //   focus: '#name',\n    //   callbacks: {\n    //     beforeOpen: function () {\n    //       if ($(window).width() < 700) {\n    //         this.st.focus = false;\n    //       } else {\n    //         this.st.focus = '#name';\n    //       }\n    //     }\n    //   }\n    // });\n\n    //phone mask\n    // $(\".phone\").mask(\"+9(999)999-99-99\");\n\n    if (windowWidht < 992) {\n      $('.h3--foot-list').on('click', function(event) {\n        $(this).stop(true).toggleClass('h3--foot-open');\n        $(this).parent().find('.foot__list').stop(true).slideToggle();\n      });\n    }\n\n    $('.main-slider').slick({\n      arrows: true,\n      draggable: false,\n      prevArrow: '<div class=\"slide-controll slide-controll--prev\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z\" transform=\"translate(-695 -1458)\" fill-rule=\"evenodd\"/></svg></div>',\n      nextArrow: '<div class=\"slide-controll slide-controll--next\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z\" transform=\"translate(-1511 -1458)\"  fill-rule=\"evenodd\"/></svg></div>',\n      responsive: [{\n        breakpoint: 993,\n        settings: {\n          draggable: true,\n        }\n      }]\n\n\n    });\n\n    $('.popup-close').on('click', function(event) {\n        // $.magnificPopup.close();\n        $.fancybox.close();\n      });\n\n    $('.product-item__option--favorite').on('click', function(event) {\n      $(this).stop(true).toggleClass('product-item__option--favorite-active');\n    });\n\n    /*================================\n    ==========catalog viewer==========\n    ================================*/\n    // Product List\n    $('#list-view').click(function() {\n\n      $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-12');\n\n        // console.log(\".layout-item\");\n\n        localStorage.setItem('display', 'list');\n      });\n\n    // Product Grid\n    $('#grid-view').click(function() {\n        // What a shame bootstrap does not take into account dynamically loaded columns\n        var cols = $('.catalog-sidebar').length;\n        // console.log(\"cols\", cols);\n\n        if (cols == 2) {\n          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-6 col-md-6 layout-col')\n        } else if (cols == 1) {\n          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-4 col-md-6 layout-col')\n        } else {\n          $('.row--layout .layout-item').prop('class', '').addClass('layout-item col-xl-3 col-md-6 layout-col')\n        }\n\n        localStorage.setItem('display', 'grid');\n      });\n\n    if (localStorage.getItem('display') == 'list') {\n      $('#list-view').trigger('click');\n      $('#list-view').addClass('active');\n    } else {\n      $('#grid-view').trigger('click');\n      $('#grid-view').addClass('active');\n    }\n    /*================================\n    ======= catalog viewer end =======\n    ================================*/\n\n\n\n    $('.pagination__list li').on('click', function(event) {\n      event.preventDefault()\n      $(this).addClass('active').siblings().removeClass('active');\n\n    });\n\n\n    $('.increment-field__btn--sub').click(function() {\n      if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);\n    });\n    $('.increment-field__btn--add').click(function() {\n      $(this).prev().val(+$(this).prev().val() + 1);\n    });\n\n\n    $('input[type=\"radio\"],input[type=\"checkbox\"],select').styler();\n\n\n\n\n    //open first element on page load\n    $('.accordion__content').eq(0).stop(true, true).slideToggle('200');\n    $('.accordion__item').eq(0).addClass('accordion__item--active');\n    //open first element on page load end\n    $('.accordion__title').click(function() {\n      var $this = $(this);\n      $('.accordion__title').find('input').prop(\"checked\", false);\n      $(this).find('input').prop(\"checked\", true);\n\n      setTimeout(function() {\n        $('input[type=\"radio\"]').trigger('refresh');\n      }, 100);\n\n      $this.next('.accordion__content').stop(true, true).slideToggle('200');\n      $this.parent().toggleClass('accordion__item--active');\n\n      $this.parent().siblings('.accordion__item').children('.accordion__content').stop(true, true).slideUp('200');\n      $this.parent().siblings('.accordion__item').removeClass('accordion__item--active');\n\n    });\n\n\n\n\n\n\n    $(\".ordering__foot-check input\").on(' change ', function(event) {\n\n      if ($(this).is(':checked')) {\n        $(\".ordering__foot-btns button\").prop(\"disabled\", false);\n            // console.log('check');\n          } else {\n            $(\".ordering__foot-btns button\").prop(\"disabled\", true);\n            // console.log('uncheck');\n          }\n\n\n        });\n\n\n    function filterList(value) {\n      var list = $(\".table--lk-ur .table__row-content\");\n      $(list).fadeOut(10);\n      if (value == \"All\") {\n        $(\".table--lk-ur\").find(\".table__row-content\").each(function(i) {\n          $(this).slideDown();\n        });\n      } else {\n        $(\".table--lk-ur\").find(\"tr[data-filter*=\" + value + \"]\").each(function(i) {\n          $(this).slideDown();\n        });\n      }\n    };\n\n    $('.lk-block__select--lk-ur select').on('change', function(event) {\n      var curVal = $(this).val();\n      filterList(curVal);\n    });\n\n\n    $('[data-toggle=\"tooltip\"]').tooltip({\n      trigger: 'click',\n      html: true,\n      // placement: 'left',\n        placement: function(tip, element) { //$this is implicit\n\n        // if (position.left > 515) {\n        //     return \"left\";\n        // }\n           // if (position.top < 110){\n        //   return \"bottom\";\n        // }\n        if (windowWidht < 500) {\n            return \"bottom\";\n        }else{\n        return \"left\";\n        }\n      }\n    }) \n\n \n\n    // $('.filter__head ').on('click', function(event) {\n    //   // $('.hamburger').toggleClass('is-active');\n\n    //   // console.log(\".filter__head\");\n    // });\n\n\n\n    $('.filter__block-title').on('click', function(event) {\n\n      $(this).toggleClass('filter__block-title--collapse').next('.filter__block-content').stop(true, true).slideToggle();\n\n    });\n   \n\n  \n    //  $(\".filter__price-range\").ionRangeSlider({\n    //    type: \"double\",\n    //    min: 0,\n    //    max: 999999,\n    //    from: 30,\n    //    to: 600000,\n    //    min_interval: 20,\n    //    onChange: function (data) {\n\n    //     data(\"from\"),\n    //     data(\"to\");\n    //      console.log(from + \" - \" + to);\n    //   },\n    // });\n\n\n    var $range = $(\".filter__price-range\"),\n    $inputFrom = $('.price-controll__input .filter__price-controll-min'),\n    $inputTo = $('.price-controll__input .filter__price-controll-max'),\n    instance,\n    min = 0,\n    max = 1000,\n    from = 0,\n    to = 1000;\n\n\n    $('.price-controll__input-clear').on('click', function(event) {\n      instance.reset();\n      $('.price-controll__input .filter__price-controll-min').prop('value', min);\n      $('.price-controll__input .filter__price-controll-max').prop('value', max);\n        // console.log(\"instance.reset()\", from);\n        // $range.destroy();\n      });\n\n\n    $range.ionRangeSlider({\n      type: \"double\",\n      min: min,\n      max: max,\n      from: from,\n      to: to,\n      onStart: updateInputs,\n      onChange: updateInputs\n    });\n    instance = $range.data(\"ionRangeSlider\");\n\n    function updateInputs(data) {\n      from = data.from;\n      to = data.to;\n\n      $inputFrom.prop(\"value\", from);\n      $inputTo.prop(\"value\", to);\n    }\n\n    $inputFrom.on(\"input\", function() {\n      var val = $(this).prop(\"value\");\n\n        // validate\n        if (val < min) {\n          val = min;\n        } else if (val > to) {\n          val = to;\n        }\n\n        instance.update({\n          from: val\n        });\n      });\n\n    $inputTo.on(\"input\", function() {\n      var val = $(this).prop(\"value\");\n\n        // validate\n        if (val < from) {\n          val = from;\n        } else if (val > max) {\n          val = max;\n        }\n\n        instance.update({\n          to: val\n        });\n      });\n\n\n\n\n\n    $('.filter__head').on('click', function(event) {\n      // $(this).children('.hamburger').toggleClass('is-active');\n      $('.filter__content').stop(true,true).slideToggle();\n    });\n\n\n    if (windowWidht < 992) {\n      $('.filter__content').stop(true,true).slideToggle();\n    }\n\n\n\n\n\n\n\n\n\n\n\n    /*s-menu*/\n\n    var toggleButton = $('.catalog-btn'),\n    sMenu = $('.s-menu'),\n    menuList = $('.s-menu__list'),\n    subMenuList = $('.s-menu__sublist'),\n    menuItem = $('.s-menu__item'),\n    subMenuItem = $('.s-menu__subitem'),\n    menuLink = $('.s-menu__link'),\n    subMenuLink = $('.s-menu__sublink'),\n    menuArrow = $('.s-menu__arrow');\n\n    function elementHeight(selector, num) {\n        // высота блока по макс.высоте чаилда\n        // console.log(\"num\", num);\n        var childUlHeight = 0,\n        mainUlHeight = menuList.outerHeight(true);\n\n        // $('.s-menu__list li.active-element ul').each(function(){ \n        // $('li.active-element>ul').each(function() {\n          $(selector).each(function() {\n            if ($(this).outerHeight(true) > childUlHeight) {\n              childUlHeight = $(this).outerHeight(true) + num;\n            }\n          });\n        // console.log(\"childUlHeight\", childUlHeight);\n\n        if (childUlHeight > mainUlHeight) {\n          sMenu.height(childUlHeight);\n        } else {\n          sMenu.height(mainUlHeight);\n        }\n      };\n\n\n    // если есть вложеный список добавляю стрелку\n    $('.s-menu__item, .s-menu__subitem ').each(function() {\n      if ($(this).find(\"ul\").length > 0) {\n        $(this).append('<div class=\"s-menu__arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M1512.51,1458l-1.51,1.4,4.97,4.6-4.97,4.6,1.51,1.4,6.49-6Z\" transform=\"translate(-1511 -1458)\" fill-rule=\"evenodd\"/></svg></div>')\n      }\n    });\n\n\n    if (windowWidht > 992) {\n\n      toggleButton.on('click', function(event) {\n        $(this).toggleClass(\"catalog-btn--open\");\n        $(this).find('.hamburger').toggleClass('is-active');\n        sMenu.stop(true, true).slideToggle();\n      });\n\n      sMenu.mouseleave(function() {\n        sMenu.attr('style', '');\n        toggleButton.removeClass(\"catalog-btn--open\");\n        toggleButton.find('.hamburger').removeClass('is-active');\n        sMenu.stop(true, true).slideUp();\n        $('.s-menu li').removeClass('active-element');\n      });\n\n      $('.s-menu__list li').mouseenter(function() {\n        $(this).children('li').removeClass('active-element');\n        $(this).addClass('active-element').siblings().removeClass('active-element');\n        elementHeight('li.active-element>ul', 0);\n      });\n\n    } //if width > 992\n    else {\n      var mobLineHeight = $('.mob-info').outerHeight(true);\n      $('.s-menu').prepend('<div class=\"s-menu__back\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 12\"><path d=\"M701.486,1458l1.514,1.4-4.973,4.6,4.973,4.6-1.514,1.4L695,1464Z\" transform=\"translate(-695 -1458)\" fill-rule=\"evenodd\"/></svg>Назад</div>');\n      var backBtn = $(\".s-menu__back\"),\n      backBtnHeigh = backBtn.outerHeight(true);\n      toggleButton.on('click', function(event) {\n        $(this).toggleClass(\"catalog-btn--open\");\n        $(this).find('.hamburger').toggleClass('is-active');\n        $('.s-menu__list').css('height', 'auto');\n        $('.s-menu__list').stop(true, true).slideToggle();\n        backBtn.hide();\n        $('.s-menu__list li').removeClass('active-list');\n      });\n\n      $('.s-menu__arrow').on('click', function(event) {\n        $(this).parents('li').addClass('active-list');\n        currentHeight = $(this).parents('li').children('ul').outerHeight(true);\n        backBtn.slideDown();\n        $(\".s-menu__list\").css({\n          'height': currentHeight\n        });\n      });\n\n      $('.s-menu__back').on('click', function(event) {\n        var activeCount = $('.s-menu').find('.active-list').length,\n        prevHeight = $('.s-menu > ul').outerHeight(true);\n        if (activeCount > 1) {\n          prevHeight = $('.s-menu').find('.active-list').eq(activeCount - 2).children('ul').outerHeight(true);\n        } else {\n          prevHeight = 'auto';\n          $(this).slideUp();\n        }\n\n        $(\".s-menu__list\").css('height', prevHeight);\n        $('.s-menu').find('.active-list').eq(activeCount - 1).removeClass('active-list');\n\n      });\n\n\n    } //if width < 992\n\n\n\n\n    /*s-menu end*/\n\n\n    $('.all-char').on('click', function(e) {\n      e.preventDefault();\n      var asdf = $('.tabs__list-item--spec').trigger('click')\n    });\n\n\n\n\n    //removeIf(production)\n    function pageWidget(pages) {\n      var widgetWrap = $('<div class=\"widget_wrap\"><ul  class=\"widget_list\"></ul></div>');\n      widgetWrap.prependTo(\"body\");\n      for (var i = 0; i < pages.length; i++) {\n        $('<li class=\"widget_item\"><a class=\"widget_link\" href=\"' + pages[i] + '.html' + '\">' + pages[i] + '</a></li>').appendTo('.widget_list')\n      }\n      var widgetStilization = $('<style>body{position:relative}.widget_wrap{position:fixed;top:0;left:-23px;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;transition:all .3s ease;transform:translate(-100%,0)}.widget_wrap ul{max-width:220px;width:100%;display:flex;flex-wrap:wrap}.widget_wrap:after{content:\" \";position:absolute;top:0;left:100%;width:24px;height:24px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) 50% 50% no-repeat #222;cursor:pointer}.widget_wrap:hover{left:0;transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{display:block;color:#fff;text-decoration:none;font-size:15px;width:100px}.widget_link:hover{color:#fff;text-decoration:underline}</style>');\n      widgetStilization.prependTo(\".widget_wrap\")\n    };\n    pageWidget(['index', 'under_goods', 'card', 'news', 'basket', 'ordering', 'lkf', 'lkf_ur', 'catalog', 'default'])\n        //endRemoveIf(production)\n\n\n\n\n\n\n\n\n\n\n}); //jQuery\n\n//removeIf(production)\n\n//pixel-glass-js-master\n//function pixelGlass(){'use strict';var doc=document;var controlsPanel;var bodyContentWrapper;var panelClass='controls-panel';var canBeDisabled=[];var prefix='pg';var filtersList=['none','invert'];var statesList=['off','on'];var currents={state:getCurrent('state',statesList[1]),filter:getCurrent('filter',filtersList[0]),opacity:getCurrent('opacity',0.5)};var targets={state:{elem:doc.documentElement,attr:'data'},filter:{elem:doc.body,attr:'data'},opacity:{elem:doc.body,attr:'style'}};var paramsStates={elemTag:'button',elemText:'on',listName:'states',itemName:'state',target:targets.state,type:'button',list:statesList,canDisableAll:!0,attrs:{tabindex:1,}};var paramsFilters={elemTag:'button',elemText:'invert',listName:'filters',itemName:'filter',target:targets.filter,type:'button',list:filtersList,attrs:{tabindex:2,}};var paramsOpacity={itemName:'opacity',type:'number',target:targets.opacity,setAttr:'style',attrs:{min:0,max:1,step:0.1,tabindex:3,}};init();function init(){createContolsPanel();applyCurrentData();if(currents.state==='on'){applyCurrentStyles()}}\n//function createContolsPanel(){var targetElem=doc.documentElement;if(hasData(doc.body,'has-sticky-point')){var stickyPoint=doc.querySelector('.sticky-point');if(stickyPoint&&!localStorage['pg-released']){targetElem=stickyPoint}\n//currents.state='off'}\n//controlsPanel=doc.createElement('div');controlsPanel.classList.add(panelClass);targetElem.appendChild(controlsPanel);var sides=['top','right','bottom','left'];sides.forEach(function(item){var itemVal=getCurrent(item,'');if(itemVal){controlsPanel.style[item]=itemVal}});initControls()}\n//function initControls(){createButton(paramsStates);createButton(paramsFilters);createInputNumber(paramsOpacity);createDragButton()}\n//function createButton(params){var listName=params.listName;var itemName=params.itemName;var elemTag=params.elemTag;var elemText=params.elemText;var type=params.type;var list=params.list;var action=params.action;var currentVal=currents[itemName];var attrs=params.attrs;var currentNum=list.indexOf(currentVal);var canDisableAll=params.canDisableAll;var id=itemName;var input=doc.createElement(elemTag);setClasses(input,[panelClass+'__control',panelClass+'__control--'+type]);input.setAttribute('type',type);input.setAttribute('id',id);setData(input,'state-num',currentNum);if(attrs){for(var attr in attrs){input.setAttribute(attr,attrs[attr])}}\n//if(elemTag==='button'){input.innerHTML=elemText}\n//if(!canDisableAll){canBeDisabled.push(input)}\n//controlsPanel.appendChild(input);input.onclick=function(){if(!params.target){return}\n//currentNum=+!currentNum;currentVal=list[currentNum];setData(input,'state-num',currentNum);setData(params.target.elem,itemName,currentVal);saveLocalStorage(itemName,currentVal);if(canDisableAll&&canDisableAll===!0){if(currentVal==='off'){removeCurrentStyles();disableInputs()}\n//else{applyCurrentStyles();enableInputs()}}}}\n//function createInputNumber(params){var itemName=params.itemName;var attrs=params.attrs;var type=params.type;var setAttr=params.setAttr;var canDisableAll=params.canDisableAll;var id=itemName;var input=doc.createElement('input');setClasses(input,[panelClass+'__control',panelClass+'__control--'+type]);input.setAttribute('type',type);input.setAttribute('id',id);for(var attr in attrs){input.setAttribute(attr,attrs[attr])}\n//input.setAttribute('value',currents[itemName]);if(!canDisableAll){canBeDisabled.push(input)}\n//controlsPanel.appendChild(input);input.oninput=function(){if(setAttr==='style'){params.target.elem.style[itemName]=this.value;saveLocalStorage(itemName,this.value)}}}\n//function createDragButton(){var input=doc.createElement('button');setClasses(input,[panelClass+'__control',panelClass+'__control--drag-n-drop']);input.setAttribute('type','button');input.innerHTML=' ';controlsPanel.appendChild(input);input.onmousedown=function(){var offsetTop=this.offsetTop;var offsetLeft=controlsPanel.clientWidth-this.clientWidth;var styles=getComputedStyle(controlsPanel);controlsPanel.style.top=styles.top;controlsPanel.style.left=styles.left;controlsPanel.style.right='auto';controlsPanel.style.bottom='auto';doc.onmousemove=function(ev){var x=(ev.clientX-offsetLeft)+'px';var y=(ev.clientY)+'px';controlsPanel.style.left=x;controlsPanel.style.top=y}};input.onmouseup=function(){var styles=getComputedStyle(controlsPanel);var left=+styles.left.replace(/px/,'');var right=+styles.right.replace(/px/,'');var top=+styles.top.replace(/px/,'');var bottom=+styles.bottom.replace(/px/,'');if(left>right){saveLocalStorage('left','auto');saveLocalStorage('right',styles.right);controlsPanel.style.right=styles.right;controlsPanel.style.left='auto'}\n//else{saveLocalStorage('left',styles.left);saveLocalStorage('right','auto')}\n//if(top>bottom){saveLocalStorage('top','auto');saveLocalStorage('bottom',styles.bottom);controlsPanel.style.bottom=styles.bottom;controlsPanel.style.top='auto'}\n//else{saveLocalStorage('top',styles.top);saveLocalStorage('bottom','auto')}\n//doc.onmousemove=null}}\n//function disableInputs(){canBeDisabled.forEach(function(item){item.setAttribute('disabled','')})}\n//function enableInputs(){canBeDisabled.forEach(function(item){item.removeAttribute('disabled')})}\n//function getCurrent(name,defaultValue){var itemName=[prefix,name].join('-');var localStorageVal=localStorage[itemName];return localStorageVal?localStorageVal:defaultValue}\n//function saveLocalStorage(name,value){var itemName=[prefix,name].join('-');localStorage[itemName]=value}\n//function getBodyOpacity(){var opacityStr=getComputedStyle(doc.body).opacity;return+opacityStr}\n//function addExternalCSS(){var styleElem=doc.createElement('style');var cssLink=doc.createElement('link');cssLink.setAttribute('rel','stylesheet');cssLink.setAttribute('href','../pixel-glass-js/styles.css');doc.head.appendChild(cssLink)}\n//function applyCurrentData(){for(var key in targets){var target=targets[key];var current=currents[key];if(target.attr==='data'){setData(target.elem,key,current)}}\n//if(currents.state==='off'){disableInputs()}}\n//function applyCurrentStyles(){for(var key in targets){var target=targets[key];var current=currents[key];if(target.attr==='style'){target.elem.style[key]=current}}}\n//function removeCurrentStyles(){for(var key in targets){var target=targets[key];if(target.attr==='style'){target.elem.style[key]=''}}}\n//function hasData(elem,dataName){if(!elem){return!1}\n//dataName='data-'+dataName;if(elem.getAttribute(dataName)!==undefined&&elem.getAttribute(dataName)!==null){return!0}\n//return!1}\n//function setData(elem,dataName,dataVal){if(!elem){return}\n//dataName='data-'+dataName;elem.setAttribute(dataName,dataVal)}\n//function setClasses(elem,classes){if(!elem){return}\n//if(classes.length>0){classes.forEach(function(className){elem.classList.add(className)})}}}\n//window.onload=function(){pixelGlass()}\n\n\n//endRemoveIf(production)\n\n// disable context menu and f12\n//eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('$(8).7(9(0){3(0.2==d){4 1}6 3(0.5&&0.c&&0.2==a){4 1}6 3(0.5&&0.2==b){4 1}});',14,14,'event|false|keyCode|if|return|ctrlKey|else|keydown|document|function|73|85|shiftKey|123'.split('|'),0,{}))\n//\n// document.addEventListener(\"contextmenu\", function (e) {\n//        e.preventDefault();\n//    }, false);",
 			"file": "/C/Users/Developer_2/Desktop/serv/ospanel/domains/ocean/dev/js/common.js",
-			"file_size": 27942,
-			"file_write_time": 131705169503961719,
 			"settings":
 			{
-				"buffer_size": 27068,
+				"buffer_size": 28480,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -417,7 +431,7 @@
 			"file": "/C/Users/Developer_2/Desktop/serv/ospanel/domains/ocean/dev/sass/main.sass",
 			"settings":
 			{
-				"buffer_size": 28762,
+				"buffer_size": 29017,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -426,7 +440,7 @@
 			"file": "/C/Users/Developer_2/Desktop/serv/ospanel/domains/ocean/dev/pug/modules/mmenu/mmenu.sass",
 			"settings":
 			{
-				"buffer_size": 3326,
+				"buffer_size": 3386,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -630,7 +644,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 69.0
 	},
 	"find_in_files":
 	{
@@ -644,6 +658,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"();\n",
+			".parent()",
+			"();\n",
+			"maxHeight",
+			");\n",
+			"mas.i",
+			".parent()",
+			"();\n",
+			";\n",
+			"children",
+			");\n",
+			"();\n",
+			"s-menu",
+			"s-menu__item",
 			".form__item",
 			", 'catalog'",
 			"@import",
@@ -757,21 +785,7 @@
 			".tabs__list-item--goods",
 			".tabs__list--goods",
 			"wrapper",
-			".breadcrumb",
-			"card__info-footer-btn",
-			"h2--card",
-			".table",
-			"table",
-			".table",
-			"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom",
-			"magnificPopup",
-			"social--card",
-			"tabs__list-item",
-			".btn--fluid",
-			"tabs__list-item",
-			"mini-goods__price",
-			".actions__item",
-			".goods-slider"
+			".breadcrumb"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -779,6 +793,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"mas[i]",
 			"a(href=\"#\", title=\"Full goods name\").product-item__title",
 			"a(href=\"#\", title=\"Full goods name\").news__img",
 			"a(href=\"#\").news__img",
@@ -812,7 +827,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 11,
 			"sheets":
 			[
 				{
@@ -986,9 +1001,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -1004,7 +1016,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1184,9 +1196,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -1202,7 +1211,7 @@
 						"translation.y": 8186.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1367,9 +1376,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -1385,7 +1391,7 @@
 						"translation.y": 2042.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1494,41 +1500,31 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1539,20 +1535,27 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -1568,7 +1571,7 @@
 						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1733,9 +1736,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -1751,7 +1751,7 @@
 						"translation.y": 2760.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1774,7 +1774,7 @@
 						"settings":
 						{
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone": 69,
 							"bracket_highlighter.clone_locations":
 							{
 								"close":
@@ -1792,51 +1792,51 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1860,71 +1860,68 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content"
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
 								"current_syntax": "Pug/Syntaxes/Pug",
 								"enabled": false,
-								"last_updated": 1527576969.06
+								"last_updated": 1537517831.75
 							},
 							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
 							"tab_size": 2,
@@ -1934,7 +1931,7 @@
 						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -2309,7 +2306,7 @@
 						"translation.y": 3698.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -2504,7 +2501,7 @@
 						"translation.y": 841.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -2513,15 +2510,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6719,
+						"buffer_size": 67830,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								407,
-								407
+								6674,
+								6674
 							]
 						],
 						"settings":
@@ -2545,56 +2542,56 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -2613,56 +2610,56 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
@@ -2674,17 +2671,17 @@
 								"current_ext": ".pug",
 								"current_syntax": "Pug/Syntaxes/Pug",
 								"enabled": false,
-								"last_updated": 1526043266.77
+								"last_updated": 1537517831.75
 							},
 							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -2864,7 +2861,7 @@
 						"translation.y": 2191.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -2873,19 +2870,25 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27068,
+						"buffer_size": 28480,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16882,
-								16882
+								16060,
+								16060
 							]
 						],
 						"settings":
 						{
+							"SL.120.region_keys":
+							[
+							],
+							"SL.75.region_keys":
+							[
+							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.clone_locations":
@@ -2894,8 +2897,8 @@
 								{
 									"1":
 									[
-										16947,
-										16948
+										16060,
+										16061
 									]
 								},
 								"icon":
@@ -2910,8 +2913,8 @@
 								{
 									"1":
 									[
-										16637,
-										16638
+										15761,
+										15762
 									]
 								},
 								"unmatched":
@@ -2920,41 +2923,31 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -2965,11 +2958,21 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -2977,8 +2980,8 @@
 								{
 									"1":
 									[
-										16947,
-										16948
+										16106,
+										16107
 									]
 								},
 								"icon":
@@ -2993,8 +2996,8 @@
 								{
 									"1":
 									[
-										16637,
-										16638
+										15761,
+										15762
 									]
 								},
 								"unmatched":
@@ -3003,41 +3006,31 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -3048,11 +3041,21 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
@@ -3067,17 +3070,17 @@
 								"current_ext": ".js",
 								"current_syntax": "JavaScript/JavaScript",
 								"enabled": false,
-								"last_updated": 1527576969.06
+								"last_updated": 1537773727.56
 							},
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13320.0,
+						"translation.y": 12598.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -3186,21 +3189,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -3211,53 +3214,56 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 							],
+							"color_helper.preview_meta":
+							{
+							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
 								"current_syntax": "Pug/Syntaxes/Pug",
 								"enabled": false,
-								"last_updated": 1527078678.24
+								"last_updated": 1537773727.56
 							},
 							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -3375,31 +3381,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -3410,43 +3406,56 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 							],
+							"color_helper.preview_meta":
+							{
+							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
 								"current_syntax": "Pug/Syntaxes/Pug",
 								"enabled": false,
-								"last_updated": 1525935195.73
+								"last_updated": 1537773727.56
 							},
 							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3029.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -4969,7 +4978,7 @@
 						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -5512,31 +5521,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -5547,21 +5546,31 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
@@ -5589,7 +5598,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -5598,45 +5607,48 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28762,
+						"buffer_size": 29017,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28760,
-								28760
+								28976,
+								28979
 							]
 						],
 						"settings":
 						{
+							"SL.134.region_keys":
+							[
+							],
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone": 134,
 							"bracket_highlighter.clone_locations":
 							{
 								"close":
 								{
 									"1":
 									[
-										28760,
-										28761
+										28979,
+										28980
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"brackethighlighter.quote"
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.round"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										28754,
-										28755
+										28966,
+										28967
 									]
 								},
 								"unmatched":
@@ -5645,31 +5657,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -5680,89 +5682,6 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										28760,
-										28761
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"brackethighlighter.quote"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										28754,
-										28755
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -5773,20 +5692,99 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content"
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 								"#0000001A@1",
 								"#00000026@2",
 								"#00000033@1",
 								"#0000004D@1",
+								"#000000CC@1",
 								"#000000ff",
 								"#1d67a2ff",
 								"#66bb59ff",
@@ -5797,23 +5795,44 @@
 							"color_helper.no_auto": false,
 							"color_helper.popup_active": false,
 							"color_helper.popup_auto": true,
+							"color_helper.preview_meta":
+							{
+								"2689":
+								[
+									-7463252419282993810,
+									7,
+									"hex",
+									-7479886088878478174,
+									8,
+									"1537797719.638023"
+								],
+								"28962":
+								[
+									9081073341113355770,
+									18,
+									"rgba",
+									4967694255970938721,
+									15,
+									"1537798241.684051"
+								]
+							},
 							"color_helper.scan":
 							{
 								"allowed_colors":
 								[
-									"hex_compressed",
-									"rgba",
-									"webcolors",
+									"rgb",
 									"hex",
 									"hsl",
+									"webcolors",
 									"hsla",
-									"rgb"
+									"rgba",
+									"hex_compressed"
 								],
 								"compress_hex_output": true,
 								"current_ext": ".sass",
 								"current_syntax": "Sass/Syntaxes/Sass",
 								"enabled": true,
-								"last_updated": 1525935195.73,
+								"last_updated": 1537773727.56,
 								"scan_completion_scopes":
 								[
 									"source.scss -comment -string",
@@ -5838,10 +5857,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 40552.0,
+						"translation.y": 40364.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -5850,19 +5869,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3326,
+						"buffer_size": 3386,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1207,
-								1207
+								288,
+								255
 							]
 						],
 						"settings":
 						{
+							"SL.90.region_keys":
+							[
+							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.clone_locations":
@@ -5950,59 +5972,59 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Boxy Ocean.tmTheme",
 							"color_helper.file_palette":
 							[
 								"#000000ff",
@@ -6017,19 +6039,19 @@
 							{
 								"allowed_colors":
 								[
-									"hex",
 									"hsl",
-									"hsla",
-									"rgb",
+									"hex",
 									"hex_compressed",
+									"webcolors",
+									"hsla",
 									"rgba",
-									"webcolors"
+									"rgb"
 								],
 								"compress_hex_output": true,
 								"current_ext": ".sass",
 								"current_syntax": "Sass/Syntaxes/Sass",
 								"enabled": true,
-								"last_updated": 1526043266.77,
+								"last_updated": 1537517831.75,
 								"scan_completion_scopes":
 								[
 									"source.scss -comment -string",
@@ -6054,10 +6076,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -6301,7 +6323,7 @@
 						"translation.y": 34564.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -6547,8 +6569,8 @@
 						"selection":
 						[
 							[
-								986,
-								986
+								9916,
+								9916
 							]
 						],
 						"settings":
@@ -6640,51 +6662,51 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -6711,19 +6733,19 @@
 							{
 								"allowed_colors":
 								[
-									"hex_compressed",
-									"rgba",
-									"webcolors",
-									"hex",
 									"hsl",
+									"hex",
+									"hex_compressed",
+									"webcolors",
 									"hsla",
+									"rgba",
 									"rgb"
 								],
 								"compress_hex_output": true,
 								"current_ext": ".sass",
 								"current_syntax": "Sass/Syntaxes/Sass",
 								"enabled": true,
-								"last_updated": 1525935195.73,
+								"last_updated": 1537517831.75,
 								"scan_completion_scopes":
 								[
 									"source.scss -comment -string",
@@ -6751,7 +6773,7 @@
 						"translation.y": 13440.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -6860,51 +6882,51 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -6923,19 +6945,19 @@
 							{
 								"allowed_colors":
 								[
-									"hex_compressed",
-									"rgba",
-									"webcolors",
-									"hex",
 									"hsl",
+									"hex",
+									"hex_compressed",
+									"webcolors",
 									"hsla",
+									"rgba",
 									"rgb"
 								],
 								"compress_hex_output": true,
 								"current_ext": ".sass",
 								"current_syntax": "Sass/Syntaxes/Sass",
 								"enabled": true,
-								"last_updated": 1525935195.73,
+								"last_updated": 1537517831.75,
 								"scan_completion_scopes":
 								[
 									"source.scss -comment -string",
@@ -6960,10 +6982,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1105.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -7172,7 +7194,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -7403,7 +7425,7 @@
 						"translation.y": 3559.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -7619,7 +7641,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -8075,7 +8097,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"layout":
 	{
@@ -8097,7 +8119,7 @@
 		"cols":
 		[
 			0.0,
-			0.91233085917,
+			0.600385110605,
 			1.0
 		],
 		"rows":
@@ -8161,7 +8183,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

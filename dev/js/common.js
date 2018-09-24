@@ -533,6 +533,7 @@
     if (windowWidht > 992) {
 
       toggleButton.on('click', function(event) {
+        $('body').prepend('<div class="overaly-menu"></div>').addClass('body-overlay');
         $(this).toggleClass("catalog-btn--open");
         $(this).find('.hamburger').toggleClass('is-active');
         sMenu.stop(true, true).slideToggle();
@@ -544,99 +545,54 @@
         toggleButton.find('.hamburger').removeClass('is-active');
         sMenu.stop(true, true).slideUp();
         $('.s-menu li').removeClass('active-element');
+        $("body").removeClass('body-overlay');
+        $('.overaly-menu').remove();
 
 
       });
-      var cout = 0;
+
+
+
       var defHeight = $(".s-menu").height();
-
       $('.s-menu__list li').hover(function() {
+        var maxHeight = 0;
+        var $this = $(this);
 
+        var defOffset = $(".s-menu").offset();
+        var defTop = defOffset.top;
         $(this).children('li').removeClass('active-element');
         $(this).addClass('active-element').siblings().removeClass('active-element');
-            // elementHeight('li.active-element>ul', 0);
-
-            // console.log("cout", cout);
-
-            var offset = $(".s-menu").offset();
-            // console.log("offset", offset);
-            var ofParrent = offset.top;
-            // console.log("ofParrent", ofParrent);
-            // console.log("defHeight", defHeight);
-            var elementOffset = $(this).parent().offset().top - ofParrent;
-            // var elementOffset = $(this).offset().top - ofParrent;
-            // var elementOffset = $(this).parent().position().top;
-            console.log("elementOffset", elementOffset);
-            // console.log("elementOffset", elementOffset);
-            var elementListHeight = $(this).children('ul').height();
-            console.log("elementListHeight", elementListHeight);
-            // console.log("elementListHeight", elementListHeight);
-            // var elementListHeight = $(this).children('ul').length > 0 ? $(this).children('ul').height() : 0;
-            // var elementListHeight = $(this).children('ul').length > 0 ? $(this).children('ul').height() : 0;
-            // console.log("elementListHeight", elementListHeight);
-            var elementDefHeight = elementOffset + elementListHeight;
-            // console.log("elementDefHeight", elementDefHeight);
-            // console.log("elementDefHeight", elementDefHeight);
-
-            // if ((elementOffset + $(this).children('ul').height()) > cout) {
-            //   cout = elementOffset + $(this).children('ul').height();
-            // }
-            // console.log("cout after", cout);
-
-
-            $('.s-menu').css("height", "");
-            if (defHeight < elementDefHeight) {
-              $(".s-menu").height(elementDefHeight);
-                // console.log("defHeight < elementDefHeight");
-
-              }
-
-              // if (defHeight > elementDefHeight) {
-              //   // console.log("elementOffset", elementOffset);
-              //   // console.log("defHeight", defHeight);
-              //   // console.log("elementDefHeight", elementDefHeight);
-
-              //   // // console.log($(this).parent().height());
-              //   // // console.log("asdf", asdf);
-              //   // // $(".s-menu").height
-              //   // // $(".s-menu").height(elementDefHeight);
-              //   // console.log("defHeight > elementDefHeight");
-              //   // console.log('cout - elHei', cout - elementListHeight);
-
-              //   // $(".s-menu").height(elementDefHeight);
-
-
-              // }
-
-
-
-            }, function() {
-
-
-              // var offset = $(".s-menu").offset();
-              // var ofParrent = offset.top;
-              // console.log("defHeight", defHeight);
-              // var elementOffset = $(this).offset().top;
-              // console.log("elementOffset", elementOffset);
-              // var elementListHeight = $(this).parent().height();
-              // console.log("elementListHeight", elementListHeight);
-              // var elementDefHeight = elementOffset + elementListHeight;
-
-              // $('.s-menu').css("height", "");
-
-              // $(".s-menu").height(elementListHeight);
-
-
-              // if($(".s-menu").height() < defHeight){
-              //   $(".s-menu").height(defHeight)
-
-
-              // }
+        var max = 0;
+        $('.active-element').each(function() {
+          var hch = $(this).children('ul').height();
+                // console.log("hch", hch);
+                if (hch != null) {
+                  var och = $(this).children('ul').offset();
+                    // console.log("och", och);
+                    var toch = och.top;
+                    // console.log("toch", toch);
+                    var hoch = toch + hch;
+                    // console.log("hoch", hoch);
+                    if (max < hoch) {
+                      max = hoch;
+                    }
+                  }
+                  if (max > (defTop + defHeight)) {
+                    // console.log("max", max);
+                    $(".s-menu").height(defHeight + (max - (defTop + defHeight)));
+                    // console.log("123");
+                  } else {
+                    t = false;
+                    $(".s-menu").height(defHeight);
+                    // console.log("321");
+                  }
+                });
+      }, function() {
 
 
 
 
-            });
+      });
 
 
 
