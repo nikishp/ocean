@@ -644,7 +644,7 @@
 	],
 	"find":
 	{
-		"height": 69.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -3062,9 +3062,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".js",
@@ -3245,9 +3242,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -3437,9 +3431,6 @@
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".pug",
@@ -5624,7 +5615,7 @@
 							[
 							],
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": 134,
+							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.clone_locations":
 							{
 								"close":
@@ -5712,12 +5703,27 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										28979,
+										28980
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.round"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										28966,
+										28967
+									]
 								},
 								"unmatched":
 								{
@@ -5725,11 +5731,16 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -5740,41 +5751,36 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"color_helper.box_height": 20,
 							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/Boxy Ocean.tmTheme",
@@ -5797,42 +5803,33 @@
 							"color_helper.popup_auto": true,
 							"color_helper.preview_meta":
 							{
-								"2689":
-								[
-									-7463252419282993810,
-									7,
-									"hex",
-									-7479886088878478174,
-									8,
-									"1537797719.638023"
-								],
 								"28962":
 								[
-									9081073341113355770,
+									2693129915337826460,
 									18,
 									"rgba",
-									4967694255970938721,
-									15,
-									"1537798241.684051"
+									9215243273191091529,
+									1,
+									"1541764144.628796"
 								]
 							},
 							"color_helper.scan":
 							{
 								"allowed_colors":
 								[
-									"rgb",
-									"hex",
-									"hsl",
-									"webcolors",
-									"hsla",
 									"rgba",
-									"hex_compressed"
+									"hsl",
+									"rgb",
+									"hex_compressed",
+									"hex",
+									"webcolors",
+									"hsla"
 								],
 								"compress_hex_output": true,
 								"current_ext": ".sass",
 								"current_syntax": "Sass/Syntaxes/Sass",
 								"enabled": true,
-								"last_updated": 1537773727.56,
+								"last_updated": 1541764143.56,
 								"scan_completion_scopes":
 								[
 									"source.scss -comment -string",
